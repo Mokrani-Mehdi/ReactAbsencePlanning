@@ -1,0 +1,80 @@
+.planningGrid{
+    display: grid;
+    gap: 2px;
+    padding: 15px;
+    justify-items: center;
+    position: relative;
+}
+
+.headerInfo{
+    position: sticky;
+    top: 0;
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: subgrid;
+    /* border-radius: 8px; */
+    /* margin-bottom: 4px; */
+    z-index: 13;
+    background-color: white;
+}
+
+
+.gridRow{
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: subgrid;
+    border-radius: 10px;
+    height: 30px;
+}
+
+
+
+
+.headerCellInfo{
+    background-color: white; 
+    padding: 0 0 0 30px;
+    /* border-bottom: 1px solid #ddd; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 30px;
+    /* background-color: #F4F4F4; */
+    position: relative;
+}
+
+.checkboxAbsence{
+    width: 13px;
+    position: absolute;
+    left: 4px;
+}
+
+.headerName {
+    font-size: 13px;
+}
+.firstColumnHeader {
+    text-align: left;
+    padding-left: 10px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    background-color: transparent;
+    /* Remove background to let parent background show */
+    font-weight: bold;
+}
+
+.dataCellHeader {
+   
+    padding: 8px 0;
+    font-size: 12px;
+    text-align: center;
+    border-left: 1px solid white;
+}
+.AssignedRow {
+    background-color: #e2f7e3;
+    height: 37px;
+    /* margin: 0 0 4px 0; */
+}
+.icone {
+    position: absolute;
+    right: 5px;
+}

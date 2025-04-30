@@ -1,0 +1,15 @@
+.planning{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 10px;
+}
+
+.control-container{
+    background-color: rgb(245, 245, 245);
+}
+
+.PlanningGridcontainer{
+    background-color: white;
+    margin: 0 20px 20px 20px;
+}

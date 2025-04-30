@@ -1,0 +1,457 @@
+{
+    "Workforces": [
+        {
+            "Name": "John Doe",
+            "Id": 1001,
+            "StartContract": "2023-01-15",
+            "EndContract": "2026-12-31",
+            "FixedDayOff": [
+                "Monday",
+                "Tuesday"
+            ],
+            "FavoriteDayOff": [
+                "Monday"
+            ],
+            "Absences": [
+                {
+                    "Id": 0,
+                    "Name": "Sick Leave",
+                    "Shared": false,
+                    "Type": "Medical",
+                    "StartDate": "2025-06-02",
+                    "EndDate": "2025-06-02",
+                    "Paid": true
+                },
+                {
+                    "Id": 1,
+                    "Name": "Annual Leave",
+                    "Shared": true,
+                    "Type": "Vacation",
+                    "StartDate": "2025-06-02",
+                    "EndDate": "2025-06-03",
+                    "Paid": true
+                },
+                {
+                    "Id": 2,
+                    "Name": "Sick Leave",
+                    "Shared": false,
+                    "Type": "Medical",
+                    "StartDate": "2025-06-05",
+                    "EndDate": "2025-06-05",
+                    "Paid": true
+                },
+                {
+                    "Id": 3,
+                    "Name": "Personal Leave",
+                    "Shared": false,
+                    "Type": "Personal",
+                    "StartDate": "2025-06-10",
+                    "EndDate": "2025-06-10",
+                    "Paid": false
+                },
+                {
+                    "Id": 4,
+                    "Name": "Remote Work",
+                    "Shared": true,
+                    "Type": "Work From Home",
+                    "StartDate": "2025-06-15",
+                    "EndDate": "2025-06-15",
+                    "Paid": true
+                },
+                {
+                    "Id": 5,
+                    "Name": "Training",
+                    "Shared": true,
+                    "Type": "Professional Development",
+                    "StartDate": "2025-06-20",
+                    "EndDate": "2025-06-20",
+                    "Paid": true
+                }
+            ]
+        },
+        {
+            "Name": "Jane Smith",
+            "Id": 1002,
+            "StartContract": "2022-03-01",
+            "EndContract": "",
+            "FixedDayOff": [
+                "Saturday",
+                "Sunday"
+            ],
+            "FavoriteDayOff": [
+                "Friday"
+            ],
+            "Absences": [
+                {
+                    "Id": 6,
+                    "Name": "Sick Leave",
+                    "Shared": false,
+                    "Type": "Medical",
+                    "StartDate": "2025-06-03",
+                    "EndDate": "2025-06-03",
+                    "Paid": true
+                },
+                {
+                    "Id": 7,
+                    "Name": "Vacation",
+                    "Shared": true,
+                    "Type": "Leisure",
+                    "StartDate": "2025-06-07",
+                    "EndDate": "2025-06-07",
+                    "Paid": true
+                },
+                {
+                    "Id": 8,
+                    "Name": "Unpaid Leave",
+                    "Shared": false,
+                    "Type": "Personal",
+                    "StartDate": "2025-06-12",
+                    "EndDate": "2025-06-12",
+                    "Paid": false
+                },
+                {
+                    "Id": 9,
+                    "Name": "Conference",
+                    "Shared": true,
+                    "Type": "Business Trip",
+                    "StartDate": "2025-06-16",
+                    "EndDate": "2025-06-16",
+                    "Paid": true
+                },
+                {
+                    "Id": 10,
+                    "Name": "Family Emergency",
+                    "Shared": false,
+                    "Type": "Personal",
+                    "StartDate": "2025-06-22",
+                    "EndDate": "2025-06-22",
+                    "Paid": false
+                }
+            ]
+        },
+        {
+            "Name": "Alex Johnson",
+            "Id": 1003,
+            "StartContract": "2024-09-15",
+            "EndContract": "2025-09-14",
+            "FixedDayOff": [
+                "Wednesday",
+                "Thursday"
+            ],
+            "FavoriteDayOff": [
+                "Wednesday"
+            ],
+            "Absences": [
+                {
+                    "Id": 11,
+                    "Name": "Medical Appointment",
+                    "Shared": true,
+                    "Type": "Medical",
+                    "StartDate": "2025-06-04",
+                    "EndDate": "2025-06-04",
+                    "Paid": true
+                },
+                {
+                    "Id": 12,
+                    "Name": "Vacation",
+                    "Shared": true,
+                    "Type": "Leisure",
+                    "StartDate": "2025-06-08",
+                    "EndDate": "2025-06-08",
+                    "Paid": true
+                },
+                {
+                    "Id": 13,
+                    "Name": "Remote Work",
+                    "Shared": true,
+                    "Type": "Work From Home",
+                    "StartDate": "2025-06-11",
+                    "EndDate": "2025-06-11",
+                    "Paid": true
+                },
+                {
+                    "Id": 14,
+                    "Name": "Training",
+                    "Shared": true,
+                    "Type": "Professional Development",
+                    "StartDate": "2025-06-18",
+                    "EndDate": "2025-06-18",
+                    "Paid": true
+                },
+                {
+                    "Id": 15,
+                    "Name": "Unpaid Leave",
+                    "Shared": false,
+                    "Type": "Personal",
+                    "StartDate": "2025-06-25",
+                    "EndDate": "2025-06-25",
+                    "Paid": false
+                }
+            ]
+        },
+        {
+            "Name": "Emily Brown",
+            "Id": 1004,
+            "FixedDayOff": [
+                "Friday",
+                "Saturday"
+            ],
+            "FavoriteDayOff": [
+                "Friday"
+            ],
+            "Absences": [
+                {
+                    "Id": 16,
+                    "Name": "Maternity Leave",
+                    "Shared": true,
+                    "Type": "Parental",
+                    "StartDate": "2025-06-01",
+                    "EndDate": "2025-06-01",
+                    "Paid": true
+                },
+                {
+                    "Id": 17,
+                    "Name": "Sick Leave",
+                    "Shared": false,
+                    "Type": "Medical",
+                    "StartDate": "2025-06-06",
+                    "EndDate": "2025-06-06",
+                    "Paid": true
+                },
+                {
+                    "Id": 18,
+                    "Name": "Personal Day",
+                    "Shared": false,
+                    "Type": "Personal",
+                    "StartDate": "2025-06-14",
+                    "EndDate": "2025-06-14",
+                    "Paid": false
+                },
+                {
+                    "Id": 19,
+                    "Name": "Conference",
+                    "Shared": true,
+                    "Type": "Business Trip",
+                    "StartDate": "2025-06-19",
+                    "EndDate": "2025-06-19",
+                    "Paid": true
+                },
+                {
+                    "Id": 20,
+                    "Name": "Vacation",
+                    "Shared": true,
+                    "Type": "Leisure",
+                    "StartDate": "2025-06-23",
+                    "EndDate": "2025-06-23",
+                    "Paid": true
+                }
+            ]
+        },
+        {
+            "Name": "Michael Wilson",
+            "Id": 1005,
+            "StartContract": "2021-05-10",
+            "FixedDayOff": [
+                "Sunday",
+                "Monday"
+            ],
+            "FavoriteDayOff": [
+                "Sunday"
+            ],
+            "Absences": [
+                {
+                    "Id": 21,
+                    "Name": "Remote Work",
+                    "Shared": true,
+                    "Type": "Work From Home",
+                    "StartDate": "2025-06-09",
+                    "EndDate": "2025-06-09",
+                    "Paid": true
+                },
+                {
+                    "Id": 22,
+                    "Name": "Sick Leave",
+                    "Shared": false,
+                    "Type": "Medical",
+                    "StartDate": "2025-06-13",
+                    "EndDate": "2025-06-13",
+                    "Paid": true
+                },
+                {
+                    "Id": 23,
+                    "Name": "Training",
+                    "Shared": true,
+                    "Type": "Professional Development",
+                    "StartDate": "2025-06-17",
+                    "EndDate": "2025-06-17",
+                    "Paid": true
+                },
+                {
+                    "Id": 24,
+                    "Name": "Unpaid Leave",
+                    "Shared": false,
+                    "Type": "Personal",
+                    "StartDate": "2025-06-21",
+                    "EndDate": "2025-06-21",
+                    "Paid": false
+                },
+                {
+                    "Id": 25,
+                    "Name": "Vacation",
+                    "Shared": true,
+                    "Type": "Leisure",
+                    "StartDate": "2025-06-30",
+                    "EndDate": "2025-06-30",
+                    "Paid": true
+                }
+            ]
+        }
+    ],
+    "DepartmentSkillsLists": [
+        {
+            "DepartmentName": "Accueil Sevre",
+            "DepartmentId": "fc5e1613-80fe-ef11-bae3-6045bd194eeb",
+            "HexColor": "#e8f2d1",
+            "Skills": [
+                {
+                    "Name": "H0 Sevre",
+                    "SkillId": "6a89ea8c-84fe-ef11-bae4-000d3ae73d59"
+                },
+                {
+                    "Name": "H-1 Sevre",
+                    "SkillId": "6c89ea8c-84fe-ef11-bae4-000d3ae73d59"
+                },
+                {
+                    "Name": "Hline Sevre",
+                    "SkillId": "6e89ea8c-84fe-ef11-bae4-000d3ae73d59"
+                }
+            ]
+        },
+        {
+            "DepartmentName": "Caisse Sevre",
+            "DepartmentId": "fe5e1613-80fe-ef11-bae3-6045bd194eeb",
+            "HexColor": "#dcd3e5",
+            "Skills": [
+                {
+                    "Name": "Caisse Sevre sevre",
+                    "SkillId": "6689ea8c-84fe-ef11-bae4-000d3ae73d59"
+                },
+                {
+                    "Name": "Management - Test Sev Sevre",
+                    "SkillId": "7289ea8c-84fe-ef11-bae4-000d3ae73d59"
+                }
+            ]
+        },
+        {
+            "DepartmentName": "HLINE Sevre",
+            "DepartmentId": "005f1613-80fe-ef11-bae3-6045bd194eeb",
+            "HexColor": "#ffd9d9",
+            "Skills": [
+                {
+                    "Name": "Hline1 Sevre",
+                    "SkillId": "7089ea8c-84fe-ef11-bae4-000d3ae73d59"
+                }
+            ]
+        },
+        {
+            "DepartmentName": "Managers Sevre",
+            "DepartmentId": "025f1613-80fe-ef11-bae3-6045bd194eeb",
+            "HexColor": "#eceff0",
+            "Skills": [
+                {
+                    "Name": "Manager Sevre",
+                    "SkillId": "7489ea8c-84fe-ef11-bae4-000d3ae73d59"
+                }
+            ]
+        },
+        {
+            "DepartmentName": "Plateau H-0 Sevre",
+            "DepartmentId": "045f1613-80fe-ef11-bae3-6045bd194eeb",
+            "HexColor": "#ccdce8",
+            "Skills": [
+                {
+                    "Name": "Référent 8 Sevre",
+                    "SkillId": "7689ea8c-84fe-ef11-bae4-000d3ae73d59"
+                },
+                {
+                    "Name": "Référent F Sevre",
+                    "SkillId": "7c89ea8c-84fe-ef11-bae4-000d3ae73d59"
+                },
+                {
+                    "Name": "Référent IDO Sevre",
+                    "SkillId": "7e89ea8c-84fe-ef11-bae4-000d3ae73d59"
+                },
+                {
+                    "Name": "Référent S Sevre",
+                    "SkillId": "8489ea8c-84fe-ef11-bae4-000d3ae73d59"
+                },
+                {
+                    "Name": "Référent V Sevre",
+                    "SkillId": "8689ea8c-84fe-ef11-bae4-000d3ae73d59"
+                },
+                {
+                    "Name": "Vente1 Sevre",
+                    "SkillId": "9089ea8c-84fe-ef11-bae4-000d3ae73d59"
+                }
+            ]
+        },
+        {
+            "DepartmentName": "Plateau H-1 Sevre",
+            "DepartmentId": "065f1613-80fe-ef11-bae3-6045bd194eeb",
+            "HexColor": "#ffeeda",
+            "Skills": [
+                {
+                    "Name": "Référent B Sevre",
+                    "SkillId": "7889ea8c-84fe-ef11-bae4-000d3ae73d59"
+                },
+                {
+                    "Name": "Référent C Sevre",
+                    "SkillId": "7a89ea8c-84fe-ef11-bae4-000d3ae73d59"
+                },
+                {
+                    "Name": "Référent M Sevre",
+                    "SkillId": "8089ea8c-84fe-ef11-bae4-000d3ae73d59"
+                },
+                {
+                    "Name": "Référent PAP Sevre",
+                    "SkillId": "8289ea8c-84fe-ef11-bae4-000d3ae73d59"
+                },
+                {
+                    "Name": "Référent Z Sevre",
+                    "SkillId": "8889ea8c-84fe-ef11-bae4-000d3ae73d59"
+                },
+                {
+                    "Name": "Vente Sevre",
+                    "SkillId": "8e89ea8c-84fe-ef11-bae4-000d3ae73d59"
+                }
+            ]
+        },
+        {
+            "DepartmentName": "Support commercial Sevre",
+            "DepartmentId": "085f1613-80fe-ef11-bae3-6045bd194eeb",
+            "HexColor": "#e6e4f8",
+            "Skills": [
+                {
+                    "Name": "Caisse Sevre",
+                    "SkillId": "6489ea8c-84fe-ef11-bae4-000d3ae73d59"
+                },
+                {
+                    "Name": "Encaissement et administration Sevre",
+                    "SkillId": "6889ea8c-84fe-ef11-bae4-000d3ae73d59"
+                },
+                {
+                    "Name": "SAV Sevre",
+                    "SkillId": "8a89ea8c-84fe-ef11-bae4-000d3ae73d59"
+                },
+                {
+                    "Name": "Services aux clients Sevre",
+                    "SkillId": "8c89ea8c-84fe-ef11-bae4-000d3ae73d59"
+                }
+            ]
+        }
+    ],
+    "StoreInfo": {
+        "ClosingDays": ["Monday"],
+        "Holidays": ["2025-06-02", "2025-06-24"]
+    }
+}

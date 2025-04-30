@@ -1,0 +1,52 @@
+.subheader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 10px; */
+    padding: 10px 15px 0 15px;
+}
+.Info-container{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    /* width: 650px; */
+    justify-content: space-evenly;
+    width: 50%;
+  }
+.staff {
+    display: flex;
+    padding: 5px;
+    gap: 5px;
+  }
+  
+  .store {
+    display: flex;
+    padding: 5px;
+    gap: 5px;
+  }
+  
+  .status {
+    display: flex;
+    padding: 5px;
+    gap: 5px;
+  }
+  
+  .image {
+    width: 23px;
+    height: 23px;
+  }
+
+  .select-button {
+    padding: 0.67rem 1rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #FF710C;
+    border: none;
+    border-radius: 4px;
+    width: 252px;
+    cursor: pointer;
+    float: right;
+  }

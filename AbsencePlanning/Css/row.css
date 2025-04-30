@@ -1,0 +1,101 @@
+.firstColumn {
+    background-color: white; 
+    padding: 0 0 0 30px;
+    /* border-bottom: 1px solid #ddd; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 30px;
+    background-color: #F4F4F4;
+    position: relative;
+  }
+
+input{
+    width: 13px;
+}
+
+
+
+
+.adaptive-tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: default;
+  }
+  
+  /* Hide tooltip content by default */
+  .adaptive-tooltip .tooltip-content {
+    visibility: hidden;
+    min-width: 200px;
+    max-width: 300px;
+    background-color: #555;
+    color: #fff;
+    text-align: left;
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    z-index: 16;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    left: 50%;
+    transform: translateX(-50%);
+    
+    /* Ensure text wraps properly */
+    white-space: normal;
+    word-break: break-word;
+  }
+  
+  /* Position tooltip above by default */
+  .adaptive-tooltip .tooltip-content.above {
+    bottom: 100%;
+    margin-bottom: 10px;
+  }
+  
+  /* Position tooltip below */
+  .adaptive-tooltip .tooltip-content.below {
+    top: 100%;
+    margin-top: 10px;
+  }
+  
+  /* Show the tooltip when hovering over the container */
+  .adaptive-tooltip:hover .tooltip-content {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  /* Tooltip arrow for above position */
+  .adaptive-tooltip .tooltip-content.above::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  /* Tooltip arrow for below position */
+  .adaptive-tooltip .tooltip-content.below::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #555 transparent;
+  }
+  
+  /* Style for the staff items in the tooltip */
+  .tooltip-content .staff-item {
+    display: block;
+    padding: 2px 0;
+  }
+  
+  /* Make the tooltip stand out more when there's content */
+  .adaptive-tooltip:hover {
+    z-index: 1001;
+  }
