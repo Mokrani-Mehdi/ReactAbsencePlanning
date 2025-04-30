@@ -169,6 +169,7 @@ const Planning: React.FC<Payload> = ({ Data,containerWidth,  AvailabilityPayload
           selectAllAbsences={selectAllAbsences}
           AvailabitlityPayload={AvailabilityPayload ?? []}
           onGetavailabilityCall={handleOnGetAvailability}
+          storeInfo = {Data.StoreInfo}
 
         />
       </div>

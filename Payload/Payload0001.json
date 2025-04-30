@@ -452,6 +452,7 @@
     ],
     "StoreInfo": {
         "ClosingDays": ["Monday"],
-        "Holidays": ["2025-06-02", "2025-06-24"]
+        "Holidays": ["2025-06-02", "2025-06-24"],
+        "Name" : "Bordeaux"
     }
 }

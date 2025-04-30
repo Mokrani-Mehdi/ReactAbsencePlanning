@@ -9,6 +9,8 @@ export interface Workforce
     ManagerId? : number;
     FixedDayOff? : string[];
     FavoriteDayOff? : string[];
+    StartContract?: string;
+    EndContract?: string;
 
 }
 export interface AvailabilityItem {
@@ -41,16 +43,17 @@ export interface Payload
     Data : {
         Workforces : Workforce[]
         DepartmentSkillsLists: Department[];
+        StoreInfo: StoreInfo;
     },
     containerWidth: number;
     containerHeight: number;
     AvailabilityPayload?: AvailabilityItem[];
 }
-export interface Site 
+export interface StoreInfo 
 {
-    Id:number;
+    ClosingDays:string[];
     Name:string;
-    Holidays: Date[];
-    ClosingDays: Date[];
+    Holidays: string[];
+    
     
 }

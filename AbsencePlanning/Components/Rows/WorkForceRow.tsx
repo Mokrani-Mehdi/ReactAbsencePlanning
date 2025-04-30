@@ -1,7 +1,7 @@
 import React from "react";
 import Cell from "../Cell";
 import '../../Css/row.css'
-import { Absences, Workforce } from "../../Models/Model";
+import { Absences, Workforce, StoreInfo } from "../../Models/Model";
 /* eslint-disable */
 
 interface WorkforceRowProps {
@@ -12,6 +12,7 @@ interface WorkforceRowProps {
   onCellClick: (absence: Absences | undefined, date: Date, workforce: Workforce) => void;
   onAbsenceSelect: (absenceId: number) => void;
   onWorkforceSelect: (workforce: Workforce, selected: boolean) => void;
+  storeInfo: StoreInfo;
 }
 
 const WorkForceRow: React.FC<WorkforceRowProps> = ({ 
@@ -21,18 +22,17 @@ const WorkForceRow: React.FC<WorkforceRowProps> = ({
   selectedAbsences,
   onCellClick,
   onAbsenceSelect,
-  onWorkforceSelect
+  onWorkforceSelect,
+  storeInfo
 }) => {
   const isAllSelected = workforce.Absences?.every(a => selectedAbsences.has(a.Id)) ?? false;
   const isSomeSelected = workforce.Absences?.some(a => selectedAbsences.has(a.Id)) ?? false;
   
-  // Function to get the name of the day (Monday, Tuesday, etc.) from a Date object
   const getDayName = (date: Date): string => {
     const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     return days[date.getDay()];
   };
 
-  // Function to check if a date falls on a fixed day off
   const isFixedDayOff = (date: Date): boolean => {
     if (!workforce.FixedDayOff || !Array.isArray(workforce.FixedDayOff)) {
       return false;
@@ -41,13 +41,58 @@ const WorkForceRow: React.FC<WorkforceRowProps> = ({
     return workforce.FixedDayOff.includes(dayName);
   };
 
-  // Function to check if a date falls on a favorite day off
   const isFavoriteDayOff = (date: Date): boolean => {
     if (!workforce.FavoriteDayOff || !Array.isArray(workforce.FavoriteDayOff)) {
       return false;
     }
     const dayName = getDayName(date);
     return workforce.FavoriteDayOff.includes(dayName);
+  };
+
+  const isStoreClosingDay = (date: Date): boolean => {
+    if (!storeInfo?.ClosingDays || !Array.isArray(storeInfo.ClosingDays)) {
+      return false;
+    }
+    const dayName = getDayName(date);
+    return storeInfo.ClosingDays.includes(dayName);
+  };
+
+  const isHoliday = (date: Date): boolean => {
+    if (!storeInfo?.Holidays || !Array.isArray(storeInfo.Holidays)) {
+      return false;
+    }
+    
+    const formattedDate = date.toISOString().split('T')[0];
+    return storeInfo.Holidays.includes(formattedDate);
+  };
+
+  const isWithinContractPeriod = (date: Date): boolean => {
+    if (!workforce.StartContract && !workforce.EndContract) {
+      return true;
+    }
+
+    const currentDate = new Date(date);
+    currentDate.setHours(0, 0, 0, 0);
+    
+    if (workforce.StartContract) {
+      const startContract = new Date(workforce.StartContract);
+      startContract.setHours(0, 0, 0, 0);
+      
+      if (currentDate < startContract) {
+        return false;
+      }
+    }
+    
+    if (workforce.EndContract) {
+      const endContract = new Date(workforce.EndContract);
+      endContract.setHours(0, 0, 0, 0);
+      
+      if (currentDate > endContract) {
+        return false;
+      }
+    }
+    
+    return true;
   };
   
   return (
@@ -70,7 +115,6 @@ const WorkForceRow: React.FC<WorkforceRowProps> = ({
       </div>
 
       {dates.map((date, index) => {
-        // Find all absences that apply to this date
         const currentDate = new Date(date);
         currentDate.setHours(0, 0, 0, 0);
         
@@ -84,24 +128,25 @@ const WorkForceRow: React.FC<WorkforceRowProps> = ({
           return currentDate >= startDate && currentDate <= endDate;
         }) || [];
         
-        // Get the first absence if any exist
         const primaryAbsence = applicableAbsences.length > 0 ? applicableAbsences[0] : undefined;
         
-        // Check if this date is a fixed or favorite day off
         const isFixedOff = isFixedDayOff(date);
         const isFavoriteOff = isFavoriteDayOff(date);
+        const isClosingDay = isStoreClosingDay(date);
+        const isHolidayDate = isHoliday(date);
+        const isContractActive = isWithinContractPeriod(date);
 
-        // Only show fixed/favorite day off if there's no actual absence for this day
-        const showFixedOff = applicableAbsences.length === 0 && isFixedOff;
-        const showFavoriteOff = applicableAbsences.length === 0 && !isFixedOff && isFavoriteOff;
+     
         
-        // Detect overlapping or conflicting schedules
         const hasMultipleAbsences = applicableAbsences.length > 1;
         const hasAbsenceWithFixedOff = applicableAbsences.length > 0 && isFixedOff;
         const hasAbsenceWithFavoriteOff = applicableAbsences.length > 0 && isFavoriteOff;
+        const hasAbsenceOnClosingDay = applicableAbsences.length > 0 && isClosingDay;
+        const hasAbsenceOnHoliday = applicableAbsences.length > 0 && isHolidayDate;
         
-        // Determine if there's any type of overlap
-        const hasOverlap = hasMultipleAbsences || hasAbsenceWithFixedOff || hasAbsenceWithFavoriteOff;
+        const hasOverlap = hasMultipleAbsences || hasAbsenceWithFixedOff || 
+                           hasAbsenceWithFavoriteOff || hasAbsenceOnClosingDay || 
+                           hasAbsenceOnHoliday;
 
         return (
           <span key={index} onClick={() => onCellClick(primaryAbsence, date, workforce)}>
@@ -114,6 +159,9 @@ const WorkForceRow: React.FC<WorkforceRowProps> = ({
               onSelect={primaryAbsence ? () => onAbsenceSelect(primaryAbsence.Id) : undefined}
               isFixedDayOff={isFixedOff}
               isFavoriteDayOff={isFavoriteOff}
+              isStoreClosingDay={isClosingDay}
+              isHoliday={isHolidayDate}
+              isWithinContractPeriod={isContractActive}
               hasOverlap={hasOverlap}
             />
           </span>
@@ -124,3 +172,5 @@ const WorkForceRow: React.FC<WorkforceRowProps> = ({
 };
 
 export default WorkForceRow;
+
+/* eslint-enabled */

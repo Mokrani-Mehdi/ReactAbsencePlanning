@@ -1,7 +1,7 @@
 import React , {useState,useMemo,useEffect} from "react";
 import '../Css/planningGrid.css';
 import WorkForceRow from "./Rows/WorkForceRow";
-import { Absences, AvailabilityItem, Workforce } from '../Models/Model';
+import { Absences, AvailabilityItem, StoreInfo, Workforce } from '../Models/Model';
 import ManagerRow from "./Rows/ManagerRow";
 import { getWorkForceName } from "../Helpers/AppHelper";
 import AbsenceRow from "./Rows/AbsenceRow";
@@ -15,7 +15,7 @@ interface PlanningGridProps {
   isSelectMode: boolean;
   selectedAbsences: Set<number>;
   AvailabitlityPayload : AvailabilityItem[];
-
+  storeInfo : StoreInfo
   onCellClick: (absence: Absences | undefined, date: Date, workforce: Workforce) => void;
   onAbsenceSelect: (absenceId: number) => void;
   onWorkforceSelect: (workforce: Workforce, selected: boolean) => void;
@@ -32,6 +32,7 @@ const PlanningGrid: React.FC<PlanningGridProps> = ({
   isSelectMode,
   selectedAbsences,
   AvailabitlityPayload,
+  storeInfo,
   onCellClick,
   onAbsenceSelect,
   onWorkforceSelect,
@@ -224,6 +225,7 @@ const PlanningGrid: React.FC<PlanningGridProps> = ({
           onCellClick={onCellClick}
           onAbsenceSelect={onAbsenceSelect}
           onWorkforceSelect={onWorkforceSelect}
+          storeInfo={storeInfo}
         />
       ))}
     </div>
