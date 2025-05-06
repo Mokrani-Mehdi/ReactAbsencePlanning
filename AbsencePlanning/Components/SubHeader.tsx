@@ -6,7 +6,7 @@ import {
   StoreIcon,
 } from "../Assets/Icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronLeft, faChevronRight, faCircleChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { faChevronLeft, faChevronRight, faCircleChevronRight, faPaperPlane, faTrash } from "@fortawesome/free-solid-svg-icons";
 interface SubHeaderPops {
   toggleMode: () => void;
   isSelectMode: boolean;
@@ -25,7 +25,6 @@ const SubHeader: React.FC<SubHeaderPops> = ({
     <div className="subheader">
        <div className="Info-container">
         <div className="dateRange">
-          <span content="<"/>
            <FontAwesomeIcon className="lefticone"
                       icon={faChevronLeft} 
                       size="sm"
@@ -60,13 +59,19 @@ const SubHeader: React.FC<SubHeaderPops> = ({
             </label>
           </div>
         )} */}
+        <div className="leftSide">
+        <FontAwesomeIcon className="eventIcon" icon={faPaperPlane} />
 
-        <button
+<FontAwesomeIcon className="eventIcon" icon={faTrash} />
+<button
           onClick={toggleMode}
           className="select-button"
         >
           {!isSelectMode ? "Select" : "Cancel"}
         </button>
+        </div>
+       
+       
      
     </div>
   );

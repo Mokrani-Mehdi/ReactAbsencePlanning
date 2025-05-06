@@ -1,67 +1,89 @@
 .subheader {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    /* gap: 10px; */
-    /* padding: 10px 15px 0 15px; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  /* gap: 10px; */
+  /* padding: 10px 15px 0 15px; */
 }
-.Info-container{
 
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    /* width: 650px; */
-    justify-content: space-evenly;
-    width: 50%;
-  }
+.Info-container {
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  /* width: 650px; */
+  justify-content: space-evenly;
+  width: 50%;
+}
+
 .staff {
-    display: flex;
-    padding: 5px;
-    gap: 5px;
-  }
-  
-  .store {
-    display: flex;
-    padding: 5px;
-    gap: 5px;
-  }
-  
-  .status {
-    display: flex;
-    padding: 5px;
-    gap: 5px;
-  }
-  
-  .image {
-    width: 23px;
-    height: 23px;
-  }
+  display: flex;
+  padding: 5px;
+  gap: 5px;
+}
 
-  .select-button {
-    padding: 0.67rem 1rem;
-    font-size: 1rem;
-    color: #fff;
-    background-color: #FF710C;
-    border: none;
-    border-radius: 4px;
-    width: 100px;
-    cursor: pointer;
-    float: right;
-  }
-  .dateRange{
-    padding: 0.67rem 1.5rem;
-    font-size: 16px;
-    font-weight: 500;
-    border: 1px solid black;
-    position: relative;
+.store {
+  display: flex;
+  padding: 5px;
+  gap: 5px;
+}
 
-  }
-  .lefticone{
-cursor: pointer;
-  }
-.righticone{
+.status {
+  display: flex;
+  padding: 5px;
+  gap: 5px;
+}
+
+.image {
+  width: 23px;
+  height: 23px;
+}
+
+.select-button {
+  padding: 0.67rem 1rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #FF710C;
+  border: none;
+  border-radius: 4px;
+  width: 100px;
+  cursor: pointer;
+  float: right;
+}
+
+.dateRange {
+  display: flex;
+  padding: 0.67rem 1.5rem;
+  font-size: 16px;
+  font-weight: 500;
+  border: 1px solid hsl(0, 0%, 80%);
+  position: relative;
+  align-items: center;
+  justify-content: space-around;
+  width: 180px;
+
+}
+
+.lefticone {
+  cursor: pointer;
+}
+
+.righticone {
   cursor: pointer;
 
+}
+.eventIcon{
+  height: 22px;
+  width: 22px;
+  cursor: pointer;
+}
+.leftSide {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
 }

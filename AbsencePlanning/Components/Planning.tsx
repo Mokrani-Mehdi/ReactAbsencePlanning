@@ -54,6 +54,51 @@ const Planning: React.FC<Payload> = ({ Data,containerWidth,  AvailabilityPayload
   const [cellHeight, setcellHeight] = useState(35);
   const isPayloadChange = useRef(false);
 
+  useEffect(() => {
+    const currentDataStr = JSON.stringify(FirstData);
+    const newDataStr = JSON.stringify(Data);
+
+    if (currentDataStr !== newDataStr) {
+      isPayloadChange.current = true;
+      setLocalData(Data);
+      setFirstLocalData(Data);
+      setDepartementData(Data?.DepartmentSkillsLists);
+
+      if (Data?.Workforces) {
+        setWorkforceData(
+          [...Data.Workforces].sort((a, b) => {
+            const aIsR = a.Name.startsWith("R - ");
+            const bIsR = b.Name.startsWith("R - ");
+
+            if (aIsR !== bIsR) {
+              return aIsR ? 1 : -1;
+            }
+            if (a.IsManager !== b.IsManager) {
+              return a.IsManager ? -1 : 1;
+            }
+            return a.Name.localeCompare(b.Name);
+          })
+        );
+        setManagerData(
+          Data.Workforces.filter((w) => w.IsManager == true).sort((a, b) =>
+            a.Name.localeCompare(b.Name)
+          )
+        );
+        setRoleData([
+          ...new Set(
+            Data?.Workforces.filter(
+              (workforce) => workforce.RoleDescription
+            ).map((workforce) => workforce.RoleDescription)
+          ),
+        ]);
+      }
+      
+    }
+
+    console.log(workforceData);
+  }, [Data]);
+
+
   const isValidData = React.useMemo(() => {
     return (
       localData?.Workforces?.length > 0 &&
@@ -64,6 +109,7 @@ const Planning: React.FC<Payload> = ({ Data,containerWidth,  AvailabilityPayload
   const handleOnGetAvailability = () => {
     //onSave?.("GetAvailability");
   };
+
 
   const filteredWorkforces = useMemo(() => {
     if (!workforceData) return null;

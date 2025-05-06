@@ -78,3 +78,12 @@
     position: absolute;
     right: 5px;
 }
+.headerDate{
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .headerName{
+    font-size: 10px;
+    font-weight: 400;
+  
+    }

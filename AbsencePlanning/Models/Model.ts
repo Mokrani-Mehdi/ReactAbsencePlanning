@@ -77,3 +77,10 @@ export const ABSENCE_CATEGORY_COLORS = {
   [AbsenceCategory.UNPAID_UNSHARED]: "#F44336", // Red
   [AbsenceCategory.PAID_UNSHARED]: "#FF9800", // Orange
 };
+
+
+export interface IState {
+    selectedAbsence: Absences[];
+    actionType : string | null;
+    nextDate : string | null;
+}

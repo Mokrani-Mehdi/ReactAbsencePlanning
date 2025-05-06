@@ -2,17 +2,22 @@ import Planning from "./Components/Planning";
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
 import workforceJson from "../Payload/Payload0002.json";
 import * as React from "react";
-import { Payload } from "./Models/Model";
+import { IState, Payload } from "./Models/Model";
 export class AbsencePlanning
   implements ComponentFramework.ReactControl<IInputs, IOutputs>
 {
   private notifyOutputChanged: () => void;
-
+  private state: IState;
   /**
    * Empty constructor.
    */
   constructor() {
     // Empty
+    this.state = {
+      selectedAbsence: [],
+      actionType: null,
+      nextDate: null,
+    };
   }
 
   /**
@@ -28,7 +33,29 @@ export class AbsencePlanning
     state: ComponentFramework.Dictionary
   ): void {
     this.notifyOutputChanged = notifyOutputChanged;
+    context.mode.trackContainerResize(true);
   }
+  private HandleGetAvailability = (): void => {
+    this.setState(
+      {
+        selectedAbsence: [],
+        actionType: "GetAvailability",
+      },
+      true
+    ); //
+  };
+  private setState = (
+    newState: Partial<IState>,
+    notify = false
+  ): void => {
+    this.state = {
+      ...this.state,
+      ...newState,
+    };
+    if (notify) {
+      this.notifyOutputChanged();
+    }
+  };
 
   /**
    * Called when any value in the property bag has changed. This includes field values, data-sets, global values such as container height and width, offline status, control metadata values such as label, visible, etc.
@@ -44,7 +71,7 @@ export class AbsencePlanning
     const props: Payload = {
       Data,
       containerWidth,
-      containerHeight
+      containerHeight,
     };
     return React.createElement(Planning, props);
   }
@@ -54,7 +81,18 @@ export class AbsencePlanning
    * @returns an object based on nomenclature defined in manifest, expecting object[s] for property marked as "bound" or "output"
    */
   public getOutputs(): IOutputs {
-    return {};
+    const response = this.state.actionType
+      ? {
+          data: this.state.selectedAbsence,
+          actionType: this.state.actionType,
+          
+        }
+      : null;
+
+    return {
+     
+      Payload: response ? JSON.stringify(response) : "",
+    };
   }
 
   /**
