@@ -8,9 +8,9 @@ interface WorkforceRowProps {
   workforce: Workforce;
   dates: Date[];
   isSelectMode: boolean;
-  selectedAbsences: Set<number>;
+  selectedAbsences: Set<string>;
   onCellClick: (absence: Absences | undefined, date: Date, workforce: Workforce) => void;
-  onAbsenceSelect: (absenceId: number) => void;
+  onAbsenceSelect: (absenceId: string) => void;
   onWorkforceSelect: (workforce: Workforce, selected: boolean) => void;
   storeInfo: StoreInfo;
 }
@@ -25,8 +25,8 @@ const WorkForceRow: React.FC<WorkforceRowProps> = ({
   onWorkforceSelect,
   storeInfo
 }) => {
-  const isAllSelected = workforce.Absences?.every(a => selectedAbsences.has(a.Id)) ?? false;
-  const isSomeSelected = workforce.Absences?.some(a => selectedAbsences.has(a.Id)) ?? false;
+  const isAllSelected = (workforce?.Absences?.length >0  && workforce.Absences?.every(a => selectedAbsences.has(a.Id))) ?? false;
+  const isSomeSelected = (workforce?.Absences?.length >0 && workforce.Absences?.some(a => selectedAbsences.has(a.Id))) ?? false;
   
   const getDayName = (date: Date): string => {
     const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -42,7 +42,7 @@ const WorkForceRow: React.FC<WorkforceRowProps> = ({
   };
 
   const isFavoriteDayOff = (date: Date): boolean => {
-    if (!workforce.FavoriteDayOff || !Array.isArray(workforce.FavoriteDayOff)) {
+    if (!workforce.FavoriteDayOff) {
       return false;
     }
     const dayName = getDayName(date);

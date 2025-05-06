@@ -1,0 +1,2976 @@
+{
+    "StoreInfo": {
+      "Name": "Paris Sèvres",
+      "Holidays": [],
+      "ClosingDays": [
+        "Monday"
+      ]
+    },
+    "DepartmentSkillsLists": [
+      {
+        "DepartmentName": "Accueil Sevre",
+        "DepartmentId": "fc5e1613-80fe-ef11-bae3-6045bd194eeb",
+        "HexColor": "#e8f2d1",
+        "Skills": [
+          {
+            "Name": "H0 Sevre",
+            "SkillId": "6a89ea8c-84fe-ef11-bae4-000d3ae73d59"
+          },
+          {
+            "Name": "H-1 Sevre",
+            "SkillId": "6c89ea8c-84fe-ef11-bae4-000d3ae73d59"
+          },
+          {
+            "Name": "Hline Sevre",
+            "SkillId": "6e89ea8c-84fe-ef11-bae4-000d3ae73d59"
+          }
+        ]
+      },
+      {
+        "DepartmentName": "Caisse Sevre",
+        "DepartmentId": "fe5e1613-80fe-ef11-bae3-6045bd194eeb",
+        "HexColor": "#dcd3e5",
+        "Skills": [
+          {
+            "Name": "Caisse Sevre sevre",
+            "SkillId": "6689ea8c-84fe-ef11-bae4-000d3ae73d59"
+          },
+          {
+            "Name": "Management - Test Sev Sevre",
+            "SkillId": "7289ea8c-84fe-ef11-bae4-000d3ae73d59"
+          }
+        ]
+      },
+      {
+        "DepartmentName": "HLINE Sevre",
+        "DepartmentId": "005f1613-80fe-ef11-bae3-6045bd194eeb",
+        "HexColor": "#ffd9d9",
+        "Skills": [
+          {
+            "Name": "Hline1 Sevre",
+            "SkillId": "7089ea8c-84fe-ef11-bae4-000d3ae73d59"
+          }
+        ]
+      },
+      {
+        "DepartmentName": "Managers Sevre",
+        "DepartmentId": "025f1613-80fe-ef11-bae3-6045bd194eeb",
+        "HexColor": "#eceff0",
+        "Skills": [
+          {
+            "Name": "Manager Sevre",
+            "SkillId": "7489ea8c-84fe-ef11-bae4-000d3ae73d59"
+          }
+        ]
+      },
+      {
+        "DepartmentName": "Plateau H-0 Sevre",
+        "DepartmentId": "045f1613-80fe-ef11-bae3-6045bd194eeb",
+        "HexColor": "#ccdce8",
+        "Skills": [
+          {
+            "Name": "Référent 8 Sevre",
+            "SkillId": "7689ea8c-84fe-ef11-bae4-000d3ae73d59"
+          },
+          {
+            "Name": "Référent F Sevre",
+            "SkillId": "7c89ea8c-84fe-ef11-bae4-000d3ae73d59"
+          },
+          {
+            "Name": "Référent IDO Sevre",
+            "SkillId": "7e89ea8c-84fe-ef11-bae4-000d3ae73d59"
+          },
+          {
+            "Name": "Référent S Sevre",
+            "SkillId": "8489ea8c-84fe-ef11-bae4-000d3ae73d59"
+          },
+          {
+            "Name": "Référent V Sevre",
+            "SkillId": "8689ea8c-84fe-ef11-bae4-000d3ae73d59"
+          },
+          {
+            "Name": "Vente1 Sevre",
+            "SkillId": "9089ea8c-84fe-ef11-bae4-000d3ae73d59"
+          }
+        ]
+      },
+      {
+        "DepartmentName": "Plateau H-1 Sevre",
+        "DepartmentId": "065f1613-80fe-ef11-bae3-6045bd194eeb",
+        "HexColor": "#ffeeda",
+        "Skills": [
+          {
+            "Name": "Référent B Sevre",
+            "SkillId": "7889ea8c-84fe-ef11-bae4-000d3ae73d59"
+          },
+          {
+            "Name": "Référent C Sevre",
+            "SkillId": "7a89ea8c-84fe-ef11-bae4-000d3ae73d59"
+          },
+          {
+            "Name": "Référent M Sevre",
+            "SkillId": "8089ea8c-84fe-ef11-bae4-000d3ae73d59"
+          },
+          {
+            "Name": "Référent PAP Sevre",
+            "SkillId": "8289ea8c-84fe-ef11-bae4-000d3ae73d59"
+          },
+          {
+            "Name": "Référent Z Sevre",
+            "SkillId": "8889ea8c-84fe-ef11-bae4-000d3ae73d59"
+          },
+          {
+            "Name": "Vente Sevre",
+            "SkillId": "8e89ea8c-84fe-ef11-bae4-000d3ae73d59"
+          }
+        ]
+      },
+      {
+        "DepartmentName": "Support commercial Sevre",
+        "DepartmentId": "085f1613-80fe-ef11-bae3-6045bd194eeb",
+        "HexColor": "#e6e4f8",
+        "Skills": [
+          {
+            "Name": "Caisse Sevre",
+            "SkillId": "6489ea8c-84fe-ef11-bae4-000d3ae73d59"
+          },
+          {
+            "Name": "Encaissement et administration Sevre",
+            "SkillId": "6889ea8c-84fe-ef11-bae4-000d3ae73d59"
+          },
+          {
+            "Name": "SAV Sevre",
+            "SkillId": "8a89ea8c-84fe-ef11-bae4-000d3ae73d59"
+          },
+          {
+            "Name": "Services aux clients Sevre",
+            "SkillId": "8c89ea8c-84fe-ef11-bae4-000d3ae73d59"
+          }
+        ]
+      }
+    ],
+    "AbsenceReasons": [
+      {
+        "AbsenceReasonName": "closing_shop_day",
+        "AbsenceReasonId": "ec8e838c-7dfe-ef11-bae4-0022483a86cf"
+      },
+      {
+        "AbsenceReasonName": "Congé de maternité",
+        "AbsenceReasonId": "ee8e838c-7dfe-ef11-bae4-0022483a86cf"
+      },
+      {
+        "AbsenceReasonName": "Congé de paternité",
+        "AbsenceReasonId": "f08e838c-7dfe-ef11-bae4-0022483a86cf"
+      },
+      {
+        "AbsenceReasonName": "Congé22",
+        "AbsenceReasonId": "f28e838c-7dfe-ef11-bae4-0022483a86cf"
+      },
+      {
+        "AbsenceReasonName": "ee",
+        "AbsenceReasonId": "f48e838c-7dfe-ef11-bae4-0022483a86cf"
+      },
+      {
+        "AbsenceReasonName": "exceptional_day_off",
+        "AbsenceReasonId": "f68e838c-7dfe-ef11-bae4-0022483a86cf"
+      },
+      {
+        "AbsenceReasonName": "favorite_day_off",
+        "AbsenceReasonId": "f88e838c-7dfe-ef11-bae4-0022483a86cf"
+      },
+      {
+        "AbsenceReasonName": "favorite_day_off_non_respected",
+        "AbsenceReasonId": "fa8e838c-7dfe-ef11-bae4-0022483a86cf"
+      },
+      {
+        "AbsenceReasonName": "fixed_day_off",
+        "AbsenceReasonId": "fc8e838c-7dfe-ef11-bae4-0022483a86cf"
+      },
+      {
+        "AbsenceReasonName": "fixed_day_off_non_respected",
+        "AbsenceReasonId": "fe8e838c-7dfe-ef11-bae4-0022483a86cf"
+      },
+      {
+        "AbsenceReasonName": "hybrid_day_off",
+        "AbsenceReasonId": "008f838c-7dfe-ef11-bae4-0022483a86cf"
+      },
+      {
+        "AbsenceReasonName": "hybrid_fixed_day_off",
+        "AbsenceReasonId": "028f838c-7dfe-ef11-bae4-0022483a86cf"
+      },
+      {
+        "AbsenceReasonName": "hybrid_fixed_day_off_non_respected",
+        "AbsenceReasonId": "048f838c-7dfe-ef11-bae4-0022483a86cf"
+      },
+      {
+        "AbsenceReasonName": "hybrid_random_day_off",
+        "AbsenceReasonId": "068f838c-7dfe-ef11-bae4-0022483a86cf"
+      },
+      {
+        "AbsenceReasonName": "Maladie334",
+        "AbsenceReasonId": "088f838c-7dfe-ef11-bae4-0022483a86cf"
+      },
+      {
+        "AbsenceReasonName": "out_of_contract_day",
+        "AbsenceReasonId": "0a8f838c-7dfe-ef11-bae4-0022483a86cf"
+      },
+      {
+        "AbsenceReasonName": "random_day_off",
+        "AbsenceReasonId": "0c8f838c-7dfe-ef11-bae4-0022483a86cf"
+      },
+      {
+        "AbsenceReasonName": "test dm",
+        "AbsenceReasonId": "0e8f838c-7dfe-ef11-bae4-0022483a86cf"
+      },
+      {
+        "AbsenceReasonName": "test dm2",
+        "AbsenceReasonId": "108f838c-7dfe-ef11-bae4-0022483a86cf"
+      },
+      {
+        "AbsenceReasonName": "Urgence familiale",
+        "AbsenceReasonId": "128f838c-7dfe-ef11-bae4-0022483a86cf"
+      },
+      {
+        "AbsenceReasonName": "worked_days_non_assigned",
+        "AbsenceReasonId": "148f838c-7dfe-ef11-bae4-0022483a86cf"
+      }
+    ],
+    "Workforces": [
+      {
+        "Id": "a1abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Adele CICCHELERO",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "3dacd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "045f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-0 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [
+          {
+            "Name": "closing_shop_day",
+            "Id": "a1abd795-83fe-ef11-bae3-6045bd1acfa6",
+            "Paid": false,
+            "Shared": false,
+            "StartDate": "2025-06-11",
+            "EndDate": "2025-06-12"
+          }
+        ],
+        "FixedDayOff": [
+          "Monday",
+          "Tuesday",
+          "Wednesday"
+        ],
+        "FavoriteDayOff": "Saturday"
+      },
+      {
+        "Id": "a3abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Ahmad KHALIL2",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Fonctions supports",
+        "IsKeyHolder": false,
+        "ManagerId": "2facd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "fc5e1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Accueil Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [
+          {
+            "Name": "closing_shop_day",
+            "Id": "a3abd795-83fe-ef11-bae3-6045bd1acfa6",
+            "Paid": false,
+            "Shared": true,
+            "StartDate": "2025-05-31",
+            "EndDate": "2025-06-29"
+          }
+        ],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "a5abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Aleksandra PASTERNIAK",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "49acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "005f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "HLINE Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          },
+          {
+            "Id": "045f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-0 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "a7abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Alexandra LEVY",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "3bacd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "005f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "HLINE Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          },
+          {
+            "Id": "065f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-1 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "a9abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Alexandra SITBON",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "3dacd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "005f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "HLINE Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          },
+          {
+            "Id": "045f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-0 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "ababd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Alexandre GUILBERT",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "b9abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "005f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "HLINE Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          },
+          {
+            "Id": "065f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-1 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "adabd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Alice SEBA",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "3bacd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "045f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-0 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "afabd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Alina SEMERNAIA",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "d1abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "045f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-0 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "b1abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Ambre EROUART",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "d1abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "005f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "HLINE Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          },
+          {
+            "Id": "045f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-0 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "b3abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Ambre LIU",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "d1abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "065f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-1 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "b5abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Anastassia ZHIGALOVA",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "3dacd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "045f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-0 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "b7abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Andrea GIOCONDI",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "b9abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "005f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "HLINE Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          },
+          {
+            "Id": "065f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-1 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "b9abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Angelique DIOT",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": true,
+        "StateCode": 0,
+        "RoleDescription": "Manager",
+        "IsKeyHolder": true,
+        "ManagerId": "45acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "025f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Managers Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "bbabd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Antoine Jean DEROUDILHE",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "37acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "045f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-0 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "bdabd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Ariane MAGROU",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Fonctions supports",
+        "IsKeyHolder": false,
+        "ManagerId": "2facd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "085f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Support commercial Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "bfabd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Augustin CANTENOT",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "3dacd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "065f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-1 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "c1abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Aurelie BIRGY",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Fonctions supports",
+        "IsKeyHolder": false,
+        "ManagerId": "2facd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "085f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Support commercial Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "c3abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Belal JAMMAL",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Fonctions supports",
+        "IsKeyHolder": false,
+        "ManagerId": "25acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "085f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Support commercial Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "c5abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Benjamin GIORGIS",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Fonctions supports",
+        "IsKeyHolder": false,
+        "ManagerId": "3facd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "045f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-0 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "c7abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Bruno PEGAZ TROJAN",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "b9abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "005f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "HLINE Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          },
+          {
+            "Id": "065f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-1 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "c9abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Bryan GUEDMI",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Fonctions supports",
+        "IsKeyHolder": false,
+        "ManagerId": "2facd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "fc5e1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Accueil Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "cbabd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Camélia TIOUCHICHINE",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "3dacd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "045f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-0 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "cdabd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Camille GUILLOT",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Fonctions supports",
+        "IsKeyHolder": false,
+        "ManagerId": "25acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "085f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Support commercial Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "cfabd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Castella REPAC",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "3bacd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "005f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "HLINE Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          },
+          {
+            "Id": "045f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-0 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "d1abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Cecile BELLETESTE",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": true,
+        "StateCode": 0,
+        "RoleDescription": "Manager",
+        "IsKeyHolder": true,
+        "ManagerId": "45acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "025f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Managers Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "d3abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Christophe DE ALMEIDA",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "49acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "005f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "HLINE Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          },
+          {
+            "Id": "065f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-1 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "d5abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Clara ROUX",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "49acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "045f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-0 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "d7abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Clothilde RAISON",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "49acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "065f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-1 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "d9abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Constantin CIORBA",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "d1abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "065f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-1 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "dbabd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Damien HOULES",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "d1abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "005f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "HLINE Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          },
+          {
+            "Id": "065f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-1 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "ddabd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Danielle VIX",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "3dacd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "005f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "HLINE Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          },
+          {
+            "Id": "045f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-0 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "dfabd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Delphine BRAUNINGER",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Fonctions supports",
+        "IsKeyHolder": false,
+        "ManagerId": "2facd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "fc5e1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Accueil Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "e1abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "EDMOND JUST",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "3bacd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "065f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-1 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "e3abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Elena BORGARELLI",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Fonctions supports",
+        "IsKeyHolder": false,
+        "ManagerId": "2facd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "085f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Support commercial Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "e5abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Elodie MARTIN",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Fonctions supports",
+        "IsKeyHolder": false,
+        "ManagerId": "2facd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "fc5e1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Accueil Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "e7abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Florian DESPLANCHES",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "d1abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "005f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "HLINE Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          },
+          {
+            "Id": "065f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-1 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "e9abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Guillaume LUCAS",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "b9abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "045f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-0 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "ebabd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "HANAA NYAMI-MORABIT",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "3dacd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "005f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "HLINE Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          },
+          {
+            "Id": "045f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-0 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "edabd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Jean Michel LABRIDY",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Fonctions supports",
+        "IsKeyHolder": false,
+        "ManagerId": "3facd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "045f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-0 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "efabd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Jean Paul CHAOUI BOUDRANE",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "3dacd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "005f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "HLINE Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          },
+          {
+            "Id": "045f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-0 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "f1abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Jeffrey VANNUCCI",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "49acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "005f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "HLINE Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          },
+          {
+            "Id": "065f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-1 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "f3abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Jérémy MOLES",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "3bacd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "005f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "HLINE Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          },
+          {
+            "Id": "045f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-0 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "f5abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Jia FAISY",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "3dacd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "005f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "HLINE Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          },
+          {
+            "Id": "045f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-0 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "f7abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Johanna MATEUS",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "37acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "045f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-0 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "f9abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Kim HALOUZE",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Fonctions supports",
+        "IsKeyHolder": false,
+        "ManagerId": "25acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "085f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Support commercial Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "fbabd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Kumiko YOSHIDA",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "49acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "005f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "HLINE Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          },
+          {
+            "Id": "065f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-1 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "fdabd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "LEA AMAZOUZ",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "49acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "065f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-1 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "ffabd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Linda DALIL",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "b9abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "005f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "HLINE Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          },
+          {
+            "Id": "065f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-1 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "01acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Ludmila LECOINTRE",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "d1abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "005f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "HLINE Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          },
+          {
+            "Id": "065f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-1 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "03acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Maria MATIAS",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Fonctions supports",
+        "IsKeyHolder": false,
+        "ManagerId": "25acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "085f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Support commercial Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "05acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Marie Céline GLEMET",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "2facd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "085f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Support commercial Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "07acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Marie Hélène RAMOS",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "3bacd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "045f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-0 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "09acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "MARIE MATH",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "49acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "065f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-1 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "0bacd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Marie-Christelle MOINE",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "3dacd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "045f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-0 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "0dacd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Marion BRUNET",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "37acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "045f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-0 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "0facd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Marion LEDUCQ",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Fonctions supports",
+        "IsKeyHolder": false,
+        "ManagerId": "2facd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "085f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Support commercial Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "11acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Mariya KELEDJIAN",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "3dacd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "005f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "HLINE Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          },
+          {
+            "Id": "045f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-0 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "13acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Marlene GALLIEN",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Fonctions supports",
+        "IsKeyHolder": false,
+        "ManagerId": "3facd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "045f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-0 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "15acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "MATHILDE JAPY 2",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "49acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "065f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-1 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "17acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Meng GRANDREMY",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "3bacd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "005f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "HLINE Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          },
+          {
+            "Id": "065f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-1 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "19acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Meng SUN",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "49acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "005f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "HLINE Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          },
+          {
+            "Id": "065f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-1 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "1bacd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Morgane TOUDIC",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "b9abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "005f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "HLINE Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          },
+          {
+            "Id": "045f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-0 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "1dacd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Nadia HAMMOU",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "3bacd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "045f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-0 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "1facd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Nathalie BOCCARA",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Fonctions supports",
+        "IsKeyHolder": false,
+        "ManagerId": "2facd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "065f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-1 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "21acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Nicolas HROMIN",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "b9abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "fc5e1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Accueil Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "23acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Nicole SPEVILLE",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": true,
+        "StateCode": 0,
+        "RoleDescription": "Manager",
+        "IsKeyHolder": true,
+        "ManagerId": "2facd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "005f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "HLINE Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          },
+          {
+            "Id": "045f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-0 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "25acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Niravanh LAO",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": true,
+        "StateCode": 0,
+        "RoleDescription": "Manager",
+        "IsKeyHolder": true,
+        "ManagerId": "2facd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "085f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Support commercial Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "27acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Nobella BARTHELEMY",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "3bacd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "085f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Support commercial Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "29acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Noella ALLEGRE",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Fonctions supports",
+        "IsKeyHolder": false,
+        "ManagerId": "25acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "065f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-1 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "2bacd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Noemie SAUBOUA",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "3dacd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "085f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Support commercial Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "2dacd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Noemie ZAKHAROVA",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": true,
+        "StateCode": 0,
+        "RoleDescription": "Manager",
+        "IsKeyHolder": true,
+        "ManagerId": "45acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "045f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-0 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "2facd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Ophelie VARLOUD",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": true,
+        "StateCode": 0,
+        "RoleDescription": "Manager",
+        "IsKeyHolder": true,
+        "ManagerId": "3bacd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "025f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Managers Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "31acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Prescience ASSOH",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Fonctions supports",
+        "IsKeyHolder": false,
+        "ManagerId": "25acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "005f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "HLINE Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          },
+          {
+            "Id": "045f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-0 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "33acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Priscilla HUL",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "3bacd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "085f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Support commercial Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "35acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Quentin DISSARD",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": true,
+        "StateCode": 0,
+        "RoleDescription": "Manager",
+        "IsKeyHolder": true,
+        "ManagerId": "45acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "005f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "HLINE Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          },
+          {
+            "Id": "045f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-0 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "37acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "R - Baptiste DEMAY",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": true,
+        "StateCode": 0,
+        "RoleDescription": "Manager",
+        "IsKeyHolder": true,
+        "ManagerId": "45acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "025f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Managers Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "39acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "R - Isabelle PELLAS",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": true,
+        "StateCode": 0,
+        "RoleDescription": "Manager",
+        "IsKeyHolder": true,
+        "ManagerId": "45acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "025f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Managers Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "3bacd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "R - Mehdi AKLOUCHE",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": true,
+        "StateCode": 0,
+        "RoleDescription": "Manager",
+        "IsKeyHolder": true,
+        "ManagerId": "45acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "025f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Managers Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "3dacd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "R - Mohamed Omar MANDOUR",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": true,
+        "StateCode": 0,
+        "RoleDescription": "Manager",
+        "IsKeyHolder": true,
+        "ManagerId": "49acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "025f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Managers Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "3facd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "R - Selim BARONE LUMAGA",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": true,
+        "StateCode": 0,
+        "RoleDescription": "Manager",
+        "IsKeyHolder": true,
+        "ManagerId": "d1abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "025f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Managers Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "41acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Redouane ZAOUI",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "d1abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "065f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-1 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "43acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Remy ETCHARREN",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": true,
+        "StateCode": 0,
+        "RoleDescription": "Manager",
+        "IsKeyHolder": true,
+        "ManagerId": "45acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "045f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-0 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "45acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Romain POYLO",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": true,
+        "StateCode": 0,
+        "RoleDescription": "Manager",
+        "IsKeyHolder": true,
+        "ManagerId": "d1abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "025f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Managers Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "47acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Samira BENALI",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": true,
+        "StateCode": 0,
+        "RoleDescription": "Manager",
+        "IsKeyHolder": true,
+        "ManagerId": "45acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "005f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "HLINE Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          },
+          {
+            "Id": "065f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-1 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "49acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Sandrine HUSGEN",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": true,
+        "StateCode": 0,
+        "RoleDescription": "Manager",
+        "IsKeyHolder": true,
+        "ManagerId": "45acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "025f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Managers Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "4bacd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Severine KIM",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "3bacd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "005f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "HLINE Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          },
+          {
+            "Id": "065f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-1 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "4dacd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Simone ATHUIL",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "3dacd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "045f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-0 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "4facd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Stéphanie DA SILVA",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "d1abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "045f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-0 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "51acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Takashi ISHII",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": true,
+        "StateCode": 0,
+        "RoleDescription": "Manager",
+        "IsKeyHolder": true,
+        "ManagerId": "45acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "005f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "HLINE Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          },
+          {
+            "Id": "065f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-1 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "53acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Valérie MCNAMARA",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "3dacd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "025f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Managers Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "55acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "VICTOIRE BAUDOUIN",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "3bacd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "045f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-0 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "57acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Wei SONG",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "b9abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "005f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "HLINE Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          },
+          {
+            "Id": "065f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-1 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "59acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Wenxuan ZHANG",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "b9abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "005f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "HLINE Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          },
+          {
+            "Id": "065f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-1 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "5bacd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Wilson ARBEX NETO",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Fonctions supports",
+        "IsKeyHolder": false,
+        "ManagerId": "25acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "005f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "HLINE Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          },
+          {
+            "Id": "065f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-1 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "5dacd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Yael HAMMER",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "37acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "085f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Support commercial Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "5facd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Yang HE",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Fonctions supports",
+        "IsKeyHolder": false,
+        "ManagerId": "25acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "045f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Plateau H-0 Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "61acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Yuhan GABON",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Fonctions supports",
+        "IsKeyHolder": false,
+        "ManagerId": "2facd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "085f1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Support commercial Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      },
+      {
+        "Id": "63acd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Name": "Zoe LAMAR",
+        "IsInternalProfile": true,
+        "ContractEndDateCode": "",
+        "ContractStartDate": "",
+        "IsManager": false,
+        "StateCode": 0,
+        "RoleDescription": "Conseiller de vente",
+        "IsKeyHolder": false,
+        "ManagerId": "b9abd795-83fe-ef11-bae3-6045bd1acfa6",
+        "Departments": [
+          {
+            "Id": "fc5e1613-80fe-ef11-bae3-6045bd194eeb",
+            "LogicalName": "ava_departement",
+            "Name": "Accueil Sevre",
+            "KeyAttributes": [],
+            "RowVersion": null,
+            "ExtensionData": {}
+          }
+        ],
+        "Absences": [],
+        "FixedDayOff": [],
+        "FavoriteDayOff": null
+      }
+    ]
+  }

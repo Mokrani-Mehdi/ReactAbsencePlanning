@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState,useEffect,useRef,useMemo } from "react";
 import Header from "./Header";
 import PlanningGrid from "./PlanningGrid";
 import SubHeader from "./SubHeader";
@@ -8,8 +8,27 @@ import "../Css/planning.css";
 
 const Planning: React.FC<Payload> = ({ Data,containerWidth,  AvailabilityPayload,
 }) => {
-  const [isSelectMode, setIsSelectMode] = useState<boolean>(true);
-  const [selectedAbsences, setSelectedAbsences] = useState<Set<number>>(
+
+  const [localData, setLocalData] = useState(Data);
+  const [FirstData, setFirstLocalData] = useState(Data);
+  const [workforceData, setWorkforceData] = useState(
+    Data?.Workforces?.sort((a, b) => {
+      const aIsR = a.Name.startsWith("R - ");
+      const bIsR = b.Name.startsWith("R - ");
+
+      if (aIsR !== bIsR) {
+        return aIsR ? 1 : -1; // R names come last
+      }
+
+      if (a.IsManager !== b.IsManager) {
+        return a.IsManager ? -1 : 1;
+      }
+
+      return a.Name.localeCompare(b.Name);
+    })
+  );
+  const [isSelectMode, setIsSelectMode] = useState<boolean>(false);
+  const [selectedAbsences, setSelectedAbsences] = useState<Set<string>>(
     new Set()
   );
   const [roleData, setRoleData] = useState([
@@ -28,15 +47,66 @@ const Planning: React.FC<Payload> = ({ Data,containerWidth,  AvailabilityPayload
     Data?.DepartmentSkillsLists
   );
   const [selectedDepartments, setSelectedDepartments] = useState<string[]>([]);
-  const [selectedWorkforces, setSelectedWorkforces] = useState<number[]>([]);
+  const [selectedWorkforces, setSelectedWorkforces] = useState<string[]>([]);
   const [selectedManagers, setSelectedManagers] = useState<string[]>([]);
   const [selectedRoles, setSelectedRoles] = useState<string[]>([]);
   const [cellWidth, setCellWidth] = useState(35);
   const [cellHeight, setcellHeight] = useState(35);
+  const isPayloadChange = useRef(false);
+
+  const isValidData = React.useMemo(() => {
+    return (
+      localData?.Workforces?.length > 0 &&
+      localData?.DepartmentSkillsLists?.length > 0
+    );
+  }, [localData]);
   const datesInRange = getDatesInRange("2025-05-26", "2025-07-06");
   const handleOnGetAvailability = () => {
     //onSave?.("GetAvailability");
   };
+
+  const filteredWorkforces = useMemo(() => {
+    if (!workforceData) return null;
+    if (!isValidData) return null;
+
+    return workforceData.filter((workforce) => {
+      // const nameMatches = workforce.Name.toLowerCase().includes(
+      //   searchQuery.toLowerCase()
+      // );
+
+      const departmentMatches =
+        selectedDepartments.length === 0 ||
+        (
+          workforce.Departments?.some((dept) =>
+            selectedDepartments.includes(dept.Id) ?? false
+          ));
+
+      const workforceMatch = selectedWorkforces.length === 0 || selectedWorkforces.includes(workforce.Id);
+
+      const ManagerMatches =
+        selectedManagers.length === 0 ||
+        (workforce.ManagerId != null &&
+          selectedManagers.includes(workforce.ManagerId)) ||
+        selectedManagers.includes(workforce.Id);
+
+      const roleMatches =
+        selectedRoles.length === 0 ||
+        (workforce.RoleDescription != null &&
+          selectedRoles.includes(workforce.RoleDescription));
+
+      return (
+        workforceMatch && departmentMatches && ManagerMatches && roleMatches
+      );
+    });
+  }, [
+    workforceData,
+    localData,
+    isValidData,
+    selectedDepartments,
+    selectedWorkforces,
+    selectedManagers,
+    selectedRoles,
+  ]);
   useEffect(() => {
     const calculateCellWidth = () => {
       const screenWidth = containerWidth;
@@ -88,7 +158,7 @@ const Planning: React.FC<Payload> = ({ Data,containerWidth,  AvailabilityPayload
     }
   };
 
-  const toggleAbsenceSelection = (absenceId: number) => {
+  const toggleAbsenceSelection = (absenceId: string) => {
     const newSelectedAbsences = new Set(selectedAbsences);
 
     if (newSelectedAbsences.has(absenceId)) {
@@ -118,7 +188,7 @@ const Planning: React.FC<Payload> = ({ Data,containerWidth,  AvailabilityPayload
   };
 
   const selectAllAbsences = (selected: boolean) => {
-    const newSelectedAbsences = new Set<number>();
+    const newSelectedAbsences = new Set<string>();
 
     if (selected) {
       Data.Workforces.forEach((workforce) => {
@@ -132,7 +202,7 @@ const Planning: React.FC<Payload> = ({ Data,containerWidth,  AvailabilityPayload
   };
 
   return (
-    <div className="planning" style={{ backgroundColor: "#F5F5F5" }}>
+    <div className="planning" >
       <Header
         workforces={Data.Workforces}
         selectedWorkforces={selectedWorkforces}
@@ -158,7 +228,7 @@ const Planning: React.FC<Payload> = ({ Data,containerWidth,  AvailabilityPayload
         />
 
         <PlanningGrid
-          workforces={Data.Workforces}
+          workforces={filteredWorkforces ?? []}
           datesInRange={datesInRange}
           cellWidth={cellWidth}
           isSelectMode={isSelectMode}

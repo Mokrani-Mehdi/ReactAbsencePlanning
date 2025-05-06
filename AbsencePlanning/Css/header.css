@@ -121,4 +121,21 @@
     padding: 2px 8px;
     font-size: 14px;
     cursor: default;
+    max-width: 150px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
+  .selected-label {
+    border-radius: 16px;
+    font-size: 14px;
+    cursor: default;
+    max-width: 130px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    background: rgb(224, 224, 224);
+    border-radius: 10px;
+    padding: 2px 8px;
+  }
+

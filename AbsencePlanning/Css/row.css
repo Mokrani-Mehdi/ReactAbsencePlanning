@@ -99,3 +99,9 @@ input{
   .adaptive-tooltip:hover {
     z-index: 1001;
   }
+
+  .absence-detail {
+    background-color: #e2f7e3;
+    height: 37px;
+    /* color: white; */
+}

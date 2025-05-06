@@ -6,8 +6,8 @@ import { Workforce } from '../Models/Model';
 /* eslint-disable */
 interface HeaderProps {
   workforces : Workforce[];
-  selectedWorkforces: number[];
-  setSelectedWorkforces: (query: number[]) => void;
+  selectedWorkforces: string[];
+  setSelectedWorkforces: (query: string[]) => void;
   managerData: any[];
   departmentData: any[];
   roleData: any[]
@@ -41,14 +41,40 @@ const Header: React.FC<HeaderProps> = ({
     if (index === 0) {
       const selectedCount = selectProps.value.length;
       const firstLabel = selectProps.value[0].label;
-      const allLabels = selectProps.value.map((val: { label: any; }) => val.label).join(', ');
       
       return (
-        <div className="custom-tooltip-container">
-          <div className="selected-count-chip">
-            {firstLabel} {selectedCount > 1 ? `+${selectedCount - 1}` : ''}
+        <div className="custom-tooltip-container" style={{ display: 'flex', alignItems: 'center' }}>
+          <div className="selected-label" style={{
+            fontSize: '12px',
+            maxWidth: '120px',
+            whiteSpace: 'nowrap',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+            marginRight: '4px'
+          }}>
+            {firstLabel}
           </div>
-          {selectedCount > 1 && <div className="tooltip-text">{allLabels}</div>}
+          {selectedCount > 1 && (
+            <>
+              <div className="selected-count" style={{
+                fontSize: '12px',
+                background: '#e0e0e0',
+                borderRadius: '10px',
+                padding: '2px 6px',
+                minWidth: '20px',
+                textAlign: 'center'
+              }}>
+                +{selectedCount - 1}
+              </div>
+              <div className="tooltip-text" style={{
+                fontSize: '12px',
+                maxWidth: '200px',
+                wordWrap: 'break-word'
+              }}>
+                {selectProps.value.map((val: { label: any; }) => val.label).join(', ')}
+              </div>
+            </>
+          )}
         </div>
       );
     }

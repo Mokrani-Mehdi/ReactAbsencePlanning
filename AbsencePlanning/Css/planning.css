@@ -3,6 +3,7 @@
     flex-direction: column;
     flex-wrap: nowrap;
     gap: 10px;
+    background-color: white;
 }
 
 .control-container{
@@ -10,6 +11,5 @@
 }
 
 .PlanningGridcontainer{
-    background-color: white;
-    margin: 0 20px 20px 20px;
+    padding: 0px 20px 0 20px;
 }

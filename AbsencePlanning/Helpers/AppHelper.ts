@@ -1,4 +1,4 @@
-import { Workforce } from "../Models/Model";
+import { AbsenceCategory, Absences, Workforce } from "../Models/Model";
 /* eslint-disable */
 
 
@@ -17,30 +17,33 @@ export const getDatesInRange = (startDate: string, endDate: string): Date[] => {
   };
   
   
-  export const calculateAbsenceCounts = (personList: Workforce[] | null, absenceReason: string, datesInRange : Date[]) => {
+  export const calculateAbsenceCounts = (
+    persons: Workforce[],
+    category: AbsenceCategory,
+    datesInRange: Date[]
+): number[] => {
     const counts = new Array(datesInRange.length).fill(0);
-    if (!personList) return counts;
-  
-    datesInRange.forEach((date, index) => {
-      const dateString = date;
-      
-      personList.forEach(person => {
-        const absenceOnDate = person.Absences?.find(
-          s => 
-            new Date(s.StartDate || "") >= date && new Date(s.EndDate || "") <= date &&
-            s.Name === absenceReason
-        );
-        
-        if (absenceOnDate) {
-          counts[index] += 1;
-        }
-      });
-    });
-  
-    return counts;
-  };
 
-  export const getWorkForceName = (id: number | null | undefined, workforceData : Workforce[]) => {
+    datesInRange.forEach((date, index) => {
+        persons.forEach((person) => {
+            person.Absences?.forEach((absence) => {
+                if (
+                    absence.StartDate &&
+                    absence.EndDate &&
+                    new Date(absence.StartDate) <= date &&
+                    new Date(absence.EndDate) >= date &&
+                    getAbsenceCategory(absence) === category
+                ) {
+                    counts[index]++;
+                }
+            });
+        });
+    });
+
+    return counts;
+};
+
+  export const getWorkForceName = (id: string | null | undefined, workforceData : Workforce[]) => {
     if (!id || !workforceData) return "";
     const workforce = workforceData.filter((e) => e.Id === id)[0];
     return workforce?.Name || "";
@@ -51,3 +54,42 @@ export const getDatesInRange = (startDate: string, endDate: string): Date[] => {
     const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     return days[date.getDay()];
   };
+  
+export const getAbsenceCategory = (absence: Absences): AbsenceCategory => {
+  if (absence.Shared && !absence.Paid) return AbsenceCategory.UNPAID_SHARED;
+  if (absence.Shared && absence.Paid) return AbsenceCategory.PAID_SHARED;
+  if (!absence.Shared && !absence.Paid) return AbsenceCategory.UNPAID_UNSHARED;
+  return AbsenceCategory.PAID_UNSHARED;
+};
+export const groupWorkforcesByAbsenceCategory = (
+  workforces: Workforce[]
+): Record<AbsenceCategory, Workforce[]> => {
+  const groups: Record<AbsenceCategory, Workforce[]> = {
+      [AbsenceCategory.UNPAID_SHARED]: [],
+      [AbsenceCategory.PAID_SHARED]: [],
+      [AbsenceCategory.UNPAID_UNSHARED]: [],
+      [AbsenceCategory.PAID_UNSHARED]: []
+  };
+
+  // First, identify all workers with absences by category
+  workforces.forEach(person => {
+      if (!person.Absences || person.Absences.length === 0) return;
+
+      // Group by absence categories
+      const categoriesForPerson = new Set<AbsenceCategory>();
+      
+      person.Absences.forEach(absence => {
+          const category = getAbsenceCategory(absence);
+          categoriesForPerson.add(category);
+      });
+
+      // Add person to each category they have absences in
+      categoriesForPerson.forEach(category => {
+          if (!groups[category].some(p => p.Id === person.Id)) {
+              groups[category].push(person);
+          }
+      });
+  });
+
+  return groups;
+};

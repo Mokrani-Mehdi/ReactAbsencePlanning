@@ -2,7 +2,8 @@ import React from "react";
 import "../Css/cell.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWarning } from "@fortawesome/free-solid-svg-icons";
-import { Absences } from "../Models/Model";
+import { Absences, AbsenceCategory, ABSENCE_CATEGORY_COLORS } from "../Models/Model";
+import { getAbsenceCategory } from "../Helpers/AppHelper";
 
 interface CellProps {
   workforceName: string;
@@ -40,11 +41,30 @@ const Cell: React.FC<CellProps> = ({
     }
   };
 
+  // Get category display name
+  const getCategoryDisplayName = (category: AbsenceCategory): string => {
+    switch (category) {
+      case AbsenceCategory.UNPAID_SHARED:
+        return "Unpaid Shared";
+      case AbsenceCategory.PAID_SHARED:
+        return "Paid Shared";
+      case AbsenceCategory.UNPAID_UNSHARED:
+        return "Unpaid Unshared";
+      case AbsenceCategory.PAID_UNSHARED:
+        return "Paid Unshared";
+    }
+  };
+
+  // Get color for absence based on category
+  const getAbsenceColorStyle = (absence: Absences) => {
+    const category = getAbsenceCategory(absence);
+    return { backgroundColor: isSelected ? "#3498db" : ABSENCE_CATEGORY_COLORS[category] };
+  };
+
   const getCellContent = () => {
- 
     let buttonStyle = {};
     const buttonClass = `shift-button ${isSelected ? "selected-shift" : ""}`;
-    
+
     if (isHoliday) {
       buttonStyle = { backgroundColor: isSelected ? "#3498db" : "#FF9999" };
     } else if (isStoreClosingDay) {
@@ -52,7 +72,10 @@ const Cell: React.FC<CellProps> = ({
     } else if (!isWithinContractPeriod) {
       buttonStyle = { backgroundColor: isSelected ? "#3498db" : "#E0E0E0" };
     } else if (absences && absences.length > 0) {
-      buttonStyle = { backgroundColor: isSelected ? "#3498db" : "#696969" };
+     
+      buttonStyle = getAbsenceColorStyle(absences[0]);
+    } else if (absence) {
+      buttonStyle = getAbsenceColorStyle(absence);
     } else if (isFixedDayOff) {
       buttonStyle = { backgroundColor: isSelected ? "#3498db" : "#A9A9A9" };
     } else if (isFavoriteDayOff) {
@@ -70,22 +93,33 @@ const Cell: React.FC<CellProps> = ({
     return (
       <div className="tooltip shift-container">
         <button className={buttonClass} style={buttonStyle}></button>
-        <span className="tooltiptext" style={{ width: "200px", whiteSpace: "normal" }}>
+        <span
+          className="tooltiptext"
+          style={{ width: "200px", whiteSpace: "normal" }}
+        >
           {!isWithinContractPeriod && <div>Out of Contract Period</div>}
           {isHoliday && <div>Holiday</div>}
           {isStoreClosingDay && <div>Store Closed</div>}
-          
+
           {absences && absences.length > 0 && (
             <>
-              {absences.map((abs, index) => (
-                <div key={abs.Id}>
-                  {abs.Name}
-                </div>
-              ))}
+              {absences.map((abs, index) => {
+                const category = getAbsenceCategory(abs);
+                return (
+                  <div key={abs.Id}>
+                    {abs.Name} - {getCategoryDisplayName(category)}
+                  </div>
+                );
+              })}
             </>
           )}
+
+          {absence && !absences && (
+            <div>
+              {absence.Name} - {getCategoryDisplayName(getAbsenceCategory(absence))}
+            </div>
+          )}
           
-          {absence && !absences  && <div>{absence.Name}</div>}
           {isFixedDayOff && <div>Fixed Day Off</div>}
           {isFavoriteDayOff && <div>Preferred Day Off</div>}
         </span>

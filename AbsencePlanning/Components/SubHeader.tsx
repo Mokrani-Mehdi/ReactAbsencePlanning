@@ -10,7 +10,7 @@ import {
 interface SubHeaderPops {
   toggleMode: () => void;
   isSelectMode: boolean;
-  selectedAbsences: Set<number>;
+  selectedAbsences: Set<string>;
 
   Workforces: Workforce[];
 }
@@ -57,7 +57,7 @@ const SubHeader: React.FC<SubHeaderPops> = ({
           onClick={toggleMode}
           className="select-button"
         >
-          {isSelectMode ? "Switch to View Mode" : "Switch to Select Mode"}
+          {!isSelectMode ? "Select" : "Cancel"}
         </button>
      
     </div>

@@ -1,4 +1,4 @@
-import React , {useState,useMemo,useEffect} from "react";
+import React , {useState, useMemo} from "react";
 import '../Css/planningGrid.css';
 import WorkForceRow from "./Rows/WorkForceRow";
 import { Absences, AvailabilityItem, StoreInfo, Workforce } from '../Models/Model';
@@ -7,21 +7,21 @@ import { getWorkForceName } from "../Helpers/AppHelper";
 import AbsenceRow from "./Rows/AbsenceRow";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRotateRight } from "@fortawesome/free-solid-svg-icons";
+import DepartmentRow from "./Rows/DepartmentRow";
 
 interface PlanningGridProps {
   workforces: Workforce[];
   datesInRange: Date[];
   cellWidth: number;
   isSelectMode: boolean;
-  selectedAbsences: Set<number>;
+  selectedAbsences: Set<string>;
   AvailabitlityPayload : AvailabilityItem[];
   storeInfo : StoreInfo
   onCellClick: (absence: Absences | undefined, date: Date, workforce: Workforce) => void;
-  onAbsenceSelect: (absenceId: number) => void;
+  onAbsenceSelect: (absenceId: string) => void;
   onWorkforceSelect: (workforce: Workforce, selected: boolean) => void;
   selectAllAbsences : (selected: boolean)=> void;
   onGetavailabilityCall? :() => void;
-
 }
 /* eslint-disable */
 
@@ -38,7 +38,6 @@ const PlanningGrid: React.FC<PlanningGridProps> = ({
   onWorkforceSelect,
   selectAllAbsences,
   onGetavailabilityCall,
-
 }) => {
   const gridTemplateColumns = `350px repeat(${datesInRange.length}, ${cellWidth}px)`;
 
@@ -61,11 +60,10 @@ const PlanningGrid: React.FC<PlanningGridProps> = ({
     const counts = new Array(datesInRange.length).fill(0);
     personList.forEach((person) => {
       datesInRange.forEach((date, index) => {
-        const shiftDate = date.toISOString().split('T')[0];
-        const shift = person.Absences?.find(s => 
-          new Date(s.StartDate || "") >= date && new Date(s.EndDate || "") <= date 
+        const hasAbsence = person.Absences?.some(absence => 
+          new Date(absence.StartDate || "") <= date && new Date(absence.EndDate || "") >= date 
         );
-        if (shift?.Name) counts[index]++;
+        if (hasAbsence) counts[index]++;
       });
     });
     return counts;
@@ -96,6 +94,7 @@ const PlanningGrid: React.FC<PlanningGridProps> = ({
 
     return groups;
   }, [workforces]);
+
   const managerGroups = useMemo(() => {
     if (!workforces) return {};
     
@@ -123,11 +122,24 @@ const PlanningGrid: React.FC<PlanningGridProps> = ({
     });
 
     return groups;
-  }, [workforces, workforces]);
+  }, [workforces]);
+  
   const totalAssignedCounts = useMemo(() => 
     calculateAssignedCounts(workforces), 
     [workforces, datesInRange]
   );
+
+  const departmentGroups = useMemo(() => {
+    const groups: Record<string, Workforce[]> = {};
+    workforces.forEach(person => {
+      const department = person.Departments?.[0]?.Name || "Unassigned";
+      if (!groups[department]) groups[department] = [];
+      groups[department].push(person);
+    });
+    return groups;
+  }, [workforces]);
+
+
 
   const calculateTotalAvailability = useMemo(() => {
     const counts = new Array(datesInRange.length).fill(0);
@@ -135,12 +147,16 @@ const PlanningGrid: React.FC<PlanningGridProps> = ({
     
     datesInRange.forEach((date, index) => {
       const shiftDate = date.toISOString().split('T')[0];
-      const availItem = AvailabitlityPayload.find(item => item.date.toString() === shiftDate);
+      const availItem = AvailabitlityPayload.find(item => {
+       
+        return item.date.toISOString().split('T')[0] === shiftDate;
+      });
       if (availItem) counts[index] = availItem.count;
     });
     
     return counts;
   }, [AvailabitlityPayload, datesInRange]);
+  
   const AvailabilityRow = () => (
     <div className="gridRow AssignedRow" style={{ backgroundColor: "#FF9C55" }}>
       <div 
@@ -165,6 +181,7 @@ const PlanningGrid: React.FC<PlanningGridProps> = ({
       ))}
     </div>
   );
+  
   return (
     <div className="planningGrid" style={{ gridTemplateColumns }}>
       <div className="headerInfo">
@@ -173,17 +190,12 @@ const PlanningGrid: React.FC<PlanningGridProps> = ({
             <input 
             type="checkbox" 
             className="checkboxAbsence"
-            checked={workforces.flatMap(w => w.Absences || []).every(a => selectedAbsences.has(a.Id))}
+            checked={ workforces.flatMap(w => w.Absences || []).every(a => selectedAbsences.has(a.Id)) && selectedAbsences.size > 0}
             onChange={(e) => selectAllAbsences(e.target.checked)}
           />
           )}
           <span>Info</span>
         </div>
-
-
-        
-
-
 
         {datesInRange.map((date, index) => (
           <div key={index} className="headerCell">
@@ -197,7 +209,7 @@ const PlanningGrid: React.FC<PlanningGridProps> = ({
         ))}
       </div>
 
-<AvailabilityRow/>
+      <AvailabilityRow/>
 
       <ManagerRow 
         expandedSections={expandedSections}
@@ -205,16 +217,25 @@ const PlanningGrid: React.FC<PlanningGridProps> = ({
         managerGroups={managerGroups}
         datesInRange={datesInRange}
         cellWidth={cellWidth}
-        totalAssignedCounts={totalAssignedCounts}/>
+        totalAssignedCounts={totalAssignedCounts}
+      />
 
       <AbsenceRow 
-          expandedSections={expandedSections}
-          toggleSection={toggleSection}
-          AbsenceGroup={absenceGroups}
-          datesInRange={datesInRange}
-          cellWidth={cellWidth}
-          
-        />
+        expandedSections={expandedSections}
+        toggleSection={toggleSection}
+        AbsenceGroup={absenceGroups}
+        datesInRange={datesInRange}
+        cellWidth={cellWidth}
+        workforces={workforces}
+      />
+<DepartmentRow
+        expandedSections={expandedSections}
+        toggleSection={toggleSection}
+        departmentGroups={departmentGroups}
+        datesInRange={datesInRange}
+        cellWidth={cellWidth}
+        totalAssignedCounts={totalAssignedCounts}
+      />
       {workforces?.map((workforce) => (
         <WorkForceRow 
           key={workforce.Id} 

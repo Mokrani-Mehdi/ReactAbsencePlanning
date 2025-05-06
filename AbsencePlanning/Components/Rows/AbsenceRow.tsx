@@ -1,25 +1,37 @@
 import React, { useState, useRef, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import { calculateAbsenceCounts } from "../../Helpers/AppHelper";
-import '../../Css/row.css'
-import { Workforce } from "../../Models/Model";
+import { calculateAbsenceCounts, groupWorkforcesByAbsenceCategory,getAbsenceCategory } from "../../Helpers/AppHelper";
+import '../../Css/row.css';
+import { 
+  Workforce, 
+  //AbsenceCategory, 
+  ABSENCE_CATEGORY_COLORS
+  
+} from "../../Models/Model";
 /* eslint-disable */
-
+export enum AbsenceCategory {
+  UNPAID_SHARED = "UNPAID_SHARED",
+  PAID_SHARED = "PAID_SHARED",
+  UNPAID_UNSHARED = "UNPAID_UNSHARED",
+  PAID_UNSHARED = "PAID_UNSHARED"
+}
 interface AbsenceRowProps {
   expandedSections: any;
   toggleSection: (section: "absence") => void;
   AbsenceGroup: Record<string, Workforce[]>;
   datesInRange: Date[];
   cellWidth: number;
+  workforces: Workforce[];
 }
 
 // Define interface for the AdaptiveTooltip component props
 interface AdaptiveTooltipProps {
   count: number;
   date: Date;
-  reason?: string | null;
+  category?: AbsenceCategory | null;
   className?: string;
+  backgroundColor?: string;
 }
 
 const AbsenceRow: React.FC<AbsenceRowProps> = ({
@@ -27,21 +39,28 @@ const AbsenceRow: React.FC<AbsenceRowProps> = ({
   toggleSection,
   AbsenceGroup,
   datesInRange,
-  cellWidth
-  
+  cellWidth,
+  workforces
 }) => {
-  // Function to get all staff with absences on a specific date and reason
-  const getStaffWithAbsences = (date: Date, reason?: string | null): string[] => {
+  // Group workforces by absence category for the view
+  const absenceCategoryGroups = React.useMemo(() => 
+    groupWorkforcesByAbsenceCategory(workforces),
+    [workforces]
+  );
+
+  // Function to get all staff with absences on a specific date and category
+  const getStaffWithAbsences = (date: Date, category?: AbsenceCategory | null): string[] => {
     let staffList: string[] = [];
     
-    if (reason) {
-      // For a specific absence reason
-      const personList = AbsenceGroup[reason];
+    if (category) {
+      // For a specific absence category
+      const personList = absenceCategoryGroups[category];
       personList.forEach(person => {
         const hasAbsenceOnDate = person.Absences?.some(
           s => 
-            new Date(s.StartDate || "") >= date && new Date(s.EndDate || "") <= date  &&
-            s.Name === reason
+            new Date(s.StartDate || "") <= date && 
+            new Date(s.EndDate || "") >= date &&
+            getAbsenceCategory(s) === category
         );
 
         if (hasAbsenceOnDate) {
@@ -49,34 +68,48 @@ const AbsenceRow: React.FC<AbsenceRowProps> = ({
         }
       });
     } else {
-      // For total absences (all reasons)
-      Object.keys(AbsenceGroup).forEach(reason => {
-        if (reason !== "No Absence") {
-          const personList = AbsenceGroup[reason];
-          personList.forEach(person => {
-            const hasAbsenceOnDate = person.Absences?.some(
-              s => 
-                new Date(s.StartDate || "") >= date && new Date(s.EndDate || "") <= date  &&
-                s.Name === reason
-            );
+      // For total absences (all categories)
+      Object.values(AbsenceCategory).forEach(category => {
+        const personList = absenceCategoryGroups[category];
+        personList.forEach(person => {
+          const hasAbsenceOnDate = person.Absences?.some(
+            s => 
+              new Date(s.StartDate || "") <= date && 
+              new Date(s.EndDate || "") >= date &&
+              getAbsenceCategory(s) === category
+          );
 
-            if (hasAbsenceOnDate && !staffList.includes(person.Name)) {
-              staffList.push(`${person.Name}`);
-            }
-          });
-        }
+          if (hasAbsenceOnDate && !staffList.includes(person.Name)) {
+            staffList.push(`${person.Name} (${getCategoryDisplayName(category)})`);
+          }
+        });
       });
     }
     
     return staffList;
   };
 
+  // Helper function to get display name for absence category
+  const getCategoryDisplayName = (category: AbsenceCategory): string => {
+    switch (category) {
+      case AbsenceCategory.UNPAID_SHARED:
+        return "Unpaid Shared";
+      case AbsenceCategory.PAID_SHARED:
+        return "Paid Shared";
+      case AbsenceCategory.UNPAID_UNSHARED:
+        return "Unpaid Unshared";
+      case AbsenceCategory.PAID_UNSHARED:
+        return "Paid Unshared";
+    }
+  };
+
   // Component for the adaptive tooltip
   const AdaptiveTooltip: React.FC<AdaptiveTooltipProps> = ({ 
     count, 
     date, 
-    reason = null, 
-    className = "" 
+    category = null, 
+    className = "",
+    backgroundColor
   }) => {
     const [tooltipPosition, setTooltipPosition] = useState<"above" | "below">("above");
     const cellRef = useRef<HTMLDivElement>(null);
@@ -108,8 +141,8 @@ const AbsenceRow: React.FC<AbsenceRowProps> = ({
     }, []);
     
     // Get staff list for tooltip
-    const staffWithAbsences = reason 
-      ? getStaffWithAbsences(date, reason)
+    const staffWithAbsences = category 
+      ? getStaffWithAbsences(date, category)
       : getStaffWithAbsences(date);
     
     return (
@@ -120,13 +153,17 @@ const AbsenceRow: React.FC<AbsenceRowProps> = ({
             ? "divider-header"
             : ""
         }`}
-        style={{ width: `${cellWidth}px`, position: "relative" }}
+        style={{ 
+          width: `${cellWidth}px`, 
+          position: "relative",
+          //backgroundColor: backgroundColor || ""
+        }}
       >
         {count}
         {count > 0 && (
           <div className={`tooltip-content ${tooltipPosition}`}>
             <strong>
-              {reason ? `${reason} le ` : "Absences le "}
+              {category ? `${getCategoryDisplayName(category)} le ` : "Absences le "}
               {date.toLocaleDateString("fr-FR")}
             </strong>
             <br />
@@ -143,6 +180,28 @@ const AbsenceRow: React.FC<AbsenceRowProps> = ({
     );
   };
 
+  // Function to calculate total absences for a date
+  const calculateTotalAbsencesForDate = (date: Date): number => {
+    let totalAbsences = 0;
+    Object.values(AbsenceCategory).forEach((category) => {
+      const personList = absenceCategoryGroups[category];
+      personList.forEach((person) => {
+        const hasAbsenceOnDate = person.Absences?.some(
+          (absence) =>
+            new Date(absence.StartDate || "") <= date && 
+            new Date(absence.EndDate || "") >= date &&
+            getAbsenceCategory(absence) === category
+        );
+
+        if (hasAbsenceOnDate) {
+          totalAbsences += 1;
+        }
+      });
+    });
+    return totalAbsences;
+  };
+  console.log('AbsenceCategory values:', Object.values(AbsenceCategory));
+
   return (
     <>
       <div className="gridRow absence-summary AssignedRow">
@@ -151,30 +210,14 @@ const AbsenceRow: React.FC<AbsenceRowProps> = ({
           style={{ fontWeight: "bold", cursor: "pointer" }}
           onClick={() => toggleSection("absence")}
         >
-          Total absences par motif {' '}
+          Total absences par catégorie {' '}
           <FontAwesomeIcon className="icone"
             icon={expandedSections.absence ? faChevronUp : faChevronDown} 
             size="sm"
           />
         </div>
         {datesInRange.map((date, index) => {
-          let totalAbsences = 0;
-          Object.keys(AbsenceGroup).forEach((reason) => {
-            if (reason !== "No Absence") {
-              const personList = AbsenceGroup[reason];
-              personList.forEach((person) => {
-                const hasAbsenceOnDate = person.Absences?.some(
-                  (s) =>
-                    new Date(s.StartDate || "") >= date && new Date(s.EndDate || "") <= date &&
-                    s.Name === reason
-                );
-
-                if (hasAbsenceOnDate) {
-                  totalAbsences += 1;
-                }
-              });
-            }
-          });
+          const totalAbsences = calculateTotalAbsencesForDate(date);
 
           return (
             <AdaptiveTooltip 
@@ -188,24 +231,39 @@ const AbsenceRow: React.FC<AbsenceRowProps> = ({
       </div>
 
       {expandedSections.absence &&
-        Object.entries(AbsenceGroup).map(([reason, persons]) => {
-          if (reason === "No Absence") return null;
-
-          const absenceCounts = calculateAbsenceCounts(persons, reason, datesInRange);
+        (Object.values(AbsenceCategory) as Array<AbsenceCategory>).map((category) => {
+          const absenceCounts = calculateAbsenceCounts(
+            absenceCategoryGroups[category], 
+            category, 
+            datesInRange
+          );
+          console.log("Category",category);
+          const backgroundColor = ABSENCE_CATEGORY_COLORS[category];
+          
           return (
             <div
-              key={`absence-${reason}`}
-              className="gridRow absence-detail"
+              key={`absence-${category}`}
+              className="gridRow SubRow absence-detail"
             >
-              <div className="firstColumnHeader" style={{ paddingLeft: "20px" }}>
-                {reason}
+              <div 
+                className="firstColumnHeader" 
+                style={{ 
+                  paddingLeft: "20px",
+                  // backgroundColor: backgroundColor,
+                  // color: category === AbsenceCategory.UNPAID_SHARED || 
+                  //        category === AbsenceCategory.PAID_SHARED ? "white" : "black"
+                }}
+              >
+                {getCategoryDisplayName(category)}
               </div>
               {absenceCounts.map((count, index) => (
                 <AdaptiveTooltip 
                   key={index}
                   count={count}
                   date={datesInRange[index]}
-                  reason={reason}
+                  category={category}
+                  backgroundColor={backgroundColor}
+                  className={`category-${category}`}
                 />
               ))}
             </div>

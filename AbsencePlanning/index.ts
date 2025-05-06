@@ -1,6 +1,6 @@
 import Planning from "./Components/Planning";
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
-import workforceJson from "../Payload/Payload0001.json";
+import workforceJson from "../Payload/Payload0002.json";
 import * as React from "react";
 import { Payload } from "./Models/Model";
 export class AbsencePlanning

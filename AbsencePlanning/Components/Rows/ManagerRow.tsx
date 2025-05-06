@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { Workforce } from "../../Models/Model";
 /* eslint-disable */
+import '../../Css/row.css'
 
 interface ManagerRowProps {
   expandedSections: any;
@@ -28,12 +29,20 @@ const ManagerRow: React.FC<ManagerRowProps> = ({
 
     personList.forEach((person) => {
       datesInRange.forEach((date, index) => {
-        const shift = person.Absences?.find((s) => {
-          // const shiftDate = new Date(s.Date || "").toISOString().split('T')[0];
-          // const currentDate = date.toISOString().split('T')[0];
-          return new Date(s.StartDate || "") >= date && new Date(s.EndDate || "") <= date 
+        const absence = person.Absences?.find((s) => {
+          
+          const compareDate = new Date(date);
+          compareDate.setHours(0,0,0,0);
+          
+          const compareStart = new Date(s.StartDate);
+          compareStart.setHours(0,0,0,0);
+          
+          const compareEnd = new Date(s.EndDate);
+          compareEnd.setHours(0,0,0,0);
+          
+          return compareDate >= compareStart && compareDate <= compareEnd;
         });
-        if (shift ) {
+        if (absence ) {
           counts[index] += 1;
         }
       });
@@ -99,7 +108,6 @@ const ManagerRow: React.FC<ManagerRowProps> = ({
             </div>
           );
         })}
-      {/* <SpacerRow cellWidth={cellWidth} datesInRange={datesInRange} /> */}
     </>
   );
 };
