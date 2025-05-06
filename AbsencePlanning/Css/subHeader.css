@@ -50,3 +50,18 @@
     cursor: pointer;
     float: right;
   }
+  .dateRange{
+    padding: 0.67rem 1.5rem;
+    font-size: 16px;
+    font-weight: 500;
+    border: 1px solid black;
+    position: relative;
+
+  }
+  .lefticone{
+cursor: pointer;
+  }
+.righticone{
+  cursor: pointer;
+
+}

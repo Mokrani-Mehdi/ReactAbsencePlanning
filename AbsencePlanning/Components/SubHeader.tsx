@@ -2,11 +2,11 @@ import React from "react";
 import { Workforce } from "../Models/Model";
 import '../Css/subheader.css'
 import {
-  RechargerIcon,
   Staff2Icon,
   StoreIcon,
-  VerifierIcon,
 } from "../Assets/Icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronLeft, faChevronRight, faCircleChevronRight } from "@fortawesome/free-solid-svg-icons";
 interface SubHeaderPops {
   toggleMode: () => void;
   isSelectMode: boolean;
@@ -26,8 +26,16 @@ const SubHeader: React.FC<SubHeaderPops> = ({
        <div className="Info-container">
         <div className="dateRange">
           <span content="<"/>
+           <FontAwesomeIcon className="lefticone"
+                      icon={faChevronLeft} 
+                      size="sm"
+                      
+                    />
           Juin - 2025
-          <span content=">"/>
+          <FontAwesomeIcon className="righticone"
+                      icon={faChevronRight} 
+                      size="sm"
+                    />
         </div>
         <div className="staff">
           <Staff2Icon className="image" />
