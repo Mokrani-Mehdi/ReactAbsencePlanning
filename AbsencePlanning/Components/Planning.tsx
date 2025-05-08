@@ -5,8 +5,9 @@ import SubHeader from "./SubHeader";
 import { getDatesInRange } from "../Helpers/AppHelper";
 import { Absences, Payload, Workforce } from "../Models/Model";
 import "../Css/planning.css";
-
-const Planning: React.FC<Payload> = ({ Data,containerWidth,  AvailabilityPayload,
+import { useSortable } from "@dnd-kit/sortable";
+import { CSS } from "@dnd-kit/utilities";
+const Planning: React.FC<Payload> = ({ Data,containerWidth,  AvailabilityPayload,OnChange
 }) => {
 
   const [localData, setLocalData] = useState(Data);
@@ -268,9 +269,9 @@ const Planning: React.FC<Payload> = ({ Data,containerWidth,  AvailabilityPayload
         <SubHeader
           toggleMode={toggleMode}
           isSelectMode={isSelectMode}
-          selectedAbsences={selectedAbsences}
-          
+          selectedAbsences={selectedAbsences}         
           Workforces={Data?.Workforces}
+          OnChange = {OnChange}
         />
 
         <PlanningGrid
@@ -286,6 +287,7 @@ const Planning: React.FC<Payload> = ({ Data,containerWidth,  AvailabilityPayload
           AvailabitlityPayload={AvailabilityPayload ?? []}
           onGetavailabilityCall={handleOnGetAvailability}
           storeInfo = {Data.StoreInfo}
+          OnChange = {OnChange}
 
         />
       </div>

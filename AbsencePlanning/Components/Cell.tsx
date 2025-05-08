@@ -2,12 +2,12 @@ import React from "react";
 import "../Css/cell.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWarning } from "@fortawesome/free-solid-svg-icons";
-import { Absences, AbsenceCategory, ABSENCE_CATEGORY_COLORS } from "../Models/Model";
+import { Absences, AbsenceCategory, ABSENCE_CATEGORY_COLORS, Workforce } from "../Models/Model";
 import { getAbsenceCategory } from "../Helpers/AppHelper";
 
 interface CellProps {
   workforceName: string;
-  absence?: Absences;
+  absence?: Absences| null;
   absences?: Absences[];
   isSelectMode: boolean;
   isSelected: boolean;
@@ -39,6 +39,7 @@ const Cell: React.FC<CellProps> = ({
       e.stopPropagation();
       onSelect();
     }
+   
   };
 
   // Get category display name

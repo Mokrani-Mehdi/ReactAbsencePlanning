@@ -2,7 +2,7 @@ import Planning from "./Components/Planning";
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
 import workforceJson from "../Payload/Payload0002.json";
 import * as React from "react";
-import { IState, Payload } from "./Models/Model";
+import { AbsencePlanningCellData, Absences, IState, Payload } from "./Models/Model";
 export class AbsencePlanning
   implements ComponentFramework.ReactControl<IInputs, IOutputs>
 {
@@ -14,9 +14,10 @@ export class AbsencePlanning
   constructor() {
     // Empty
     this.state = {
-      selectedAbsence: [],
+      selectedAbsences: [],
       actionType: null,
       nextDate: null,
+      selectedWorforceDate: null,
     };
   }
 
@@ -35,19 +36,18 @@ export class AbsencePlanning
     this.notifyOutputChanged = notifyOutputChanged;
     context.mode.trackContainerResize(true);
   }
-  private HandleGetAvailability = (): void => {
+  private HandleGetEvent = (selectedAbsences : Absences[], actionType: string | null,nextDate : string | null,selectedWorforceDate :  AbsencePlanningCellData|null ): void => {
     this.setState(
       {
-        selectedAbsence: [],
-        actionType: "GetAvailability",
+        selectedAbsences: selectedAbsences,
+        actionType: actionType,
+        nextDate: nextDate,
+        selectedWorforceDate: selectedWorforceDate,
       },
       true
     ); //
   };
-  private setState = (
-    newState: Partial<IState>,
-    notify = false
-  ): void => {
+  private setState = (newState: Partial<IState>, notify = false): void => {
     this.state = {
       ...this.state,
       ...newState,
@@ -72,6 +72,7 @@ export class AbsencePlanning
       Data,
       containerWidth,
       containerHeight,
+      OnChange : this.HandleGetEvent
     };
     return React.createElement(Planning, props);
   }
@@ -81,17 +82,14 @@ export class AbsencePlanning
    * @returns an object based on nomenclature defined in manifest, expecting object[s] for property marked as "bound" or "output"
    */
   public getOutputs(): IOutputs {
-    const response = this.state.actionType
-      ? {
-          data: this.state.selectedAbsence,
-          actionType: this.state.actionType,
-          
-        }
-      : null;
+    // const response = {
+    //       data: this.state.selectedAbsences,
+    //       actionType: this.state.actionType,
 
+    //     };
+ alert(JSON.stringify(this.state));
     return {
-     
-      Payload: response ? JSON.stringify(response) : "",
+      Payload: this.state ? JSON.stringify(this.state) : "",
     };
   }
 

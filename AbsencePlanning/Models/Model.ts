@@ -57,13 +57,21 @@ export interface Payload {
   containerWidth: number;
   containerHeight: number;
   AvailabilityPayload?: AvailabilityItem[];
+  OnChange : (selectedAbsences : Absences[], actionType: string | null,nextDate : string | null,selectedWorforceDate :  AbsencePlanningCellData|null ) =>  void;
 }
 export interface StoreInfo {
   ClosingDays: string[];
   Name: string;
   Holidays: string[];
+  FirstDayOfMonth : string;
 }
 
+export interface AbsencePlanningCellData
+{
+    Workforce : Workforce;
+    Absence: Absences| null;
+    Date:string;
+}
 export enum AbsenceCategory {
   UNPAID_SHARED = "UNPAID_SHARED",
   PAID_SHARED = "PAID_SHARED",
@@ -80,7 +88,8 @@ export const ABSENCE_CATEGORY_COLORS = {
 
 
 export interface IState {
-    selectedAbsence: Absences[];
+    selectedAbsences: Absences[];
     actionType : string | null;
     nextDate : string | null;
+    selectedWorforceDate : AbsencePlanningCellData|null;
 }
