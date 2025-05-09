@@ -1,15 +1,22 @@
-import React, { useState,useEffect,useRef,useMemo } from "react";
-import Header from "./Header";
-import PlanningGrid from "./PlanningGrid";
+import React, { useState, useEffect, useRef, useMemo } from "react";
+import Header from "./PlanningComponents/Header";
+import PlanningGrid from "./PlanningComponents/PlanningGrid";
 import SubHeader from "./SubHeader";
 import { getDatesInRange } from "../Helpers/AppHelper";
 import { Absences, Payload, Workforce } from "../Models/Model";
 import "../Css/planning.css";
 import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
-const Planning: React.FC<Payload> = ({ Data,containerWidth,  AvailabilityPayload,OnChange
-}) => {
 
+const LazyPopup = React.lazy(() => import("./PlanningComponents/LegendPopUp"));
+
+const Planning: React.FC<Payload> = ({
+  Data,
+  containerWidth,
+  containerHeight,
+  AvailabilityPayload,
+  OnChange,
+}) => {
   const [localData, setLocalData] = useState(Data);
   const [FirstData, setFirstLocalData] = useState(Data);
   const [workforceData, setWorkforceData] = useState(
@@ -54,6 +61,7 @@ const Planning: React.FC<Payload> = ({ Data,containerWidth,  AvailabilityPayload
   const [cellWidth, setCellWidth] = useState(35);
   const [cellHeight, setcellHeight] = useState(35);
   const isPayloadChange = useRef(false);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     const currentDataStr = JSON.stringify(FirstData);
@@ -93,12 +101,10 @@ const Planning: React.FC<Payload> = ({ Data,containerWidth,  AvailabilityPayload
           ),
         ]);
       }
-      
     }
 
     console.log(workforceData);
   }, [Data]);
-
 
   const isValidData = React.useMemo(() => {
     return (
@@ -110,7 +116,9 @@ const Planning: React.FC<Payload> = ({ Data,containerWidth,  AvailabilityPayload
   const handleOnGetAvailability = () => {
     //onSave?.("GetAvailability");
   };
-
+  const handleSetPopUpLegend = () => {
+    setShowModal(true);
+  };
 
   const filteredWorkforces = useMemo(() => {
     if (!workforceData) return null;
@@ -123,12 +131,13 @@ const Planning: React.FC<Payload> = ({ Data,containerWidth,  AvailabilityPayload
 
       const departmentMatches =
         selectedDepartments.length === 0 ||
-        (
-          workforce.Departments?.some((dept) =>
-            selectedDepartments.includes(dept.Id) ?? false
-          ));
+        workforce.Departments?.some(
+          (dept) => selectedDepartments.includes(dept.Id) ?? false
+        );
 
-      const workforceMatch = selectedWorkforces.length === 0 || selectedWorkforces.includes(workforce.Id);
+      const workforceMatch =
+        selectedWorkforces.length === 0 ||
+        selectedWorkforces.includes(workforce.Id);
 
       const ManagerMatches =
         selectedManagers.length === 0 ||
@@ -249,7 +258,19 @@ const Planning: React.FC<Payload> = ({ Data,containerWidth,  AvailabilityPayload
   };
 
   return (
-    <div className="planning" >
+    <div className="planning" style={{
+      width: containerWidth,
+      overflowX: cellWidth > 25 ? "hidden" : "auto",
+      maxHeight: containerHeight - 10,
+    }}>
+      {showModal && (
+        <React.Suspense fallback={<div>Loading...</div>}>
+          <LazyPopup
+            onClose={() => setShowModal(false)}
+           
+          />
+        </React.Suspense>
+      )}
       <Header
         workforces={Data.Workforces}
         selectedWorkforces={selectedWorkforces}
@@ -269,9 +290,10 @@ const Planning: React.FC<Payload> = ({ Data,containerWidth,  AvailabilityPayload
         <SubHeader
           toggleMode={toggleMode}
           isSelectMode={isSelectMode}
-          selectedAbsences={selectedAbsences}         
+          selectedAbsences={selectedAbsences}
           Workforces={Data?.Workforces}
-          OnChange = {OnChange}
+          currentDate={Data.StoreInfo.FirstDayOfMonth}
+          OnChange={OnChange}
         />
 
         <PlanningGrid
@@ -286,9 +308,9 @@ const Planning: React.FC<Payload> = ({ Data,containerWidth,  AvailabilityPayload
           selectAllAbsences={selectAllAbsences}
           AvailabitlityPayload={AvailabilityPayload ?? []}
           onGetavailabilityCall={handleOnGetAvailability}
-          storeInfo = {Data.StoreInfo}
-          OnChange = {OnChange}
-
+          storeInfo={Data.StoreInfo}
+          OnChange={OnChange}
+          SetLegendPopUp={handleSetPopUpLegend}
         />
       </div>
     </div>

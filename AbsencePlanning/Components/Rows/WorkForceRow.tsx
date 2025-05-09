@@ -3,7 +3,7 @@
 
 // Modified WorkForceRow.tsx with dnd-kit integration
 import React from "react";
-import Cell from "../Cell";
+import Cell from "../PlanningComponents/Cell";
 import "../../Css/row.css";
 import {
   Absences,

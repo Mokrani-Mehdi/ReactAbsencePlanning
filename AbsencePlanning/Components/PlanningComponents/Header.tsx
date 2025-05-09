@@ -1,7 +1,7 @@
 import React from 'react'
 import Select from "react-select";
-import "../Css/header.css";
-import { Workforce } from '../Models/Model';
+import "../../Css/header.css";
+import { Workforce } from '../../Models/Model';
 
 /* eslint-disable */
 interface HeaderProps {

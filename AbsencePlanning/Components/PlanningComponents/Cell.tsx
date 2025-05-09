@@ -1,9 +1,9 @@
 import React from "react";
-import "../Css/cell.css";
+import "../../Css/cell.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWarning } from "@fortawesome/free-solid-svg-icons";
-import { Absences, AbsenceCategory, ABSENCE_CATEGORY_COLORS, Workforce } from "../Models/Model";
-import { getAbsenceCategory } from "../Helpers/AppHelper";
+import { Absences, AbsenceCategory, ABSENCE_CATEGORY_COLORS, Workforce } from "../../Models/Model";
+import { getAbsenceCategory } from "../../Helpers/AppHelper";
 
 interface CellProps {
   workforceName: string;

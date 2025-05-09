@@ -1,0 +1,142 @@
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  will-change: opacity; /* Optimizes for animation */
+  animation: fadeIn 0.2s ease-out; /* Quick fade in */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.popup-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  max-width: 700px;
+  width: 100%;
+  max-height: 60vh;
+  overflow-y: auto;
+  will-change: transform; /* Hardware acceleration */
+  transform: translateZ(0); /* Force GPU rendering */
+  animation: scaleIn 0.2s ease-out; /* Quick scale in */
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.95) translateZ(0); }
+  to { transform: scale(1) translateZ(0); }
+}
+
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #eee;
+  position: sticky; /* Make header sticky */
+  top: 0;
+  background: white;
+  z-index: 1;
+}
+
+.popup-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #888;
+  padding: 0 8px;
+  line-height: 1;
+}
+
+.popup-content {
+  padding: 20px;
+  contain: content; /* CSS containment for performance */
+}
+
+.section-title {
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #555;
+  font-size: 15px;
+  text-align: left;
+}
+
+/* Replace grid with flexbox for better performance */
+.departments-grid,
+.schedule-grid,
+.hours-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 24px;
+}
+
+.department-item,
+.schedule-item,
+.hours-item {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  flex: 0 0 auto; /* Prevent items from growing/shrinking */
+  min-width: 150px; /* Minimum width for items */
+}
+
+/* Optimize circle rendering */
+.circle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+.circle-index {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: bold;
+  margin-right: 8px;
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+/* Simplify color classes */
+.blue { background-color: #4285F4; }
+.gray { background-color: #CCCCCC; }
+.green { background-color: #D4E157; }
+.orange { background-color: #FFB74D; }
+.dark-gray { background-color: #AAAAAA; }
+
+/* Optimize media queries */
+@media (max-width: 500px) {
+  .popup-container {
+    width: 90%;
+    max-height: 80vh;
+  }
+  
+  .department-item,
+  .schedule-item,
+  .hours-item {
+    min-width: 100%; /* Full width on small screens */
+  }
+}

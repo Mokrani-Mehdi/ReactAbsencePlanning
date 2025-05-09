@@ -1,20 +1,20 @@
 import React, { useState, useMemo } from "react";
-import "../Css/planningGrid.css";
-import WorkForceRow from "./Rows/WorkForceRow";
+import "../../Css/planningGrid.css";
+import WorkForceRow from "../Rows/WorkForceRow";
 import {
   AbsencePlanningCellData,
   Absences,
   AvailabilityItem,
   StoreInfo,
   Workforce,
-} from "../Models/Model";
-import ManagerRow from "./Rows/ManagerRow";
-import { getWorkForceName } from "../Helpers/AppHelper";
-import AbsenceRow from "./Rows/AbsenceRow";
+} from "../../Models/Model";
+import ManagerRow from "../Rows/ManagerRow";
+import { getWorkForceName } from "../../Helpers/AppHelper";
+import AbsenceRow from "../Rows/AbsenceRow";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faRotateRight } from "@fortawesome/free-solid-svg-icons";
-import DepartmentRow from "./Rows/DepartmentRow";
-import SpacerRow from "./Rows/SpacerRow";
+import { faRotateRight,faCircleInfo } from "@fortawesome/free-solid-svg-icons";
+import DepartmentRow from "../Rows/DepartmentRow";
+import SpacerRow from "../Rows/SpacerRow";
 import {
   DndContext,
   closestCenter,
@@ -55,6 +55,8 @@ interface PlanningGridProps {
     nextDate: string | null,
     selectedWorforceDate: AbsencePlanningCellData | null
   ) => void;
+  SetLegendPopUp :() =>  void ;
+
 }
 
 const PlanningGrid: React.FC<PlanningGridProps> = ({
@@ -71,6 +73,7 @@ const PlanningGrid: React.FC<PlanningGridProps> = ({
   selectAllAbsences,
   onGetavailabilityCall,
   OnChange,
+  SetLegendPopUp
 }) => {
   const gridTemplateColumns = `350px repeat(${datesInRange.length}, ${cellWidth}px)`;
   
@@ -278,8 +281,8 @@ const PlanningGrid: React.FC<PlanningGridProps> = ({
               onChange={(e) => selectAllAbsences(e.target.checked)}
             />
           )}
-          <span>Info</span>
-        </div>
+          <FontAwesomeIcon className="info" onClick={SetLegendPopUp} icon={faCircleInfo} style={{color: "#ff8000"}} />
+          </div>
 
         {datesInRange.map((date, index) => (
           <div key={index} className="headerCell">

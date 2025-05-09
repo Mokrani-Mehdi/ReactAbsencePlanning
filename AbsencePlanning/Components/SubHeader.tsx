@@ -15,6 +15,7 @@ interface SubHeaderPops {
   isSelectMode: boolean;
   selectedAbsences: Set<string>;
   Workforces: Workforce[];
+  currentDate : string;
   OnChange: (
     selectedAbsences: Absences[],
     actionType: string | null,
@@ -28,8 +29,17 @@ const SubHeader: React.FC<SubHeaderPops> = ({
   isSelectMode,
   selectedAbsences,
   Workforces,
+  currentDate,
   OnChange,
 }) => {
+ 
+  const HandleDateChange = (isNextMonth : boolean) : void=>{
+
+    const currentdate = new Date(currentDate);
+    const nextdate = new Date(currentdate.setMonth(currentdate.getMonth() + (isNextMonth ? 1 : -1)));
+
+    OnChange([],null,nextdate.toISOString().split('T')[0],null)
+  }
   return (
     <div className="subheader">
       <div className="Info-container">
@@ -38,13 +48,14 @@ const SubHeader: React.FC<SubHeaderPops> = ({
             className="lefticone"
             icon={faChevronLeft}
             size="sm"
-            //onClick={()=> onchange}
+            onClick={()=> HandleDateChange(false)}
           />
-          Juin - 2025
+          {new Date(currentDate).toLocaleDateString("fr-FR", { month: "long" })} {new Date(currentDate).toLocaleDateString("fr-FR", { year: "numeric" })} 
           <FontAwesomeIcon
             className="righticone"
             icon={faChevronRight}
             size="sm"
+            onClick={()=> HandleDateChange(true)}
           />
         </div>
         <div className="staff">
