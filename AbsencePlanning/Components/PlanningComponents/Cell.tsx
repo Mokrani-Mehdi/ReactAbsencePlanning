@@ -39,7 +39,6 @@ const Cell: React.FC<CellProps> = ({
       e.stopPropagation();
       onSelect();
     }
-   
   };
 
   // Get category display name

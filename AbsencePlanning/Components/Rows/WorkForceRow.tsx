@@ -1,7 +1,3 @@
-// First, install the necessary dnd-kit packages:
-// npm install @dnd-kit/core @dnd-kit/sortable @dnd-kit/utilities
-
-// Modified WorkForceRow.tsx with dnd-kit integration
 import React from "react";
 import Cell from "../PlanningComponents/Cell";
 import "../../Css/row.css";
@@ -158,6 +154,11 @@ const WorkForceRow: React.FC<WorkforceRowProps> = ({
     return true;
   };
 
+  const handleCheckboxClick = (e: React.MouseEvent) => {
+    // Stop propagation to prevent drag listeners from interfering
+    e.stopPropagation();
+  };
+
   return (
     <div 
       className="gridRow" 
@@ -165,25 +166,25 @@ const WorkForceRow: React.FC<WorkforceRowProps> = ({
       style={style}
       {...attributes}
     >
-      <div 
-        key={workforce.Id} 
-        className="firstColumn"
-        {...listeners} // Add listeners to make this element the drag handle
-      >
+      <div key={workforce.Id} className="firstColumn">
         {isSelectMode && (
-          <input
-            type="checkbox"
-            className="checkboxAbsence"
-            checked={isAllSelected}
-            ref={(el) => {
-              if (el) {
-                el.indeterminate = isSomeSelected && !isAllSelected;
-              }
-            }}
-            onChange={(e) => onWorkforceSelect(workforce, e.target.checked)}
-          />
+          <span onClick={handleCheckboxClick}>
+            <input
+              type="checkbox"
+              className="checkboxAbsence"
+              checked={isAllSelected}
+              ref={(el) => {
+                if (el) {
+                  el.indeterminate = isSomeSelected && !isAllSelected;
+                }
+              }}
+              onChange={(e) => onWorkforceSelect(workforce, e.target.checked)}
+            />
+          </span>
         )}
-        <span style={{ cursor: 'grab' }}>{workforce.Name}</span>
+        <span {...listeners} style={{ cursor: 'grab', marginLeft: '5px' }}>
+          {workforce.Name}
+        </span>
       </div>
 
       {dates.map((date, index) => {

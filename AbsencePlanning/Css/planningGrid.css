@@ -1,4 +1,4 @@
-.planningGrid{
+.planningGrid {
     display: grid;
     gap: 2px;
     padding: 15px 0;
@@ -6,7 +6,7 @@
     position: relative;
 }
 
-.headerInfo{
+.headerInfo {
     position: sticky;
     top: 0;
     display: grid;
@@ -19,7 +19,7 @@
 }
 
 
-.gridRow{
+.gridRow {
     display: grid;
     grid-column: 1 / -1;
     grid-template-columns: subgrid;
@@ -30,8 +30,8 @@
 
 
 
-.headerCellInfo{
-    background-color: white; 
+.headerCellInfo {
+    background-color: white;
     padding: 0 0 0 30px;
     /* border-bottom: 1px solid #ddd; */
     display: flex;
@@ -40,17 +40,19 @@
     height: 30px;
     /* background-color: #F4F4F4; */
     position: relative;
+    display: flex;
 }
 
-.checkboxAbsence{
+.checkboxAbsence {
     width: 13px;
-    position: absolute;
-    left: 4px;
+    /* position: absolute;
+    left: 4px; */
 }
 
 .headerName {
     font-size: 13px;
 }
+
 .firstColumnHeader {
     text-align: left;
     padding-left: 10px;
@@ -63,27 +65,39 @@
 }
 
 .dataCellHeader {
-   
+
     padding: 8px 0;
     font-size: 12px;
     text-align: center;
     border-left: 1px solid white;
 }
+
 .AssignedRow {
     background-color: #e2f7e3;
     height: 37px;
     /* margin: 0 0 4px 0; */
 }
+
 .icone {
     position: absolute;
     right: 5px;
 }
-.headerDate{
+
+.headerDate {
     font-size: 14px;
     font-weight: 500;
-  }
-  .headerName{
+}
+
+.headerName {
     font-size: 10px;
     font-weight: 400;
-  
-    }
+
+}
+
+.infoPlanningAbsence {
+    color: rgb(255, 128, 0);
+    /* position: absolute; */
+    /* top: 50%; */
+    /* left: 4px; */
+    cursor: pointer;
+}

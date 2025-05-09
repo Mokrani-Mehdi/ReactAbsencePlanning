@@ -5,8 +5,7 @@ import SubHeader from "./SubHeader";
 import { getDatesInRange } from "../Helpers/AppHelper";
 import { Absences, Payload, Workforce } from "../Models/Model";
 import "../Css/planning.css";
-import { useSortable } from "@dnd-kit/sortable";
-import { CSS } from "@dnd-kit/utilities";
+
 
 const LazyPopup = React.lazy(() => import("./PlanningComponents/LegendPopUp"));
 
@@ -17,12 +16,23 @@ const Planning: React.FC<Payload> = ({
   AvailabilityPayload,
   OnChange,
 }) => {
-  const [localData, setLocalData] = useState(Data);
-  const [FirstData, setFirstLocalData] = useState(Data);
+  // Set default values for empty Data
+  const safeData = useMemo(() => {
+    return {
+      Workforces: Data?.Workforces || [],
+      DepartmentSkillsLists: Data?.DepartmentSkillsLists || [],
+      StoreInfo: Data?.StoreInfo || { FirstDayOfMonth: new Date().toISOString() }
+    };
+  }, [Data]);
+
+  const [localData, setLocalData] = useState(safeData);
+  const [FirstData, setFirstLocalData] = useState(safeData);
+  
+  // Initialize with empty arrays if Data is empty
   const [workforceData, setWorkforceData] = useState(
-    Data?.Workforces?.sort((a, b) => {
-      const aIsR = a.Name.startsWith("R - ");
-      const bIsR = b.Name.startsWith("R - ");
+    safeData.Workforces?.sort((a, b) => {
+      const aIsR = a.Name?.startsWith("R - ");
+      const bIsR = b.Name?.startsWith("R - ");
 
       if (aIsR !== bIsR) {
         return aIsR ? 1 : -1; // R names come last
@@ -32,28 +42,36 @@ const Planning: React.FC<Payload> = ({
         return a.IsManager ? -1 : 1;
       }
 
-      return a.Name.localeCompare(b.Name);
-    })
+      return a.Name?.localeCompare(b.Name || "") || 0;
+    }) || []
   );
+  
   const [isSelectMode, setIsSelectMode] = useState<boolean>(false);
   const [selectedAbsences, setSelectedAbsences] = useState<Set<string>>(
     new Set()
   );
-  const [roleData, setRoleData] = useState([
-    ...new Set(
-      Data?.Workforces?.filter((workforce) => workforce.RoleDescription).map(
-        (workforce) => workforce.RoleDescription
-      )
-    ),
-  ]);
-  const [managerData, setManagerData] = useState(
-    Data?.Workforces?.filter((w) => w.IsManager == true).sort((a, b) =>
-      a.Name.localeCompare(b.Name)
-    )
-  );
-  const [DepartementData, setDepartementData] = useState(
-    Data?.DepartmentSkillsLists
-  );
+  
+  // Initialize with empty arrays for roles
+  const [roleData, setRoleData] = useState(() => {
+    if (!safeData.Workforces || safeData.Workforces.length === 0) return [];
+    
+    return [...new Set(
+      safeData.Workforces
+        .filter((workforce) => workforce.RoleDescription)
+        .map((workforce) => workforce.RoleDescription)
+    )];
+  });
+  
+  // Initialize with empty arrays for managers
+  const [managerData, setManagerData] = useState(() => {
+    if (!safeData.Workforces || safeData.Workforces.length === 0) return [];
+    
+    return safeData.Workforces
+      .filter((w) => w.IsManager === true)
+      .sort((a, b) => a.Name?.localeCompare(b.Name || "") || 0);
+  });
+  
+  const [DepartementData, setDepartementData] = useState(safeData.DepartmentSkillsLists || []);
   const [selectedDepartments, setSelectedDepartments] = useState<string[]>([]);
   const [selectedWorkforces, setSelectedWorkforces] = useState<string[]>([]);
   const [selectedManagers, setSelectedManagers] = useState<string[]>([]);
@@ -69,15 +87,23 @@ const Planning: React.FC<Payload> = ({
 
     if (currentDataStr !== newDataStr) {
       isPayloadChange.current = true;
-      setLocalData(Data);
-      setFirstLocalData(Data);
-      setDepartementData(Data?.DepartmentSkillsLists);
+      
+      // Create a safe version of Data with fallbacks
+      const safeData = {
+        Workforces: Data?.Workforces || [],
+        DepartmentSkillsLists: Data?.DepartmentSkillsLists || [],
+        StoreInfo: Data?.StoreInfo || { FirstDayOfMonth: new Date().toISOString() }
+      };
+      
+      setLocalData(safeData);
+      setFirstLocalData(safeData);
+      setDepartementData(safeData.DepartmentSkillsLists);
 
-      if (Data?.Workforces) {
+      if (safeData.Workforces && safeData.Workforces.length > 0) {
         setWorkforceData(
-          [...Data.Workforces].sort((a, b) => {
-            const aIsR = a.Name.startsWith("R - ");
-            const bIsR = b.Name.startsWith("R - ");
+          [...safeData.Workforces].sort((a, b) => {
+            const aIsR = a.Name?.startsWith("R - ");
+            const bIsR = b.Name?.startsWith("R - ");
 
             if (aIsR !== bIsR) {
               return aIsR ? 1 : -1;
@@ -85,21 +111,28 @@ const Planning: React.FC<Payload> = ({
             if (a.IsManager !== b.IsManager) {
               return a.IsManager ? -1 : 1;
             }
-            return a.Name.localeCompare(b.Name);
+            return a.Name?.localeCompare(b.Name || "") || 0;
           })
         );
+        
         setManagerData(
-          Data.Workforces.filter((w) => w.IsManager == true).sort((a, b) =>
-            a.Name.localeCompare(b.Name)
-          )
+          safeData.Workforces
+            .filter((w) => w.IsManager === true)
+            .sort((a, b) => a.Name?.localeCompare(b.Name || "") || 0)
         );
+        
         setRoleData([
           ...new Set(
-            Data?.Workforces.filter(
-              (workforce) => workforce.RoleDescription
-            ).map((workforce) => workforce.RoleDescription)
+            safeData.Workforces
+              .filter((workforce) => workforce.RoleDescription)
+              .map((workforce) => workforce.RoleDescription)
           ),
         ]);
+      } else {
+        // Set empty arrays when no data is available
+        setWorkforceData([]);
+        setManagerData([]);
+        setRoleData([]);
       }
     }
 
@@ -108,27 +141,27 @@ const Planning: React.FC<Payload> = ({
 
   const isValidData = React.useMemo(() => {
     return (
-      localData?.Workforces?.length > 0 &&
-      localData?.DepartmentSkillsLists?.length > 0
+      (localData?.Workforces?.length > 0 &&
+      localData?.DepartmentSkillsLists?.length > 0)
     );
   }, [localData]);
+  
+  // Use a stable date range even when data is missing
   const datesInRange = getDatesInRange("2025-05-26", "2025-07-06");
+  
   const handleOnGetAvailability = () => {
     //onSave?.("GetAvailability");
   };
+  
   const handleSetPopUpLegend = () => {
     setShowModal(true);
   };
 
   const filteredWorkforces = useMemo(() => {
-    if (!workforceData) return null;
-    if (!isValidData) return null;
+    if (!workforceData) return [];
+    if (!isValidData) return [];
 
     return workforceData.filter((workforce) => {
-      // const nameMatches = workforce.Name.toLowerCase().includes(
-      //   searchQuery.toLowerCase()
-      // );
-
       const departmentMatches =
         selectedDepartments.length === 0 ||
         workforce.Departments?.some(
@@ -163,6 +196,7 @@ const Planning: React.FC<Payload> = ({
     selectedManagers,
     selectedRoles,
   ]);
+  
   useEffect(() => {
     const calculateCellWidth = () => {
       const screenWidth = containerWidth;
@@ -188,6 +222,7 @@ const Planning: React.FC<Payload> = ({
     window.addEventListener("resize", calculateCellWidth);
     return () => window.removeEventListener("resize", calculateCellWidth);
   }, [containerWidth, datesInRange.length]);
+  
   const toggleMode = () => {
     setIsSelectMode(!isSelectMode);
     // Clear selections when changing modes
@@ -246,8 +281,8 @@ const Planning: React.FC<Payload> = ({
   const selectAllAbsences = (selected: boolean) => {
     const newSelectedAbsences = new Set<string>();
 
-    if (selected) {
-      Data.Workforces.forEach((workforce) => {
+    if (selected && safeData.Workforces) {
+      safeData.Workforces.forEach((workforce) => {
         workforce.Absences?.forEach((absence) => {
           newSelectedAbsences.add(absence.Id);
         });
@@ -257,6 +292,12 @@ const Planning: React.FC<Payload> = ({
     setSelectedAbsences(newSelectedAbsences);
   };
 
+  // Ensure we always pass arrays even when data is empty
+  const safeWorkforces = safeData.Workforces || [];
+  const safeDepartmentData = safeData.DepartmentSkillsLists || [];
+  const safeRoleData = roleData || [];
+  const safeManagerData = managerData || [];
+  
   return (
     <div className="planning" style={{
       width: containerWidth,
@@ -272,12 +313,12 @@ const Planning: React.FC<Payload> = ({
         </React.Suspense>
       )}
       <Header
-        workforces={Data.Workforces}
+        workforces={safeWorkforces}
         selectedWorkforces={selectedWorkforces}
         setSelectedWorkforces={setSelectedWorkforces}
-        managerData={managerData}
-        departmentData={DepartementData}
-        roleData={roleData}
+        managerData={safeManagerData}
+        departmentData={safeDepartmentData}
+        roleData={safeRoleData}
         selectedManagers={selectedManagers}
         setSelectedManagers={setSelectedManagers}
         selectedDepartments={selectedDepartments}
@@ -291,27 +332,34 @@ const Planning: React.FC<Payload> = ({
           toggleMode={toggleMode}
           isSelectMode={isSelectMode}
           selectedAbsences={selectedAbsences}
-          Workforces={Data?.Workforces}
-          currentDate={Data.StoreInfo.FirstDayOfMonth}
+          Workforces={safeWorkforces}
+          currentDate={safeData.StoreInfo?.FirstDayOfMonth || new Date().toISOString()}
+          storeName={safeData.StoreInfo?.Name || ""}
           OnChange={OnChange}
         />
 
-        <PlanningGrid
-          workforces={filteredWorkforces ?? []}
-          datesInRange={datesInRange}
-          cellWidth={cellWidth}
-          isSelectMode={isSelectMode}
-          selectedAbsences={selectedAbsences}
-          onCellClick={handleCellClick}
-          onAbsenceSelect={toggleAbsenceSelection}
-          onWorkforceSelect={selectAllAbsencesForWorkforce}
-          selectAllAbsences={selectAllAbsences}
-          AvailabitlityPayload={AvailabilityPayload ?? []}
-          onGetavailabilityCall={handleOnGetAvailability}
-          storeInfo={Data.StoreInfo}
-          OnChange={OnChange}
-          SetLegendPopUp={handleSetPopUpLegend}
-        />
+        {isValidData ? (
+          <PlanningGrid
+            workforces={filteredWorkforces}
+            datesInRange={datesInRange}
+            cellWidth={cellWidth}
+            isSelectMode={isSelectMode}
+            selectedAbsences={selectedAbsences}
+            onCellClick={handleCellClick}
+            onAbsenceSelect={toggleAbsenceSelection}
+            onWorkforceSelect={selectAllAbsencesForWorkforce}
+            selectAllAbsences={selectAllAbsences}
+            AvailabitlityPayload={AvailabilityPayload ?? []}
+            onGetavailabilityCall={handleOnGetAvailability}
+            storeInfo={safeData.StoreInfo || { FirstDayOfMonth: new Date().toISOString() }}
+            OnChange={OnChange}
+            SetLegendPopUp={handleSetPopUpLegend}
+          />
+        ) : (
+          <div className="empty-planning-message">
+            No planning data available. Please add workforces and departments.
+          </div>
+        )}
       </div>
     </div>
   );

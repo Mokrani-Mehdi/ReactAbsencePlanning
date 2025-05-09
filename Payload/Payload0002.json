@@ -1,6 +1,6 @@
 {
     "StoreInfo": {
-        "Name": "Paris S\u00E8vres",
+        "Name": "Paris Sevres",
         "Holidays": [
             "2025-06-25",
             "2025-06-17"
@@ -262,14 +262,7 @@
                 }
             ],
             "Absences": [
-                {
-                    "Name": "closing_shop_day",
-                    "Id": "a1abd795-83fe-ef11-bae3-6045bd1acfa6",
-                    "Paid": false,
-                    "Shared": false,
-                    "StartDate": "2025-06-11",
-                    "EndDate": "2025-06-12"
-                }
+               
             ],
             "FixedDayOff": [
                 "Monday",

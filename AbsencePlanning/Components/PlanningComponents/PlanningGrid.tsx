@@ -281,7 +281,7 @@ const PlanningGrid: React.FC<PlanningGridProps> = ({
               onChange={(e) => selectAllAbsences(e.target.checked)}
             />
           )}
-          <FontAwesomeIcon className="info" onClick={SetLegendPopUp} icon={faCircleInfo} style={{color: "#ff8000"}} />
+          <FontAwesomeIcon className="infoPlanningAbsence" onClick={() => SetLegendPopUp} icon={faCircleInfo} style={{color: "#ff8000"}} />
           </div>
 
         {datesInRange.map((date, index) => (

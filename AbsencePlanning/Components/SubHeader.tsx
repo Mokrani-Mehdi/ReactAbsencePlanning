@@ -16,6 +16,7 @@ interface SubHeaderPops {
   selectedAbsences: Set<string>;
   Workforces: Workforce[];
   currentDate : string;
+  storeName : string;
   OnChange: (
     selectedAbsences: Absences[],
     actionType: string | null,
@@ -30,6 +31,7 @@ const SubHeader: React.FC<SubHeaderPops> = ({
   selectedAbsences,
   Workforces,
   currentDate,
+  storeName,
   OnChange,
 }) => {
  
@@ -65,7 +67,7 @@ const SubHeader: React.FC<SubHeaderPops> = ({
         <div className="store">
           {" "}
           <StoreIcon className="image" />
-          Bordeaux
+          {storeName}
         </div>
       </div>
   

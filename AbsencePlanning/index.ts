@@ -1,13 +1,23 @@
 import Planning from "./Components/Planning";
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
-import workforceJson from "../Payload/Payload0002.json";
 import * as React from "react";
-import { AbsencePlanningCellData, Absences, IState, Payload } from "./Models/Model";
+import _ from "lodash";
+
+import {
+  AbsencePlanningCellData,
+  Absences,
+  IState,
+  Payload,
+} from "./Models/Model";
+/* eslint-disable */
+
 export class AbsencePlanning
   implements ComponentFramework.ReactControl<IInputs, IOutputs>
 {
   private notifyOutputChanged: () => void;
   private state: IState;
+  private memoizedData: any = null;
+
   /**
    * Empty constructor.
    */
@@ -36,7 +46,12 @@ export class AbsencePlanning
     this.notifyOutputChanged = notifyOutputChanged;
     context.mode.trackContainerResize(true);
   }
-  private HandleGetEvent = (selectedAbsences : Absences[], actionType: string | null,nextDate : string | null,selectedWorforceDate :  AbsencePlanningCellData|null ): void => {
+  private HandleGetEvent = (
+    selectedAbsences: Absences[],
+    actionType: string | null,
+    nextDate: string | null,
+    selectedWorforceDate: AbsencePlanningCellData | null
+  ): void => {
     this.setState(
       {
         selectedAbsences: selectedAbsences,
@@ -65,14 +80,37 @@ export class AbsencePlanning
   public updateView(
     context: ComponentFramework.Context<IInputs>
   ): React.ReactElement {
+    let Data;
     const containerWidth = context.mode.allocatedWidth || 1500; // Default to 1500 if not available
     const containerHeight = context.mode.allocatedHeight || 800;
-    const Data = workforceJson;
+    let dataChanged = false;
+    try {
+      if (
+        context.parameters.Payload.raw &&
+        typeof context.parameters.Payload.raw === "string"
+      ) {
+        const parsedData = JSON.parse(context.parameters.Payload.raw);
+
+        if (!this.memoizedData || !_.isEqual(this.memoizedData, parsedData)) {
+          this.memoizedData = parsedData;
+          Data = parsedData;
+          dataChanged = true;
+        } else {
+          Data = this.memoizedData;
+        }
+      } else {
+        Data = {};
+      }
+    } catch (error) {
+      console.error("Error parsing JSON:", error);
+      Data = {};
+    }
+
     const props: Payload = {
       Data,
       containerWidth,
       containerHeight,
-      OnChange : this.HandleGetEvent
+      OnChange: this.HandleGetEvent,
     };
     return React.createElement(Planning, props);
   }
@@ -87,9 +125,9 @@ export class AbsencePlanning
     //       actionType: this.state.actionType,
 
     //     };
- alert(JSON.stringify(this.state));
+    //alert(JSON.stringify(this.state));
     return {
-      Payload: this.state ? JSON.stringify(this.state) : "",
+      Response: this.state ? JSON.stringify(this.state) : "",
     };
   }
 
