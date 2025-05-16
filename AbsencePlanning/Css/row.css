@@ -102,7 +102,7 @@ input{
   }
 
   .absence-detail {
-    background-color: #e2f7e3;
+    background-color: #909090;
     height: 37px;
-    /* color: white; */
+     color: white; 
 }

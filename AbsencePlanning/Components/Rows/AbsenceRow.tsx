@@ -1,21 +1,17 @@
 import React, { useState, useRef, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import { calculateAbsenceCounts, groupWorkforcesByAbsenceCategory,getAbsenceCategory } from "../../Helpers/AppHelper";
+import { calculateAbsenceCounts, getCategoryDisplayName,getDayName,groupWorkforcesByAbsenceCategory,getAbsenceCategory,isDayOff,isOutOfContract } from "../../Helpers/AppHelper";
 import '../../Css/row.css';
 import { 
   Workforce, 
-  //AbsenceCategory, 
-  ABSENCE_CATEGORY_COLORS
+  AbsenceCategory, 
+  ABSENCE_CATEGORY_COLORS,
+  StoreInfo
   
 } from "../../Models/Model";
 /* eslint-disable */
-export enum AbsenceCategory {
-  UNPAID_SHARED = "UNPAID_SHARED",
-  PAID_SHARED = "PAID_SHARED",
-  UNPAID_UNSHARED = "UNPAID_UNSHARED",
-  PAID_UNSHARED = "PAID_UNSHARED"
-}
+
 interface AbsenceRowProps {
   expandedSections: any;
   toggleSection: (section: "absence") => void;
@@ -23,6 +19,7 @@ interface AbsenceRowProps {
   datesInRange: Date[];
   cellWidth: number;
   workforces: Workforce[];
+  storeInfo: StoreInfo;
 }
 
 // Define interface for the AdaptiveTooltip component props
@@ -32,6 +29,7 @@ interface AdaptiveTooltipProps {
   category?: AbsenceCategory | null;
   className?: string;
   backgroundColor?: string;
+  storeInfo: StoreInfo;
 }
 
 const AbsenceRow: React.FC<AbsenceRowProps> = ({
@@ -40,7 +38,8 @@ const AbsenceRow: React.FC<AbsenceRowProps> = ({
   AbsenceGroup,
   datesInRange,
   cellWidth,
-  workforces
+  workforces,
+  storeInfo
 }) => {
   // Group workforces by absence category for the view
   const absenceCategoryGroups = React.useMemo(() => 
@@ -55,22 +54,9 @@ const AbsenceRow: React.FC<AbsenceRowProps> = ({
     if (category) {
       // For a specific absence category
       const personList = absenceCategoryGroups[category];
-      personList.forEach(person => {
-        const hasAbsenceOnDate = person.Absences?.some(
-          s => 
-            new Date(s.StartDate || "") <= date && 
-            new Date(s.EndDate || "") >= date &&
-            getAbsenceCategory(s) === category
-        );
-
-        if (hasAbsenceOnDate) {
-          staffList.push(person.Name);
-        }
-      });
-    } else {
-      // For total absences (all categories)
-      Object.values(AbsenceCategory).forEach(category => {
-        const personList = absenceCategoryGroups[category];
+      
+      if (category !== AbsenceCategory.REPOS_OFF && category !== AbsenceCategory.OUT_OF_CONTRACT) {
+        // Standard absence handling
         personList.forEach(person => {
           const hasAbsenceOnDate = person.Absences?.some(
             s => 
@@ -79,10 +65,81 @@ const AbsenceRow: React.FC<AbsenceRowProps> = ({
               getAbsenceCategory(s) === category
           );
 
-          if (hasAbsenceOnDate && !staffList.includes(person.Name)) {
-            staffList.push(`${person.Name} (${getCategoryDisplayName(category)})`);
+          if (hasAbsenceOnDate) {
+            staffList.push(person.Name);
           }
         });
+      } 
+      // Handle REPOS_OFF category
+      else if (category === AbsenceCategory.REPOS_OFF) {
+        personList.forEach(person => {
+          if (isDayOff(person, date, storeInfo) && !isOutOfContract(person, date)) {
+            const reason = [];
+            
+            // Add reasons why person is off
+            if (person.FixedDayOff?.includes(getDayName(date))) reason.push("Jour fixe");
+            if (person.FavoriteDayOff?.includes(getDayName(date))) reason.push("Jour préféré");
+            if (storeInfo.ClosingDays?.includes(getDayName(date))) reason.push("Fermeture");
+            if (storeInfo.Holidays?.includes(date.toISOString().split("T")[0])) reason.push("Jour férié");
+            
+            staffList.push(`${person.Name} (${reason.join(", ")})`);
+          }
+        });
+      } 
+      // Handle OUT_OF_CONTRACT category
+      else if (category === AbsenceCategory.OUT_OF_CONTRACT) {
+        personList.forEach(person => {
+          if (isOutOfContract(person, date)) {
+            const reason = [];
+            
+            if (person.StartContract && new Date(date) < new Date(person.StartContract)) {
+              reason.push("Avant contrat");
+            }
+            
+            if (person.EndContract && new Date(date) > new Date(person.EndContract)) {
+              reason.push("Après contrat");
+            }
+            
+            staffList.push(`${person.Name} (${reason.join(", ")})`);
+          }
+        });
+      }
+    } else {
+      // For total absences (all categories)
+      Object.values(AbsenceCategory).forEach(cat => {
+        const personList = absenceCategoryGroups[cat];
+        
+        if (cat !== AbsenceCategory.REPOS_OFF && cat !== AbsenceCategory.OUT_OF_CONTRACT) {
+          // Standard absence categories
+          personList.forEach(person => {
+            const hasAbsenceOnDate = person.Absences?.some(
+              s => 
+                new Date(s.StartDate || "") <= date && 
+                new Date(s.EndDate || "") >= date &&
+                getAbsenceCategory(s) === cat
+            );
+
+            if (hasAbsenceOnDate && !staffList.includes(person.Name)) {
+              staffList.push(`${person.Name} (${getCategoryDisplayName(cat)})`);
+            }
+          });
+        } 
+        // REPOS_OFF category
+        else if (cat === AbsenceCategory.REPOS_OFF) {
+          personList.forEach(person => {
+            if (isDayOff(person, date, storeInfo) && !isOutOfContract(person, date) && !staffList.includes(person.Name)) {
+              staffList.push(`${person.Name} (${getCategoryDisplayName(cat)})`);
+            }
+          });
+        } 
+        // OUT_OF_CONTRACT category
+        else if (cat === AbsenceCategory.OUT_OF_CONTRACT) {
+          personList.forEach(person => {
+            if (isOutOfContract(person, date) && !staffList.includes(person.Name)) {
+              staffList.push(`${person.Name} (${getCategoryDisplayName(cat)})`);
+            }
+          });
+        }
       });
     }
     
@@ -90,18 +147,8 @@ const AbsenceRow: React.FC<AbsenceRowProps> = ({
   };
 
   // Helper function to get display name for absence category
-  const getCategoryDisplayName = (category: AbsenceCategory): string => {
-    switch (category) {
-      case AbsenceCategory.UNPAID_SHARED:
-        return "Unpaid Shared";
-      case AbsenceCategory.PAID_SHARED:
-        return "Paid Shared";
-      case AbsenceCategory.UNPAID_UNSHARED:
-        return "Unpaid Unshared";
-      case AbsenceCategory.PAID_UNSHARED:
-        return "Paid Unshared";
-    }
-  };
+
+
 
   // Component for the adaptive tooltip
   const AdaptiveTooltip: React.FC<AdaptiveTooltipProps> = ({ 
@@ -109,7 +156,8 @@ const AbsenceRow: React.FC<AbsenceRowProps> = ({
     date, 
     category = null, 
     className = "",
-    backgroundColor
+    backgroundColor,
+    storeInfo
   }) => {
     const [tooltipPosition, setTooltipPosition] = useState<"above" | "below">("above");
     const cellRef = useRef<HTMLDivElement>(null);
@@ -156,7 +204,7 @@ const AbsenceRow: React.FC<AbsenceRowProps> = ({
         style={{ 
           width: `${cellWidth}px`, 
           position: "relative",
-          //backgroundColor: backgroundColor || ""
+          // backgroundColor: backgroundColor || ""
         }}
       >
         {count}
@@ -183,28 +231,56 @@ const AbsenceRow: React.FC<AbsenceRowProps> = ({
   // Function to calculate total absences for a date
   const calculateTotalAbsencesForDate = (date: Date): number => {
     let totalAbsences = 0;
+    const absenceCounted = new Set<string>(); // To avoid counting the same workforce multiple times
+    
     Object.values(AbsenceCategory).forEach((category) => {
       const personList = absenceCategoryGroups[category];
-      personList.forEach((person) => {
-        const hasAbsenceOnDate = person.Absences?.some(
-          (absence) =>
-            new Date(absence.StartDate || "") <= date && 
-            new Date(absence.EndDate || "") >= date &&
-            getAbsenceCategory(absence) === category
-        );
+      
+      if (category !== AbsenceCategory.REPOS_OFF && category !== AbsenceCategory.OUT_OF_CONTRACT) {
+        // Standard absence categories
+        personList.forEach((person) => {
+          const hasAbsenceOnDate = person.Absences?.some(
+            (absence) =>
+              new Date(absence.StartDate || "") <= date && 
+              new Date(absence.EndDate || "") >= date &&
+              getAbsenceCategory(absence) === category
+          );
 
-        if (hasAbsenceOnDate) {
-          totalAbsences += 1;
-        }
-      });
+          if (hasAbsenceOnDate && !absenceCounted.has(person.Id)) {
+            totalAbsences += 1;
+            absenceCounted.add(person.Id);
+          }
+        });
+      } 
+      // REPOS_OFF category
+      else if (category === AbsenceCategory.REPOS_OFF) {
+        personList.forEach((person) => {
+          if (isDayOff(person, date, storeInfo) && 
+              !isOutOfContract(person, date) && 
+              !absenceCounted.has(person.Id)) {
+            totalAbsences += 1;
+            absenceCounted.add(person.Id);
+          }
+        });
+      } 
+      // OUT_OF_CONTRACT category
+      else if (category === AbsenceCategory.OUT_OF_CONTRACT) {
+        personList.forEach((person) => {
+          if (isOutOfContract(person, date) && !absenceCounted.has(person.Id)) {
+            totalAbsences += 1;
+            absenceCounted.add(person.Id);
+          }
+        });
+      }
     });
+    
     return totalAbsences;
   };
   console.log('AbsenceCategory values:', Object.values(AbsenceCategory));
 
   return (
     <>
-      <div className="gridRow absence-summary AssignedRow">
+      <div className="gridRow absence-detail AssignedRow">
         <div
           className="firstColumnHeader"
           style={{ fontWeight: "bold", cursor: "pointer" }}
@@ -225,6 +301,7 @@ const AbsenceRow: React.FC<AbsenceRowProps> = ({
               count={totalAbsences}
               date={date}
               className="total-absence"
+              storeInfo={storeInfo}
             />
           );
         })}
@@ -235,9 +312,10 @@ const AbsenceRow: React.FC<AbsenceRowProps> = ({
           const absenceCounts = calculateAbsenceCounts(
             absenceCategoryGroups[category], 
             category, 
-            datesInRange
+            datesInRange,
+            storeInfo
           );
-          console.log("Category",category);
+          
           const backgroundColor = ABSENCE_CATEGORY_COLORS[category];
           
           return (
@@ -262,8 +340,9 @@ const AbsenceRow: React.FC<AbsenceRowProps> = ({
                   count={count}
                   date={datesInRange[index]}
                   category={category}
-                  backgroundColor={backgroundColor}
+                  // backgroundColor={backgroundColor}
                   className={`category-${category}`}
+                  storeInfo={storeInfo}
                 />
               ))}
             </div>
@@ -272,5 +351,6 @@ const AbsenceRow: React.FC<AbsenceRowProps> = ({
     </>
   );
 };
+
 
 export default AbsenceRow;

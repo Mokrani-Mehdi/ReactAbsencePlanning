@@ -77,13 +77,17 @@ export enum AbsenceCategory {
   PAID_SHARED = "PAID_SHARED",
   UNPAID_UNSHARED = "UNPAID_UNSHARED",
   PAID_UNSHARED = "PAID_UNSHARED",
+  REPOS_OFF = "REPOS_OFF",
+  OUT_OF_CONTRACT = "OUT_OF_CONTRACT"
 }
 
 export const ABSENCE_CATEGORY_COLORS = {
-  [AbsenceCategory.UNPAID_SHARED]: "#4CAF50", // Green
-  [AbsenceCategory.PAID_SHARED]: "#2196F3", // Blue
-  [AbsenceCategory.UNPAID_UNSHARED]: "#F44336", // Red
-  [AbsenceCategory.PAID_UNSHARED]: "#FF9800", // Orange
+  [AbsenceCategory.UNPAID_SHARED]: "#8884d8",
+  [AbsenceCategory.PAID_SHARED]: "#82ca9d",
+  [AbsenceCategory.UNPAID_UNSHARED]: "#ffc658",
+  [AbsenceCategory.PAID_UNSHARED]: "#ff8042",
+  [AbsenceCategory.REPOS_OFF]: "#b3b3cc",
+  [AbsenceCategory.OUT_OF_CONTRACT]: "#cccccc"
 };
 
 

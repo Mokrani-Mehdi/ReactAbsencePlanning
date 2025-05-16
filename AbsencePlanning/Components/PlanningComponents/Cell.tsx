@@ -3,7 +3,7 @@ import "../../Css/cell.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWarning } from "@fortawesome/free-solid-svg-icons";
 import { Absences, AbsenceCategory, ABSENCE_CATEGORY_COLORS, Workforce } from "../../Models/Model";
-import { getAbsenceCategory } from "../../Helpers/AppHelper";
+import { getAbsenceCategory,getCategoryDisplayName } from "../../Helpers/AppHelper";
 
 interface CellProps {
   workforceName: string;
@@ -42,18 +42,7 @@ const Cell: React.FC<CellProps> = ({
   };
 
   // Get category display name
-  const getCategoryDisplayName = (category: AbsenceCategory): string => {
-    switch (category) {
-      case AbsenceCategory.UNPAID_SHARED:
-        return "Unpaid Shared";
-      case AbsenceCategory.PAID_SHARED:
-        return "Paid Shared";
-      case AbsenceCategory.UNPAID_UNSHARED:
-        return "Unpaid Unshared";
-      case AbsenceCategory.PAID_UNSHARED:
-        return "Paid Unshared";
-    }
-  };
+
 
   // Get color for absence based on category
   const getAbsenceColorStyle = (absence: Absences) => {

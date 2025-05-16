@@ -304,6 +304,15 @@ const PlanningGrid: React.FC<PlanningGridProps> = ({
         datesInRange={datesInRange}
         cellWidth={cellWidth}
         workforces={localWorkforces}
+        storeInfo={storeInfo}
+      />
+       <ManagerRow
+        expandedSections={expandedSections}
+        toggleSection={toggleSection}
+        managerGroups={managerGroups}
+        datesInRange={datesInRange}
+        cellWidth={cellWidth}
+        totalAssignedCounts={totalAssignedCounts}
       />
       <DepartmentRow
         expandedSections={expandedSections}
@@ -313,14 +322,7 @@ const PlanningGrid: React.FC<PlanningGridProps> = ({
         cellWidth={cellWidth}
         totalAssignedCounts={totalAssignedCounts}
       />
-      <ManagerRow
-        expandedSections={expandedSections}
-        toggleSection={toggleSection}
-        managerGroups={managerGroups}
-        datesInRange={datesInRange}
-        cellWidth={cellWidth}
-        totalAssignedCounts={totalAssignedCounts}
-      />
+     
 
       <SpacerRow cellWidth={cellWidth} datesInRange={datesInRange} />
 
