@@ -47,8 +47,8 @@ const Planning: React.FC<Payload> = ({
   );
   
   const [isSelectMode, setIsSelectMode] = useState<boolean>(false);
-  const [selectedAbsences, setSelectedAbsences] = useState<Set<string>>(
-    new Set()
+  const [selectedAbsences, setSelectedAbsences] = useState<Absences[]>(
+    []
   );
   
   // Initialize with empty arrays for roles
@@ -226,7 +226,7 @@ const Planning: React.FC<Payload> = ({
   const toggleMode = () => {
     setIsSelectMode(!isSelectMode);
     // Clear selections when changing modes
-    setSelectedAbsences(new Set());
+    setSelectedAbsences([]);
   };
 
   const handleCellClick = (
@@ -249,49 +249,72 @@ const Planning: React.FC<Payload> = ({
     }
   };
 
-  const toggleAbsenceSelection = (absenceId: string) => {
-    const newSelectedAbsences = new Set(selectedAbsences);
-
-    if (newSelectedAbsences.has(absenceId)) {
-      newSelectedAbsences.delete(absenceId);
-    } else {
-      newSelectedAbsences.add(absenceId);
-    }
-
-    setSelectedAbsences(newSelectedAbsences);
+  const toggleAbsenceSelection = (absenceToToggle: Absences) => {
+    setSelectedAbsences((prevSelected) => {
+      // Check if the absence is already selected by comparing IDs
+      const isAlreadySelected = prevSelected.some(
+        (absence) => absence.Id === absenceToToggle.Id
+      );
+      
+      if (isAlreadySelected) {
+        // Remove the absence if already selected
+        return prevSelected.filter((absence) => absence.Id !== absenceToToggle.Id);
+      } else {
+        // Add the absence if not already selected
+        return [...prevSelected, absenceToToggle];
+      }
+    });
   };
 
-  const selectAllAbsencesForWorkforce = (
+   const selectAllAbsencesForWorkforce = (
     workforce: Workforce,
     selected: boolean
   ) => {
-    const newSelectedAbsences = new Set(selectedAbsences);
-
-    workforce.Absences?.forEach((absence) => {
-      if (selected) {
-        newSelectedAbsences.add(absence.Id);
-      } else {
-        newSelectedAbsences.delete(absence.Id);
-      }
-    });
-
-    setSelectedAbsences(newSelectedAbsences);
+    if (selected) {
+      // Add all absences from this workforce that aren't already selected
+      setSelectedAbsences((prevSelected) => {
+        const currentSelectedIds = new Set(prevSelected.map(a => a.Id));
+        const newAbsences = workforce.Absences?.filter(
+          (absence) => !currentSelectedIds.has(absence.Id)
+        ) || [];
+        
+        return [...prevSelected, ...newAbsences];
+      });
+    } else {
+      // Remove all absences from this workforce
+      setSelectedAbsences((prevSelected) => {
+        const workforceAbsenceIds = new Set(
+          workforce.Absences?.map((absence) => absence.Id) || []
+        );
+        
+        return prevSelected.filter(
+          (absence) => !workforceAbsenceIds.has(absence.Id)
+        );
+      });
+    }
   };
 
   const selectAllAbsences = (selected: boolean) => {
-    const newSelectedAbsences = new Set<string>();
-
     if (selected && safeData.Workforces) {
+      // Collect all unique absences across all workforces
+      const allAbsences: Absences[] = [];
+      const addedIds = new Set<string>();
+      
       safeData.Workforces.forEach((workforce) => {
         workforce.Absences?.forEach((absence) => {
-          newSelectedAbsences.add(absence.Id);
+          if (!addedIds.has(absence.Id)) {
+            allAbsences.push(absence);
+            addedIds.add(absence.Id);
+          }
         });
       });
+      
+      setSelectedAbsences(allAbsences);
+    } else {
+      // Clear all selections
+      setSelectedAbsences([]);
     }
-
-    setSelectedAbsences(newSelectedAbsences);
   };
-
   // Ensure we always pass arrays even when data is empty
   const safeWorkforces = safeData.Workforces || [];
   const safeDepartmentData = safeData.DepartmentSkillsLists || [];

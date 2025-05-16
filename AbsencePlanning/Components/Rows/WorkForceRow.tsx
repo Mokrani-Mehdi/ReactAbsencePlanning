@@ -14,13 +14,13 @@ interface WorkforceRowProps {
   workforce: Workforce;
   dates: Date[];
   isSelectMode: boolean;
-  selectedAbsences: Set<string>;
+  selectedAbsences: Absences[];
   onCellClick: (
     absence: Absences | undefined,
     date: Date,
     workforce: Workforce
   ) => void;
-  onAbsenceSelect: (absenceId: string) => void;
+  onAbsenceSelect: (absence: Absences) => void; // Changed to accept Absences
   onWorkforceSelect: (workforce: Workforce, selected: boolean) => void;
   storeInfo: StoreInfo;
   OnChange: (
@@ -61,14 +61,20 @@ const WorkForceRow: React.FC<WorkforceRowProps> = ({
 
   const isAllSelected =
     (workforce?.Absences?.length > 0 &&
-      workforce.Absences?.every((a) => selectedAbsences.has(a.Id))) ??
+      workforce.Absences?.every((a) => 
+        selectedAbsences.some(selected => selected.Id === a.Id)
+      )) ??
     false;
+    
   const isSomeSelected =
     (workforce?.Absences?.length > 0 &&
-      workforce.Absences?.some((a) => selectedAbsences.has(a.Id))) ??
+      workforce.Absences?.some((a) => 
+        selectedAbsences.some(selected => selected.Id === a.Id)
+      )) ??
     false;
 
-  const HandleOnChange = (absence: Absences | null, date: Date) => {
+
+ const HandleOnChange = (absence: Absences | null, date: Date) => {
     if (!isSelectMode) {
       const selectedWorforceDate: AbsencePlanningCellData = {
         Absence: absence,
@@ -241,11 +247,13 @@ const WorkForceRow: React.FC<WorkforceRowProps> = ({
               }
               isSelectMode={isSelectMode}
               isSelected={
-                primaryAbsence ? selectedAbsences.has(primaryAbsence.Id) : false
+                primaryAbsence ? 
+                  selectedAbsences.some(a => a.Id === primaryAbsence.Id) : 
+                  false
               }
-              onSelect={
+               onSelect={
                 primaryAbsence
-                  ? () => onAbsenceSelect(primaryAbsence.Id)
+                  ? () => onAbsenceSelect(primaryAbsence)
                   : undefined
               }
               isFixedDayOff={isFixedOff}

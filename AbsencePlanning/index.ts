@@ -125,7 +125,7 @@ export class AbsencePlanning
     //       actionType: this.state.actionType,
 
     //     };
-    //alert(JSON.stringify(this.state));
+    console.log(JSON.stringify(this.state));
     return {
       Response: this.state ? JSON.stringify(this.state) : "",
     };

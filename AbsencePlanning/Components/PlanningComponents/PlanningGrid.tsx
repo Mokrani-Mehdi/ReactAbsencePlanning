@@ -37,7 +37,7 @@ interface PlanningGridProps {
   datesInRange: Date[];
   cellWidth: number;
   isSelectMode: boolean;
-  selectedAbsences: Set<string>;
+  selectedAbsences: Absences[];
   AvailabitlityPayload: AvailabilityItem[];
   storeInfo: StoreInfo;
   onCellClick: (
@@ -45,7 +45,7 @@ interface PlanningGridProps {
     date: Date,
     workforce: Workforce
   ) => void;
-  onAbsenceSelect: (absenceId: string) => void;
+  onAbsenceSelect: (absence: Absences) => void; // Changed to accept Absences
   onWorkforceSelect: (workforce: Workforce, selected: boolean) => void;
   selectAllAbsences: (selected: boolean) => void;
   onGetavailabilityCall?: () => void;
@@ -92,7 +92,9 @@ const PlanningGrid: React.FC<PlanningGridProps> = ({
     absence: false,
     keyHolder: false,
   });
-  
+  const HandleSetPopUp = () => {
+    SetLegendPopUp();
+  }
   // Set up sensors for drag and drop
   const sensors = useSensors(
     useSensor(PointerSensor, {
@@ -275,13 +277,13 @@ const PlanningGrid: React.FC<PlanningGridProps> = ({
               checked={
                 localWorkforces
                   .flatMap((w) => w.Absences || [])
-                  .every((a) => selectedAbsences.has(a.Id)) &&
-                selectedAbsences.size > 0
+                  .every((a) => selectedAbsences.some(selected => selected.Id === a.Id)) &&
+                selectedAbsences.length > 0
               }
               onChange={(e) => selectAllAbsences(e.target.checked)}
             />
           )}
-          <FontAwesomeIcon className="infoPlanningAbsence" onClick={() => SetLegendPopUp} icon={faCircleInfo} style={{color: "#ff8000"}} />
+          <FontAwesomeIcon className="infoPlanningAbsence" onClick={HandleSetPopUp} icon={faCircleInfo} style={{color: "#ff8000"}} />
           </div>
 
         {datesInRange.map((date, index) => (

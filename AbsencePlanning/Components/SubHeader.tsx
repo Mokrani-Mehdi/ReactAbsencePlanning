@@ -13,7 +13,7 @@ import {
 interface SubHeaderPops {
   toggleMode: () => void;
   isSelectMode: boolean;
-  selectedAbsences: Set<string>;
+  selectedAbsences: Absences[];
   Workforces: Workforce[];
   currentDate : string;
   storeName : string;
@@ -42,6 +42,27 @@ const SubHeader: React.FC<SubHeaderPops> = ({
 
     OnChange([],null,nextdate.toISOString().split('T')[0],null)
   }
+
+    const handleShareClick = (): void => {
+    if (selectedAbsences.length === 0) {
+      alert("Please select at least one absence to share");
+      return;
+    }
+    OnChange(selectedAbsences, "Share", null, null);
+  };
+
+  // Handler for delete button click
+  const handleDeleteClick = (): void => {
+    if (selectedAbsences.length === 0) {
+      alert("Please select at least one absence to delete");
+      return;
+    }
+    
+    // Optional: Add confirmation dialog
+    if (window.confirm(`Are you sure you want to delete ${selectedAbsences.length} selected absence(s)?`)) {
+      OnChange(selectedAbsences, "Delete", null, null);
+    }
+  };
   return (
     <div className="subheader">
       <div className="Info-container">
@@ -75,16 +96,26 @@ const SubHeader: React.FC<SubHeaderPops> = ({
         <FontAwesomeIcon
           className="eventIcon"
           icon={faPaperPlane}
-          onClick={() => OnChange([], "Share", null, null)}
+          style={{
+            color: selectedAbsences.length > 0 ? "#74C0FC" : "#ccc", 
+            cursor: selectedAbsences.length > 0 ? "pointer" : "not-allowed"
+          }}
+          onClick={handleShareClick}
+          title={`Share ${selectedAbsences.length} absence(s)`}
         />
 
         <FontAwesomeIcon
           className="eventIcon"
           icon={faTrash}
-          onClick={() => OnChange([], "Delete", null, null)}
+          style={{
+            color: selectedAbsences.length > 0 ? "#74C0FC" : "#ccc",
+            cursor: selectedAbsences.length > 0 ? "pointer" : "not-allowed"
+          }}
+          onClick={handleDeleteClick}
+          title={`Delete ${selectedAbsences.length} absence(s)`}
         />
         <button onClick={toggleMode} className="select-button">
-          {!isSelectMode ? "Select" : "Cancel"}
+          {!isSelectMode ? "Select" : "Cancel " + selectedAbsences.length}
         </button>
       </div>
     </div>

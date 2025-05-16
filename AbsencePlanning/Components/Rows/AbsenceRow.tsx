@@ -276,7 +276,7 @@ const AbsenceRow: React.FC<AbsenceRowProps> = ({
     
     return totalAbsences;
   };
-  console.log('AbsenceCategory values:', Object.values(AbsenceCategory));
+  
 
   return (
     <>
