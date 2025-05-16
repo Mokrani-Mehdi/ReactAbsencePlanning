@@ -1,4 +1,4 @@
-.subheader {
+.PA-subheader {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -7,7 +7,7 @@
   /* padding: 10px 15px 0 15px; */
 }
 
-.Info-container {
+.PA-Info-container {
 
   display: flex;
   flex-direction: row;
@@ -18,30 +18,30 @@
   width: 50%;
 }
 
-.staff {
+.PA-staff {
   display: flex;
   padding: 5px;
   gap: 5px;
 }
 
-.store {
+.PA-store {
   display: flex;
   padding: 5px;
   gap: 5px;
 }
 
-.status {
+.PA-status {
   display: flex;
   padding: 5px;
   gap: 5px;
 }
 
-.image {
+.PA-image {
   width: 23px;
   height: 23px;
 }
 
-.select-button {
+.PA-select-button {
   padding: 0.67rem 1rem;
   font-size: 1rem;
   color: #fff;
@@ -53,7 +53,7 @@
   float: right;
 }
 
-.dateRange {
+.PA-dateRange {
   display: flex;
   padding: 0.67rem 1.5rem;
   font-size: 16px;
@@ -66,20 +66,20 @@
 
 }
 
-.lefticone {
+.PA-lefticone {
   cursor: pointer;
 }
 
-.righticone {
+.PA-righticone {
   cursor: pointer;
 
 }
-.eventIcon{
+.PA-eventIcon{
   height: 22px;
   width: 22px;
   cursor: pointer;
 }
-.leftSide {
+.PA-leftSide {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;

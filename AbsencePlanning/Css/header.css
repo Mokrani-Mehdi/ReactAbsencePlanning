@@ -1,4 +1,4 @@
-.header-container {
+.PA-header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -7,7 +7,7 @@
   }
   
   
-  .DropDown-Department-container {
+  .PA-DropDown-Department-container {
     position: relative;
     width: 250px;
     font-family: 'Roboto', sans-serif;
@@ -15,14 +15,14 @@
     height: 100%;
   }
   
-  .DropDown-manager-container {
+  .PA-DropDown-manager-container {
     position: relative;
     width: 250px;
     font-family: 'Roboto', sans-serif;
     z-index: 14;
     height: 100%;
   }
-  .DropDown-Role-container {
+  .PA-DropDown-Role-container {
     position: relative;
     width: 250px;
     font-family: 'Roboto', sans-serif;
@@ -32,7 +32,7 @@
   
   
   
-  .search-container {
+  .PA-search-container {
   
     margin: 0px 2px 0 0;
     font-family: 'Roboto', sans-serif;
@@ -40,7 +40,7 @@
     width: 250px;
   }
   
-  .search-input {
+  .PA-search-input {
     width: 100%;
     padding: 0.67rem 0;
     text-indent: 10px;
@@ -50,7 +50,7 @@
     /* height: 100%; */
   }
   
-  .search-input:focus {
+  .PA-search-input:focus {
     outline: none;
     border-color: #0066cc;
     box-shadow: 0 0 0 2px rgba(0, 102, 204, 0.2);
@@ -61,7 +61,7 @@
 
   
   
-  .DropDown-containers {
+  .PA-DropDown-containers {
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -70,7 +70,7 @@
   }
   
   
-  .Info-container{
+  .PA-Info-container{
   
     display: flex;
     flex-direction: row;
@@ -78,16 +78,16 @@
     align-items: center;
   }
   
-  /* .css-13cymwt-control{
+  /* .PA-css-13cymwt-control{
     height: 100%;
   } */
   
-  .custom-tooltip-container {
+  .PA-custom-tooltip-container {
     position: relative;
     display: inline-block;
   }
   
-  .tooltip-text {
+  .PA-tooltip-text {
     visibility: hidden;
     background-color: #555;
     color: #fff;
@@ -105,12 +105,12 @@
     min-width: 120px;
   }
   
-  .custom-tooltip-container:hover .tooltip-text {
+  .PA-custom-tooltip-container:hover .PA-tooltip-text {
     visibility: visible;
     opacity: 1;
   }
   
-  .selected-count-chip {
+  .PA-selected-count-chip {
     background-color: #e0e0e0;
     border-radius: 16px;
     padding: 2px 8px;
@@ -121,7 +121,7 @@
     white-space: nowrap;
     overflow: hidden;
   }
-  .selected-label {
+  .PA-selected-label {
     border-radius: 16px;
     font-size: 14px;
     cursor: default;

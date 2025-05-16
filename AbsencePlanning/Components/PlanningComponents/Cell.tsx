@@ -52,7 +52,7 @@ const Cell: React.FC<CellProps> = ({
 
   const getCellContent = () => {
     let buttonStyle = {};
-    const buttonClass = `shift-button ${isSelected ? "selected-shift" : ""}`;
+    const buttonClass = `PA-shift-button ${isSelected ? "PA-selected-shift" : ""}`;
 
     if (isHoliday) {
       buttonStyle = { backgroundColor: isSelected ? "#3498db" : "#FF9999" };
@@ -73,17 +73,17 @@ const Cell: React.FC<CellProps> = ({
 
     if (Object.keys(buttonStyle).length === 0) {
       return (
-        <div className="empty-shift">
-          <span className="add-shift-icon" title="Add Shift"></span>
+        <div className="PA-empty-shift">
+          <span className="PA-add-shift-icon" title="Add Shift"></span>
         </div>
       );
     }
 
     return (
-      <div className="tooltip shift-container">
+      <div className="PA-tooltip PA-shift-container">
         <button className={buttonClass} style={buttonStyle}></button>
         <span
-          className="tooltiptext"
+          className="PA-tooltiptext"
           style={{ width: "200px", whiteSpace: "normal" }}
         >
           {!isWithinContractPeriod && <div>Out of Contract Period</div>}
@@ -118,14 +118,14 @@ const Cell: React.FC<CellProps> = ({
 
   return (
     <div
-      className={`cell ${isSelected ? "selected" : ""}`}
+      className={`PA-cell ${isSelected ? "PA-selected" : ""}`}
       onClick={handleClick}
     >
-      <div className="cell-container">
+      <div className="PA-cell-container">
         {getCellContent()}
         {hasOverlap && (
           <FontAwesomeIcon
-            className="warning-icon"
+            className="PA-warning-icon"
             icon={faWarning}
             size="sm"
           />

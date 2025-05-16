@@ -53,14 +53,14 @@ const ManagerRow: React.FC<ManagerRowProps> = ({
 
   return (
     <>
-      <div className="gridRow AssignedRow" style={{ backgroundColor: "#99D4A9" }}>
+      <div className="PA-gridRow AssignedRow" style={{ backgroundColor: "#99D4A9" }}>
         <div
-          className="firstColumnHeader"
+          className="PA-firstColumnHeader"
           style={{ fontWeight: "bold",  cursor: "pointer" }}
           onClick={() => toggleSection("manager")}
         >
           Total Absents par manager {' '}
-          <FontAwesomeIcon className="icone"
+          <FontAwesomeIcon className="PA-icone"
             icon={expandedSections.manager ? faChevronUp : faChevronDown} 
             size="sm"
           />
@@ -68,9 +68,9 @@ const ManagerRow: React.FC<ManagerRowProps> = ({
         {totalAssignedCounts.map((count, index) => (
           <div
             key={index}
-            className={`dataCellHeader ${
+            className={`PA-dataCellHeader ${
               datesInRange[index].toLocaleDateString("en-US", { weekday: "long" }) === "Sunday"
-                ? "divider-header"
+                ? "PA-divider-header"
                 : ""
             }`}
             style={{ width: `${cellWidth}px` }}
@@ -86,18 +86,18 @@ const ManagerRow: React.FC<ManagerRowProps> = ({
           return (
             <div
               key={`manager-${manager}`}
-              className="gridRow SubRow"
+              className="PA-gridRow SubRow"
               style={{ backgroundColor: "#f2fcf3" }}
             >
-              <div className="firstColumnHeader" style={{ paddingLeft: "20px" }}>
+              <div className="PA-firstColumnHeader" style={{ paddingLeft: "20px" }}>
                 {manager}
               </div>
               {managerCounts.map((count, index) => (
                 <div
                   key={index}
-                  className={`dataCellHeader ${
+                  className={`PA-dataCellHeader ${
                     datesInRange[index].toLocaleDateString("en-US", { weekday: "long" }) === "Sunday"
-                      ? "divider-header"
+                      ? "PA-divider-header"
                       : ""
                   }`}
                   style={{ width: `${cellWidth}px` }}

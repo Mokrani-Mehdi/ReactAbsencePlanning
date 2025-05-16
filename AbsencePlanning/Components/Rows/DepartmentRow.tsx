@@ -94,7 +94,7 @@ const DepartmentRow: React.FC<DepartmentRowProps> = ({
     department = null, 
     className = "" 
   }) => {
-    const [tooltipPosition, setTooltipPosition] = useState<"above" | "below">("above");
+    const [tooltipPosition, setTooltipPosition] = useState<"PA-above" | "PA-below">("PA-above");
     const cellRef = useRef<HTMLDivElement>(null);
     
     useEffect(() => {
@@ -108,7 +108,7 @@ const DepartmentRow: React.FC<DepartmentRowProps> = ({
         
         // If there's more space at the bottom than at the top, position tooltip below
         // Otherwise, position it above (default)
-        setTooltipPosition(bottomSpace > topSpace ? "below" : "above");
+        setTooltipPosition(bottomSpace > topSpace ? "PA-below" : "PA-above");
       };
       
       checkPosition();
@@ -126,7 +126,7 @@ const DepartmentRow: React.FC<DepartmentRowProps> = ({
     return (
       <div
         ref={cellRef}
-        className={`dataCellHeader adaptive-tooltip ${className} ${
+        className={`PA-dataCellHeader PA-adaptive-tooltip ${className} ${
           date.toLocaleDateString("en-US", { weekday: "long" }) === "Sunday"
             ? "divider-header"
             : ""
@@ -135,7 +135,7 @@ const DepartmentRow: React.FC<DepartmentRowProps> = ({
       >
         {count}
         {count > 0 && (
-          <div className={`tooltip-content ${tooltipPosition}`}>
+          <div className={`PA-tooltip-content ${tooltipPosition}`}>
             <strong>
               {department ? `${department} le ` : "Staff affecté le "}
               {date.toLocaleDateString("fr-FR")}
@@ -184,14 +184,14 @@ const DepartmentRow: React.FC<DepartmentRowProps> = ({
 
   return (
     <>
-      <div className="gridRow AssignedRow" style={{ backgroundColor: "#CCE9D4" }}>
+      <div className="PA-gridRow PA-AssignedRow" style={{ backgroundColor: "#CCE9D4" }}>
         <div
-          className="firstColumnHeader"
+          className="PA-firstColumnHeader"
           style={{ fontWeight: "bold", cursor: "pointer" }}
           onClick={() => toggleSection("department")}
         >
           Total affectés par département {' '}
-          <FontAwesomeIcon className="icone"
+          <FontAwesomeIcon className="PA-icone"
             icon={expandedSections.department ? faChevronUp : faChevronDown} 
             size="sm"
           />
@@ -204,7 +204,7 @@ const DepartmentRow: React.FC<DepartmentRowProps> = ({
               count={totalAssignedCounts[index]}
               date={date}
               staffList={staffList}
-              className="total-assigned"
+              className="PA-total-assigned"
             />
           );
         })}
@@ -216,10 +216,10 @@ const DepartmentRow: React.FC<DepartmentRowProps> = ({
           return (
             <div
               key={`department-${department}`}
-              className="gridRow SubRow"
+              className="PA-gridRow SubRow"
               style={{ backgroundColor: "#f2fcf3" }}
             >
-              <div className="firstColumnHeader" style={{ paddingLeft: "20px" }}>
+              <div className="PA-firstColumnHeader" style={{ paddingLeft: "20px" }}>
                 {department}
               </div>
               {datesInRange.map((date, index) => {

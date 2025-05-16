@@ -1,4 +1,4 @@
-.planningGrid {
+.PA-planningGrid {
     display: grid;
     gap: 2px;
     padding: 15px 0;
@@ -6,7 +6,7 @@
     position: relative;
 }
 
-.headerInfo {
+.PA-headerInfo {
     position: sticky;
     top: 0;
     display: grid;
@@ -19,7 +19,7 @@
 }
 
 
-.gridRow {
+.PA-gridRow {
     display: grid;
     grid-column: 1 / -1;
     grid-template-columns: subgrid;
@@ -30,7 +30,7 @@
 
 
 
-.headerCellInfo {
+.PA-headerCellInfo {
     background-color: white;
     padding: 0 0 0 30px;
     /* border-bottom: 1px solid #ddd; */
@@ -43,17 +43,17 @@
     display: flex;
 }
 
-.checkboxAbsence {
+.PA-checkboxAbsence {
     width: 13px;
     /* position: absolute;
     left: 4px; */
 }
 
-.headerName {
+.PA-headerName {
     font-size: 13px;
 }
 
-.firstColumnHeader {
+.PA-firstColumnHeader {
     text-align: left;
     padding-left: 10px;
     display: flex;
@@ -64,7 +64,7 @@
     font-weight: bold;
 }
 
-.dataCellHeader {
+.PA-dataCellHeader {
 
     padding: 8px 0;
     font-size: 12px;
@@ -72,29 +72,29 @@
     border-left: 1px solid white;
 }
 
-.AssignedRow {
+.PA-AssignedRow {
     background-color: #e2f7e3;
     height: 37px;
     /* margin: 0 0 4px 0; */
 }
 
-.icone {
+.PA-icone {
     position: absolute;
     right: 5px;
 }
 
-.headerDate {
+.PA-headerDate {
     font-size: 14px;
     font-weight: 500;
 }
 
-.headerName {
+.PA-headerName {
     font-size: 10px;
     font-weight: 400;
 
 }
 
-.infoPlanningAbsence {
+.PA-infoPA {
     color: rgb(255, 128, 0);
     /* position: absolute; */
     /* top: 50%; */

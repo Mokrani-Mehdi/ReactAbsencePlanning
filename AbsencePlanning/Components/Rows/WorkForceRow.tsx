@@ -167,17 +167,17 @@ const WorkForceRow: React.FC<WorkforceRowProps> = ({
 
   return (
     <div 
-      className="gridRow" 
+      className="PA-gridRow" 
       ref={setNodeRef} 
       style={style}
       {...attributes}
     >
-      <div key={workforce.Id} className="firstColumn">
+      <div key={workforce.Id} className="PA-firstColumn">
         {isSelectMode && (
           <span onClick={handleCheckboxClick}>
             <input
               type="checkbox"
-              className="checkboxAbsence"
+              className="PA-checkboxAbsence"
               checked={isAllSelected}
               ref={(el) => {
                 if (el) {

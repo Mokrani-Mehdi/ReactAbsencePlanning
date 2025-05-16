@@ -8,15 +8,15 @@ interface LegendPopUpProps {
 
 const AbsenceCategorySection = memo(() => (
   <>
-    <div className="section-title">Absence Category</div>
-    <div className="departments-grid">
+    <div className="PA-section-title">Absence Category</div>
+    <div className="PA-departments-grid">
       {Object.values(AbsenceCategory).map((category) => (
-        <div className="department-item" key={category}>
+        <div className="PA-department-item" key={category}>
           <span
-            className="circle"
+            className="PA-circle"
             style={{ backgroundColor: ABSENCE_CATEGORY_COLORS[category] }}
           ></span>
-          <span className="category-label">{category}</span>
+          <span className="PA-category-label">{category}</span>
         </div>
       ))}
     </div>
@@ -32,15 +32,15 @@ const LegendPopUp: React.FC<LegendPopUpProps> = memo(
     }, []);
 
     return (
-      <div className="popup-overlay" onClick={onClose}>
-        <div className="popup-container" onClick={handleContainerClick}>
-          <div className="popup-header">
+      <div className="PA-popup-overlay" onClick={onClose}>
+        <div className="PA-popup-container" onClick={handleContainerClick}>
+          <div className="PA-popup-header">
             <h3>Time Off Information</h3>
-            <button className="close-button" onClick={onClose}>
+            <button className="PA-close-button" onClick={onClose}>
               &times;
             </button>
           </div>
-          <div className="popup-content">
+          <div className="PA-popup-content">
             <AbsenceCategorySection  />
             
           </div>

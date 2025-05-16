@@ -6,14 +6,14 @@ interface SpacerRowProps {
 }
 
  const SpacerRow: React.FC<SpacerRowProps> = ({ cellWidth , datesInRange }) => (
-    <div className="gridRow spacer-row" style={{ height: "3px" }}>
-      <div className="firstColumnHeader"></div>
+    <div className="PA-gridRow spacer-row" style={{ height: "3px" }}>
+      <div className="PA-firstColumnHeader"></div>
       {datesInRange.map((date, index) => (
         <div
           key={index}
-          className={`dataCellHeader ${
+          className={`PA-dataCellHeader ${
             date.toLocaleDateString("en-US", { weekday: "long" }) === "Sunday"
-              ? "divider-header"
+              ? "PA-divider-header"
               : ""
           }`}
           style={{ width: `${cellWidth}px` }}

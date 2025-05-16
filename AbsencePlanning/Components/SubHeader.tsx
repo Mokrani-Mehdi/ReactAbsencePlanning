@@ -15,8 +15,8 @@ interface SubHeaderPops {
   isSelectMode: boolean;
   selectedAbsences: Absences[];
   Workforces: Workforce[];
-  currentDate : string;
-  storeName : string;
+  currentDate: string;
+  storeName: string;
   OnChange: (
     selectedAbsences: Absences[],
     actionType: string | null,
@@ -34,16 +34,16 @@ const SubHeader: React.FC<SubHeaderPops> = ({
   storeName,
   OnChange,
 }) => {
- 
-  const HandleDateChange = (isNextMonth : boolean) : void=>{
-
+  const HandleDateChange = (isNextMonth: boolean): void => {
     const currentdate = new Date(currentDate);
-    const nextdate = new Date(currentdate.setMonth(currentdate.getMonth() + (isNextMonth ? 1 : -1)));
+    const nextdate = new Date(
+      currentdate.setMonth(currentdate.getMonth() + (isNextMonth ? 1 : -1))
+    );
 
-    OnChange([],null,nextdate.toISOString().split('T')[0],null)
-  }
+    OnChange([], null, nextdate.toISOString().split("T")[0], null);
+  };
 
-    const handleShareClick = (): void => {
+  const handleShareClick = (): void => {
     if (selectedAbsences.length === 0) {
       alert("Please select at least one absence to share");
       return;
@@ -57,64 +57,78 @@ const SubHeader: React.FC<SubHeaderPops> = ({
       alert("Please select at least one absence to delete");
       return;
     }
-    
+
     // Optional: Add confirmation dialog
-    if (window.confirm(`Are you sure you want to delete ${selectedAbsences.length} selected absence(s)?`)) {
+    if (
+      window.confirm(
+        `Are you sure you want to delete ${selectedAbsences.length} selected absence(s)?`
+      )
+    ) {
       OnChange(selectedAbsences, "Delete", null, null);
     }
   };
   return (
-    <div className="subheader">
-      <div className="Info-container">
-        <div className="dateRange">
+    <div className="PA-subheader">
+      <div className="PA-Info-container">
+        <div className="PA-dateRange">
+          <div  onClick={() => HandleDateChange(false)}>
           <FontAwesomeIcon
-            className="lefticone"
+            className="PA-lefticone"
             icon={faChevronLeft}
             size="sm"
-            onClick={()=> HandleDateChange(false)}
+           
           />
-          {new Date(currentDate).toLocaleDateString("fr-FR", { month: "long" })} {new Date(currentDate).toLocaleDateString("fr-FR", { year: "numeric" })} 
+          </div>
+          {new Date(currentDate).toLocaleDateString("fr-FR", { month: "long" })}{" "}
+          {new Date(currentDate).toLocaleDateString("fr-FR", {
+            year: "numeric",
+          })}<div onClick={() => HandleDateChange(true)}>
           <FontAwesomeIcon
-            className="righticone"
+            className="PA-righticone"
             icon={faChevronRight}
             size="sm"
-            onClick={()=> HandleDateChange(true)}
+           
           />
+          </div>
         </div>
-        <div className="staff">
-          <Staff2Icon className="image" />
+        <div className="PA-staff">
+          <Staff2Icon className="PA-image" />
           {Workforces.length} effectifs
         </div>
-        <div className="store">
+        <div className="PA-store">
           {" "}
-          <StoreIcon className="image" />
+          <StoreIcon className="PA-image" />
           {storeName}
         </div>
       </div>
-  
-      <div className="leftSide">
-        <FontAwesomeIcon
-          className="eventIcon"
-          icon={faPaperPlane}
-          style={{
-            color: selectedAbsences.length > 0 ? "#74C0FC" : "#ccc", 
-            cursor: selectedAbsences.length > 0 ? "pointer" : "not-allowed"
-          }}
-          onClick={handleShareClick}
-          title={`Share ${selectedAbsences.length} absence(s)`}
-        />
 
-        <FontAwesomeIcon
-          className="eventIcon"
-          icon={faTrash}
-          style={{
-            color: selectedAbsences.length > 0 ? "#74C0FC" : "#ccc",
-            cursor: selectedAbsences.length > 0 ? "pointer" : "not-allowed"
-          }}
-          onClick={handleDeleteClick}
-          title={`Delete ${selectedAbsences.length} absence(s)`}
-        />
-        <button onClick={toggleMode} className="select-button">
+      <div className="PA-leftSide">
+        <div onClick={handleShareClick}>
+          <FontAwesomeIcon
+            className="PA-eventIcon"
+            icon={faPaperPlane}
+            style={{
+              color: selectedAbsences.length > 0 ? "#74C0FC" : "#ccc",
+              cursor: selectedAbsences.length > 0 ? "pointer" : "not-allowed",
+            }}
+            // onClick={handleShareClick}
+            title={`Share ${selectedAbsences.length} absence(s)`}
+          />
+        </div>
+
+        <div onClick={handleDeleteClick}>
+          <FontAwesomeIcon
+            className="PA-eventIcon"
+            icon={faTrash}
+            style={{
+              color: selectedAbsences.length > 0 ? "#74C0FC" : "#ccc",
+              cursor: selectedAbsences.length > 0 ? "pointer" : "not-allowed",
+            }}
+            //onClick={handleDeleteClick}
+            title={`Delete ${selectedAbsences.length} absence(s)`}
+          />
+        </div>
+        <button onClick={toggleMode} className="PA-select-button">
           {!isSelectMode ? "Select" : "Cancel " + selectedAbsences.length}
         </button>
       </div>

@@ -1,4 +1,4 @@
-.firstColumn {
+.PA-firstColumn {
     background-color: white; 
     padding: 0 0 0 30px;
     /* border-bottom: 1px solid #ddd; */
@@ -18,14 +18,14 @@ input{
 
 
 
-.adaptive-tooltip {
+.PA-adaptive-tooltip {
     position: relative;
     display: inline-block;
     cursor: default;
   }
   
   /* Hide tooltip content by default */
-  .adaptive-tooltip .tooltip-content {
+  .PA-adaptive-tooltip .PA-tooltip-content {
     visibility: hidden;
     min-width: 200px;
     max-width: 300px;
@@ -49,25 +49,25 @@ input{
   }
   
   /* Position tooltip above by default */
-  .adaptive-tooltip .tooltip-content.above {
+  .PA-adaptive-tooltip .PA-tooltip-content.PA-above {
     bottom: 100%;
     margin-bottom: 10px;
   }
   
   /* Position tooltip below */
-  .adaptive-tooltip .tooltip-content.below {
+  .PA-adaptive-tooltip .PA-tooltip-content.PA-below {
     top: 100%;
     margin-top: 10px;
   }
   
   /* Show the tooltip when hovering over the container */
-  .adaptive-tooltip:hover .tooltip-content {
+  .PA-adaptive-tooltip:hover .PA-tooltip-content {
     visibility: visible;
     opacity: 1;
   }
   
   /* Tooltip arrow for above position */
-  .adaptive-tooltip .tooltip-content.above::after {
+  .PA-adaptive-tooltip .PA-tooltip-content.PA-above::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -79,7 +79,7 @@ input{
   }
   
   /* Tooltip arrow for below position */
-  .adaptive-tooltip .tooltip-content.below::after {
+  .PA-adaptive-tooltip .PA-tooltip-content.PA-below::after {
     content: "";
     position: absolute;
     bottom: 100%;
@@ -91,17 +91,17 @@ input{
   }
   
   /* Style for the staff items in the tooltip */
-  .tooltip-content .staff-item {
+  .PA-tooltip-content .PA-staff-item {
     display: block;
     padding: 2px 0;
   }
   
   /* Make the tooltip stand out more when there's content */
-  .adaptive-tooltip:hover {
+  .PA-adaptive-tooltip:hover {
     z-index: 1001;
   }
 
-  .absence-detail {
+  .PA-absence-detail {
     background-color: #909090;
     height: 37px;
      color: white; 

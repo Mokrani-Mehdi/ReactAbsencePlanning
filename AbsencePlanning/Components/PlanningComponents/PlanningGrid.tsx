@@ -239,23 +239,23 @@ const PlanningGrid: React.FC<PlanningGridProps> = ({
   }, [AvailabitlityPayload, datesInRange]);
 
   const AvailabilityRow = () => (
-    <div className="gridRow AssignedRow" style={{ backgroundColor: "#FF9C55" }}>
+    <div className="PA-gridRow AssignedRow" style={{ backgroundColor: "#FF9C55" }}>
       <div
-        className="firstColumnHeader"
+        className="PA-firstColumnHeader"
         style={{ fontWeight: "bold", cursor: "pointer", color: "white" }}
         onClick={onGetavailabilityCall}
       >
         Disponibilité
-        <FontAwesomeIcon className="icone" icon={faRotateRight} size="sm" />
+        <FontAwesomeIcon className="PA-icone" icon={faRotateRight} size="sm" />
       </div>
       {calculateTotalAvailability.map((count, index) => (
         <div
           key={index}
-          className={`dataCellHeader ${
+          className={`PA-dataCellHeader ${
             datesInRange[index].toLocaleDateString("en-US", {
               weekday: "long",
             }) === "Sunday"
-              ? "divider-header"
+              ? "PA-divider-header"
               : ""
           }`}
           style={{ width: `${cellWidth}px`, color: "white" }}
@@ -267,13 +267,13 @@ const PlanningGrid: React.FC<PlanningGridProps> = ({
   );
 
   return (
-    <div className="planningGrid" style={{ gridTemplateColumns }}>
-      <div className="headerInfo">
-        <div className="headerCellInfo">
+    <div className="PA-planningGrid" style={{ gridTemplateColumns }}>
+      <div className="PA-headerInfo">
+        <div className="PA-headerCellInfo">
           {isSelectMode && (
             <input
               type="checkbox"
-              className="checkboxAbsence"
+              className="PA-checkboxAbsence"
               checked={
                 localWorkforces
                   .flatMap((w) => w.Absences || [])
@@ -283,17 +283,17 @@ const PlanningGrid: React.FC<PlanningGridProps> = ({
               onChange={(e) => selectAllAbsences(e.target.checked)}
             />
           )}
-          <FontAwesomeIcon className="infoPlanningAbsence" onClick={HandleSetPopUp} icon={faCircleInfo} style={{color: "#ff8000"}} />
+          <div className="PA-infoPA"  onClick={HandleSetPopUp}> <FontAwesomeIcon  icon={faCircleInfo} style={{color: "#ff8000"}} /></div>
           </div>
 
         {datesInRange.map((date, index) => (
-          <div key={index} className="headerCell">
-            <div className="headerName">
+          <div key={index} className="PA-headerCell">
+            <div className="PA-headerName">
               {date
                 .toLocaleDateString("fr-FR", { weekday: "long" })
                 .substring(0, 3)}
             </div>
-            <div className="headerDate">{date.getDate()}</div>
+            <div className="PA-headerDate">{date.getDate()}</div>
           </div>
         ))}
       </div>

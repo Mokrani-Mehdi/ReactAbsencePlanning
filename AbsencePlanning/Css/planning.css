@@ -1,4 +1,4 @@
-.planning {
+.PA-planning {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -10,10 +10,17 @@
     max-height: 100%;
 }
 
-.control-container {
+.PA-control-container {
     background-color: rgb(245, 245, 245);
 }
 
-.PlanningGridcontainer {
+.PA-PlanningGridcontainer {
     padding: 0px 20px 0 20px;
+}
+
+.PA-empty-planning-message {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

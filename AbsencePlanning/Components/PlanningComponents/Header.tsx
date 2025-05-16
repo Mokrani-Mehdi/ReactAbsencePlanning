@@ -42,8 +42,8 @@ const Header: React.FC<HeaderProps> = ({
       const firstLabel = selectProps.value[0].label;
       
       return (
-        <div className="custom-tooltip-container" style={{ display: 'flex', alignItems: 'center' }}>
-          <div className="selected-label" style={{
+        <div className="PA-custom-tooltip-container" style={{ display: 'flex', alignItems: 'center' }}>
+          <div className="PA-selected-label" style={{
             fontSize: '12px',
             maxWidth: '120px',
             whiteSpace: 'nowrap',
@@ -55,7 +55,7 @@ const Header: React.FC<HeaderProps> = ({
           </div>
           {selectedCount > 1 && (
             <>
-              <div className="selected-count" style={{
+              <div className="PA-selected-count" style={{
                 fontSize: '12px',
                 background: '#e0e0e0',
                 borderRadius: '10px',
@@ -65,7 +65,7 @@ const Header: React.FC<HeaderProps> = ({
               }}>
                 +{selectedCount - 1}
               </div>
-              <div className="tooltip-text" style={{
+              <div className="PA-tooltip-text" style={{
                 fontSize: '12px',
                 maxWidth: '200px',
                 wordWrap: 'break-word'
@@ -81,17 +81,17 @@ const Header: React.FC<HeaderProps> = ({
     return null;
   };
   return (
-    <div className="header-container">
-      <div className="intro-container">
+    <div className="PA-header-container">
+      <div className="PA-intro-container">
         
           Planning Absences
       
       </div>
 
-      <div className="DropDown-containers">
-      <div className="DropDown-Role-container">
+      <div className="PA-DropDown-containers">
+      <div className="PA-DropDown-Role-container">
           <Select
-            className="material-dropdown"
+            className="PA-material-dropdown"
             isMulti
             options={roleData.map((role) => ({
               value: role,
@@ -117,9 +117,9 @@ const Header: React.FC<HeaderProps> = ({
             }}
           />
         </div>
-        <div className="DropDown-manager-container">
+        <div className="PA-DropDown-manager-container">
           <Select
-            className="material-dropdown"
+            className="PA-material-dropdown"
             options={managerData.map((manager) => ({
               value: manager.Id,
               label: manager.Name,
@@ -147,9 +147,9 @@ const Header: React.FC<HeaderProps> = ({
             
           />
         </div>
-        <div className="DropDown-Department-container">
+        <div className="PA-DropDown-Department-container">
           <Select
-            className="material-dropdown"
+            className="PA-material-dropdown"
            
             isMulti
             options={departmentData.map((dept) => ({
@@ -180,9 +180,9 @@ const Header: React.FC<HeaderProps> = ({
             }}
           />
         </div>
-        <div className="DropDown-Department-container">
+        <div className="PA-DropDown-Department-container">
           <Select
-            className="material-dropdown"
+            className="PA-material-dropdown"
            
             isMulti
             options={workforces.map((workforce) => ({

@@ -322,7 +322,7 @@ const Planning: React.FC<Payload> = ({
   const safeManagerData = managerData || [];
   
   return (
-    <div className="planning" style={{
+    <div className="PA-planning" style={{
       width: containerWidth,
       overflowX: cellWidth > 25 ? "hidden" : "auto",
       maxHeight: containerHeight - 10,
@@ -350,7 +350,7 @@ const Planning: React.FC<Payload> = ({
         setSelectedRoles={setSelectedRoles}
       />
 
-      <div className="PlanningGridcontainer">
+      <div className="PA-PlanningGridcontainer">
         <SubHeader
           toggleMode={toggleMode}
           isSelectMode={isSelectMode}
@@ -379,7 +379,7 @@ const Planning: React.FC<Payload> = ({
             SetLegendPopUp={handleSetPopUpLegend}
           />
         ) : (
-          <div className="empty-planning-message">
+          <div className="PA-empty-planning-message">
             No planning data available. Please add workforces and departments.
           </div>
         )}

@@ -159,7 +159,7 @@ const AbsenceRow: React.FC<AbsenceRowProps> = ({
     backgroundColor,
     storeInfo
   }) => {
-    const [tooltipPosition, setTooltipPosition] = useState<"above" | "below">("above");
+    const [tooltipPosition, setTooltipPosition] = useState<"PA-above" | "PA-below">("PA-above");
     const cellRef = useRef<HTMLDivElement>(null);
     
     useEffect(() => {
@@ -173,7 +173,7 @@ const AbsenceRow: React.FC<AbsenceRowProps> = ({
         
         // If there's more space at the bottom than at the top, position tooltip below
         // Otherwise, position it above (default)
-        setTooltipPosition(bottomSpace > topSpace ? "below" : "above");
+        setTooltipPosition(bottomSpace > topSpace ? "PA-below" : "PA-above");
       };
       
       checkPosition();
@@ -196,9 +196,9 @@ const AbsenceRow: React.FC<AbsenceRowProps> = ({
     return (
       <div
         ref={cellRef}
-        className={`dataCellHeader adaptive-tooltip ${className} ${
+        className={`PA-dataCellHeader PA-adaptive-tooltip ${className} ${
           date.toLocaleDateString("en-US", { weekday: "long" }) === "Sunday"
-            ? "divider-header"
+            ? "PA-divider-header"
             : ""
         }`}
         style={{ 
@@ -209,7 +209,7 @@ const AbsenceRow: React.FC<AbsenceRowProps> = ({
       >
         {count}
         {count > 0 && (
-          <div className={`tooltip-content ${tooltipPosition}`}>
+          <div className={`PA-tooltip-content ${tooltipPosition}`}>
             <strong>
               {category ? `${getCategoryDisplayName(category)} le ` : "Absences le "}
               {date.toLocaleDateString("fr-FR")}
@@ -217,7 +217,7 @@ const AbsenceRow: React.FC<AbsenceRowProps> = ({
             <br />
             {staffWithAbsences.length > 0 ? (
               staffWithAbsences.map((staff, i) => (
-                <span key={i} className="staff-item">{staff}<br /></span>
+                <span key={i} className="PA-staff-item">{staff}<br /></span>
               ))
             ) : (
               <span>Aucun personnel</span>
@@ -280,14 +280,14 @@ const AbsenceRow: React.FC<AbsenceRowProps> = ({
 
   return (
     <>
-      <div className="gridRow absence-detail AssignedRow">
+      <div className="PA-gridRow absence-detail AssignedRow">
         <div
-          className="firstColumnHeader"
+          className="PA-firstColumnHeader"
           style={{ fontWeight: "bold", cursor: "pointer" }}
           onClick={() => toggleSection("absence")}
         >
           Total absences par catégorie {' '}
-          <FontAwesomeIcon className="icone"
+          <FontAwesomeIcon className="PA-icone"
             icon={expandedSections.absence ? faChevronUp : faChevronDown} 
             size="sm"
           />
@@ -300,7 +300,7 @@ const AbsenceRow: React.FC<AbsenceRowProps> = ({
               key={index}
               count={totalAbsences}
               date={date}
-              className="total-absence"
+              className="PA-total-absence"
               storeInfo={storeInfo}
             />
           );
@@ -321,10 +321,10 @@ const AbsenceRow: React.FC<AbsenceRowProps> = ({
           return (
             <div
               key={`absence-${category}`}
-              className="gridRow SubRow absence-detail"
+              className="PA-gridRow SubRow absence-detail"
             >
               <div 
-                className="firstColumnHeader" 
+                className="PA-firstColumnHeader" 
                 style={{ 
                   paddingLeft: "20px",
                   // backgroundColor: backgroundColor,
@@ -341,7 +341,7 @@ const AbsenceRow: React.FC<AbsenceRowProps> = ({
                   date={datesInRange[index]}
                   category={category}
                   // backgroundColor={backgroundColor}
-                  className={`category-${category}`}
+                  className={`PA-category-${category}`}
                   storeInfo={storeInfo}
                 />
               ))}
