@@ -71,7 +71,7 @@ const SubHeader: React.FC<SubHeaderPops> = ({
     <div className="PA-subheader">
       <div className="PA-Info-container">
         <div className="PA-dateRange">
-          <div  onClick={() => HandleDateChange(false)}>
+          <div   className="PA-lefticone" onClick={() => HandleDateChange(false)}>
           <FontAwesomeIcon
             className="PA-lefticone"
             icon={faChevronLeft}
@@ -82,7 +82,7 @@ const SubHeader: React.FC<SubHeaderPops> = ({
           {new Date(currentDate).toLocaleDateString("fr-FR", { month: "long" })}{" "}
           {new Date(currentDate).toLocaleDateString("fr-FR", {
             year: "numeric",
-          })}<div onClick={() => HandleDateChange(true)}>
+          })}<div  className="PA-righticone" onClick={() => HandleDateChange(true)}>
           <FontAwesomeIcon
             className="PA-righticone"
             icon={faChevronRight}

@@ -86,12 +86,13 @@
 .PA-headerDate {
     font-size: 14px;
     font-weight: 500;
+    text-align: center;
 }
 
 .PA-headerName {
     font-size: 10px;
     font-weight: 400;
-
+    text-align: center;
 }
 
 .PA-infoPA {

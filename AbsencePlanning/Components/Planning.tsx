@@ -147,7 +147,7 @@ const Planning: React.FC<Payload> = ({
   }, [localData]);
   
   // Use a stable date range even when data is missing
-  const datesInRange = getDatesInRange("2025-05-26", "2025-07-06");
+  const datesInRange = getDatesInRange(safeData.StoreInfo.StartPlanning, safeData.StoreInfo.EndPlanning);
   
   const handleOnGetAvailability = () => {
     //onSave?.("GetAvailability");

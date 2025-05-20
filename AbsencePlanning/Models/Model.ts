@@ -64,6 +64,8 @@ export interface StoreInfo {
   Name: string;
   Holidays: string[];
   FirstDayOfMonth : string;
+  StartPlanning: string;
+  EndPlanning: string;
 }
 
 export interface AbsencePlanningCellData
@@ -82,12 +84,12 @@ export enum AbsenceCategory {
 }
 
 export const ABSENCE_CATEGORY_COLORS = {
-  [AbsenceCategory.UNPAID_SHARED]: "#8884d8",
-  [AbsenceCategory.PAID_SHARED]: "#82ca9d",
-  [AbsenceCategory.UNPAID_UNSHARED]: "#ffc658",
-  [AbsenceCategory.PAID_UNSHARED]: "#ff8042",
-  [AbsenceCategory.REPOS_OFF]: "#b3b3cc",
-  [AbsenceCategory.OUT_OF_CONTRACT]: "#cccccc"
+  [AbsenceCategory.UNPAID_SHARED]: "#228B22",
+  [AbsenceCategory.PAID_SHARED]: "#4682B4",
+  [AbsenceCategory.UNPAID_UNSHARED]: "#90EE90",
+  [AbsenceCategory.PAID_UNSHARED]: "#87CEFA",
+  [AbsenceCategory.REPOS_OFF]: "#D3D3D3",
+  [AbsenceCategory.OUT_OF_CONTRACT]: "#808080"
 };
 
 
