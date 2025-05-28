@@ -280,7 +280,7 @@ const AbsenceRow: React.FC<AbsenceRowProps> = ({
 
   return (
     <>
-      <div className="PA-gridRow absence-detail AssignedRow">
+      <div className="PA-gridRow PA-absence-detail PA-AssignedRow">
         <div
           className="PA-firstColumnHeader"
           style={{ fontWeight: "bold", cursor: "pointer" }}
@@ -321,7 +321,7 @@ const AbsenceRow: React.FC<AbsenceRowProps> = ({
           return (
             <div
               key={`absence-${category}`}
-              className="PA-gridRow SubRow absence-detail"
+              className="PA-gridRow PA-SubRow PA-absence-detail"
             >
               <div 
                 className="PA-firstColumnHeader" 

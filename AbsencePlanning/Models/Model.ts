@@ -57,7 +57,7 @@ export interface Payload {
   containerWidth: number;
   containerHeight: number;
   AvailabilityPayload?: AvailabilityItem[];
-  OnChange : (selectedAbsences : Absences[], actionType: string | null,nextDate : string | null,selectedWorforceDate :  AbsencePlanningCellData|null ) =>  void;
+  OnChange : (selectedAbsences : string[], actionType: string | null,nextDate : string | null,selectedWorforceDate :  AbsencePlanningCellData|null ) =>  void;
 }
 export interface StoreInfo {
   ClosingDays: string[];
@@ -94,7 +94,7 @@ export const ABSENCE_CATEGORY_COLORS = {
 
 
 export interface IState {
-    selectedAbsences: Absences[];
+    selectedAbsences: string[];
     actionType : string | null;
     nextDate : string | null;
     selectedWorforceDate : AbsencePlanningCellData|null;

@@ -3,7 +3,7 @@ import "../../Css/cell.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWarning } from "@fortawesome/free-solid-svg-icons";
 import { Absences, AbsenceCategory, ABSENCE_CATEGORY_COLORS, Workforce } from "../../Models/Model";
-import { getAbsenceCategory,getCategoryDisplayName } from "../../Helpers/AppHelper";
+import { getAbsenceCategory, getCategoryDisplayName } from "../../Helpers/AppHelper";
 
 interface CellProps {
   workforceName: string;
@@ -41,34 +41,37 @@ const Cell: React.FC<CellProps> = ({
     }
   };
 
-  // Get category display name
-
-
   // Get color for absence based on category
   const getAbsenceColorStyle = (absence: Absences) => {
     const category = getAbsenceCategory(absence);
-    return { backgroundColor: isSelected ? "#3498db" : ABSENCE_CATEGORY_COLORS[category] };
+    // Return background color without changing it for selection
+    return { backgroundColor: ABSENCE_CATEGORY_COLORS[category] };
   };
 
   const getCellContent = () => {
-    let buttonStyle = {};
+    let buttonStyle: React.CSSProperties = {};
+    // Add border for selected cells instead of changing background
     const buttonClass = `PA-shift-button ${isSelected ? "PA-selected-shift" : ""}`;
 
     if (isHoliday) {
-      buttonStyle = { backgroundColor: isSelected ? "#3498db" : "#FF9999" };
+      buttonStyle = { backgroundColor: "#B0B0B0" };
     } else if (isStoreClosingDay) {
-      buttonStyle = { backgroundColor: isSelected ? "#3498db" : "#FFD700" };
+      buttonStyle = { backgroundColor: "#A0A0A0" };
     } else if (!isWithinContractPeriod) {
-      buttonStyle = { backgroundColor: isSelected ? "#3498db" : "#E0E0E0" };
+      buttonStyle = { backgroundColor: "#808080" };
     } else if (absences && absences.length > 0) {
-     
       buttonStyle = getAbsenceColorStyle(absences[0]);
     } else if (absence) {
       buttonStyle = getAbsenceColorStyle(absence);
     } else if (isFixedDayOff) {
-      buttonStyle = { backgroundColor: isSelected ? "#3498db" : "#A9A9A9" };
+      buttonStyle = { backgroundColor: "#D3D3D3" };
     } else if (isFavoriteDayOff) {
-      buttonStyle = { backgroundColor: isSelected ? "#3498db" : "#C0C0C0" };
+      buttonStyle = { backgroundColor: "#D3D3D3" };
+    }
+    
+    // Add the selection border if selected
+    if (isSelected) {
+      buttonStyle.border = "2px solid black";
     }
 
     if (Object.keys(buttonStyle).length === 0) {
@@ -96,7 +99,8 @@ const Cell: React.FC<CellProps> = ({
                 const category = getAbsenceCategory(abs);
                 return (
                   <div key={abs.Id}>
-                    {abs.Name} - {getCategoryDisplayName(category)}
+                    {abs.Name} 
+                    {/* - {getCategoryDisplayName(category)} */}
                   </div>
                 );
               })}

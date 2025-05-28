@@ -45,8 +45,10 @@
 
 .PA-checkboxAbsence {
     width: 13px;
-    /* position: absolute;
-    left: 4px; */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 4px;
 }
 
 .PA-headerName {

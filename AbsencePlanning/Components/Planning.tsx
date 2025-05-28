@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useMemo } from "react";
 import Header from "./PlanningComponents/Header";
 import PlanningGrid from "./PlanningComponents/PlanningGrid";
-import SubHeader from "./SubHeader";
+import SubHeader from "./PlanningComponents/SubHeader";
 import { getDatesInRange } from "../Helpers/AppHelper";
 import { Absences, Payload, Workforce } from "../Models/Model";
 import "../Css/planning.css";

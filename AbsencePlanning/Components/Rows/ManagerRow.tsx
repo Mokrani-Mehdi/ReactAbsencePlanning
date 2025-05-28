@@ -53,7 +53,7 @@ const ManagerRow: React.FC<ManagerRowProps> = ({
 
   return (
     <>
-      <div className="PA-gridRow AssignedRow" style={{ backgroundColor: "#99D4A9" }}>
+      <div className="PA-gridRow PA-AssignedRow" style={{ backgroundColor: "#99D4A9" }}>
         <div
           className="PA-firstColumnHeader"
           style={{ fontWeight: "bold",  cursor: "pointer" }}
@@ -86,7 +86,7 @@ const ManagerRow: React.FC<ManagerRowProps> = ({
           return (
             <div
               key={`manager-${manager}`}
-              className="PA-gridRow SubRow"
+              className="PA-gridRow PA-SubRow"
               style={{ backgroundColor: "#f2fcf3" }}
             >
               <div className="PA-firstColumnHeader" style={{ paddingLeft: "20px" }}>

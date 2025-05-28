@@ -1,7 +1,7 @@
 import React from "react";
-import { AbsencePlanningCellData, Absences, Workforce } from "../Models/Model";
-import "../Css/subheader.css";
-import { Staff2Icon, StoreIcon } from "../Assets/Icons";
+import { AbsencePlanningCellData, Absences, Workforce } from "../../Models/Model";
+import "../../Css/subheader.css";
+import { Staff2Icon, StoreIcon } from "../../Assets/Icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChevronLeft,
@@ -18,7 +18,7 @@ interface SubHeaderPops {
   currentDate: string;
   storeName: string;
   OnChange: (
-    selectedAbsences: Absences[],
+    selectedAbsences: string[],
     actionType: string | null,
     nextDate: string | null,
     selectedWorforceDate: AbsencePlanningCellData | null
@@ -48,7 +48,7 @@ const SubHeader: React.FC<SubHeaderPops> = ({
       alert("Please select at least one absence to share");
       return;
     }
-    OnChange(selectedAbsences, "Share", null, null);
+    OnChange(selectedAbsences.filter(absence => !absence.Shared).map(absence=> absence.Id), "Share", null, null);
   };
 
   // Handler for delete button click
@@ -64,7 +64,7 @@ const SubHeader: React.FC<SubHeaderPops> = ({
         `Are you sure you want to delete ${selectedAbsences.length} selected absence(s)?`
       )
     ) {
-      OnChange(selectedAbsences, "Delete", null, null);
+      OnChange(selectedAbsences.map(absence=> absence.Id), "Delete", null, null);
     }
   };
   return (
@@ -108,8 +108,8 @@ const SubHeader: React.FC<SubHeaderPops> = ({
             className="PA-eventIcon"
             icon={faPaperPlane}
             style={{
-              color: selectedAbsences.length > 0 ? "#74C0FC" : "#ccc",
-              cursor: selectedAbsences.length > 0 ? "pointer" : "not-allowed",
+              color: selectedAbsences.filter( absence => !absence.Shared ).length > 0 ? "#74C0FC" : "#ccc",
+              cursor: selectedAbsences.filter( absence => !absence.Shared ).length > 0 ? "pointer" : "not-allowed",
             }}
             // onClick={handleShareClick}
             title={`Share ${selectedAbsences.length} absence(s)`}

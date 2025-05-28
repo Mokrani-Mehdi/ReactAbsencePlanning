@@ -50,7 +50,7 @@ interface PlanningGridProps {
   selectAllAbsences: (selected: boolean) => void;
   onGetavailabilityCall?: () => void;
   OnChange: (
-    selectedAbsences: Absences[],
+    selectedAbsences: string[],
     actionType: string | null,
     nextDate: string | null,
     selectedWorforceDate: AbsencePlanningCellData | null

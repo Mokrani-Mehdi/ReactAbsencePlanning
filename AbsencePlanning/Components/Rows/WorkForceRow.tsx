@@ -24,7 +24,7 @@ interface WorkforceRowProps {
   onWorkforceSelect: (workforce: Workforce, selected: boolean) => void;
   storeInfo: StoreInfo;
   OnChange: (
-    selectedAbsences: Absences[],
+    selectedAbsences: string[],
     actionType: string | null,
     nextDate: string | null,
     selectedWorforceDate: AbsencePlanningCellData | null

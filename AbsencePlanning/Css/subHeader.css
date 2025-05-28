@@ -61,9 +61,8 @@
   border: 1px solid hsl(0, 0%, 80%);
   position: relative;
   align-items: center;
-  justify-content: space-around;
-  width: 180px;
-
+  justify-content: space-between;
+  width: 200px;
 }
 
 .PA-lefticone {
@@ -74,11 +73,13 @@
   cursor: pointer;
 
 }
-.PA-eventIcon{
+
+.PA-eventIcon {
   height: 22px;
   width: 22px;
   cursor: pointer;
 }
+
 .PA-leftSide {
   display: flex;
   flex-direction: row;

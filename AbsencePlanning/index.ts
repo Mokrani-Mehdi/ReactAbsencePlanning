@@ -47,7 +47,7 @@ export class AbsencePlanning
     context.mode.trackContainerResize(true);
   }
   private HandleGetEvent = (
-    selectedAbsences: Absences[],
+    selectedAbsences: string[],
     actionType: string | null,
     nextDate: string | null,
     selectedWorforceDate: AbsencePlanningCellData | null
