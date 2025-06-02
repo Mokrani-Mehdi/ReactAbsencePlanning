@@ -24,3 +24,18 @@
     align-items: center;
     justify-content: center;
 }
+
+@media only screen and (max-width: 1200px) {
+    .PA-firstColumnHeader {
+        font-size: 12px;
+    }
+    .PA-headerDate {
+        font-size: 12px;
+    }
+    .PA-headerName {
+        font-size: 8px;
+    }
+    .PA-firstColumn{
+        font-size: 14px;
+    }
+}

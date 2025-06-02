@@ -36,6 +36,7 @@ interface PlanningGridProps {
   workforces: Workforce[];
   datesInRange: Date[];
   cellWidth: number;
+  firstColumnWidth: number;
   isSelectMode: boolean;
   selectedAbsences: Absences[];
   AvailabitlityPayload: AvailabilityItem[];
@@ -63,6 +64,7 @@ const PlanningGrid: React.FC<PlanningGridProps> = ({
   datesInRange,
   cellWidth,
   isSelectMode,
+  firstColumnWidth,
   selectedAbsences,
   AvailabitlityPayload,
   storeInfo,
@@ -74,7 +76,7 @@ const PlanningGrid: React.FC<PlanningGridProps> = ({
   OnChange,
   SetLegendPopUp,
 }) => {
-  const gridTemplateColumns = `350px repeat(${datesInRange.length}, ${cellWidth}px)`;
+  const gridTemplateColumns = `${firstColumnWidth}px repeat(${datesInRange.length}, ${cellWidth}px)`;
 
   // State for workforces to enable reordering
   const [localWorkforces, setLocalWorkforces] =
@@ -240,7 +242,7 @@ const PlanningGrid: React.FC<PlanningGridProps> = ({
 
   const AvailabilityRow = () => (
     <div
-      className="PA-gridRow AssignedRow"
+      className="PA-gridRow PA-AssignedRow"
       style={{ backgroundColor: "#FF9C55" }}
     >
       <div

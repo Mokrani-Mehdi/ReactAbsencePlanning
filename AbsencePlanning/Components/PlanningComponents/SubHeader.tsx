@@ -114,7 +114,7 @@ const SubHeader: React.FC<SubHeaderPops> = ({
             className="PA-eventIcon"
             icon={faPaperPlane}
             style={{
-              color: selectedAbsences.filter( absence => !absence.Shared ).length > 0 ? "#74C0FC" : "#ccc",
+              color: selectedAbsences.filter( absence => !absence.Shared ).length > 0 ? "#FF710C" : "#ccc",
               cursor: selectedAbsences.filter( absence => !absence.Shared ).length > 0 ? "pointer" : "not-allowed",
             }}
             // onClick={handleShareClick}
@@ -127,7 +127,7 @@ const SubHeader: React.FC<SubHeaderPops> = ({
             className="PA-eventIcon"
             icon={faTrash}
             style={{
-              color: selectedAbsences.length > 0 ? "#74C0FC" : "#ccc",
+              color: selectedAbsences.length > 0 ? "#FF710C" : "#ccc",
               cursor: selectedAbsences.length > 0 ? "pointer" : "not-allowed",
             }}
             //onClick={handleDeleteClick}

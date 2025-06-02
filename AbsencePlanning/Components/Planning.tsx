@@ -196,32 +196,40 @@ const Planning: React.FC<Payload> = ({
     selectedManagers,
     selectedRoles,
   ]);
-  
+  const [firstColumnWidth, setFirstColumnWidth] = useState(350);
+
   useEffect(() => {
-    const calculateCellWidth = () => {
-      const screenWidth = containerWidth;
-      const firstColumnWidth = 350;
-      const gapSize = 2;
-      const padding = 20;
-      const scrollbarWidth = 16;
+  const calculateDimensions = () => {
+    const screenWidth = containerWidth;
+    
+    // Dynamic first column width based on screen size
+    const newFirstColumnWidth = screenWidth <= 1200 ? 250 : 350;
+    setFirstColumnWidth(newFirstColumnWidth);
+    
+    const gapSize = 2;
+    const padding = 30; // Account for grid padding (15px * 2)
+    const scrollbarWidth = 16;
 
-      const availableWidth =
-        screenWidth -
-        firstColumnWidth -
-        padding -
-        scrollbarWidth -
-        datesInRange.length * gapSize;
+    // Calculate available width for date columns
+    const availableWidth =
+      screenWidth -
+      newFirstColumnWidth -
+      padding -
+      scrollbarWidth -
+      (datesInRange.length * gapSize);
 
-      const width = Math.max(17, availableWidth / datesInRange.length);
-      const height = width > 45 ? 45 : width;
-      setCellWidth(width);
-      setcellHeight(height);
-    };
+    // Ensure minimum width and calculate cell dimensions
+    const width = Math.max(17, availableWidth / datesInRange.length);
+    const height = width > 45 ? 45 : width;
+    
+    setCellWidth(width);
+    setcellHeight(height);
+  };
 
-    calculateCellWidth();
-    window.addEventListener("resize", calculateCellWidth);
-    return () => window.removeEventListener("resize", calculateCellWidth);
-  }, [containerWidth, datesInRange.length]);
+  calculateDimensions();
+  window.addEventListener("resize", calculateDimensions);
+  return () => window.removeEventListener("resize", calculateDimensions);
+}, [containerWidth, datesInRange.length]);
   
   const toggleMode = () => {
     setIsSelectMode(!isSelectMode);
@@ -324,7 +332,7 @@ const Planning: React.FC<Payload> = ({
   return (
     <div className="PA-planning" style={{
       width: containerWidth,
-      overflowX: cellWidth > 25 ? "hidden" : "auto",
+      // overflowX: cellWidth > 25 ? "hidden" : "auto",
       maxHeight: containerHeight - 10,
     }}>
       {showModal && (
@@ -368,6 +376,7 @@ const Planning: React.FC<Payload> = ({
             cellWidth={cellWidth}
             isSelectMode={isSelectMode}
             selectedAbsences={selectedAbsences}
+            firstColumnWidth={firstColumnWidth} // Add this prop
             onCellClick={handleCellClick}
             onAbsenceSelect={toggleAbsenceSelection}
             onWorkforceSelect={selectAllAbsencesForWorkforce}

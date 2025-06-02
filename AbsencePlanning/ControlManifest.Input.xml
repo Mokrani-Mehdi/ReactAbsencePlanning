@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <manifest>
-  <control namespace="AbsencePlanning" constructor="AbsencePlanning" version="1.0.19" display-name-key="AbsencePlanning" description-key="AbsencePlanning description" control-type="virtual">
+  <control namespace="AbsencePlanning" constructor="AbsencePlanning" version="1.0.20" display-name-key="AbsencePlanning" description-key="AbsencePlanning description" control-type="virtual">
     <external-service-usage enabled="false"/>
     <property name="Payload" display-name-key="Payload" description-key="Payload" of-type="SingleLine.Text" usage="bound" required="true" default-value=""/>
     <property name="Availability" display-name-key="Availability" description-key="Availability" of-type="SingleLine.Text" usage="bound" required="false" default-value=""/>
