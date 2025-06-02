@@ -12,7 +12,7 @@ import ManagerRow from "../Rows/ManagerRow";
 import { getWorkForceName } from "../../Helpers/AppHelper";
 import AbsenceRow from "../Rows/AbsenceRow";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faRotateRight,faCircleInfo } from "@fortawesome/free-solid-svg-icons";
+import { faRotateRight, faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 import DepartmentRow from "../Rows/DepartmentRow";
 import SpacerRow from "../Rows/SpacerRow";
 import {
@@ -55,8 +55,7 @@ interface PlanningGridProps {
     nextDate: string | null,
     selectedWorforceDate: AbsencePlanningCellData | null
   ) => void;
-  SetLegendPopUp :() =>  void ;
-
+  SetLegendPopUp: () => void;
 }
 
 const PlanningGrid: React.FC<PlanningGridProps> = ({
@@ -73,13 +72,14 @@ const PlanningGrid: React.FC<PlanningGridProps> = ({
   selectAllAbsences,
   onGetavailabilityCall,
   OnChange,
-  SetLegendPopUp
+  SetLegendPopUp,
 }) => {
   const gridTemplateColumns = `350px repeat(${datesInRange.length}, ${cellWidth}px)`;
-  
+
   // State for workforces to enable reordering
-  const [localWorkforces, setLocalWorkforces] = useState<Workforce[]>(workforces);
-  
+  const [localWorkforces, setLocalWorkforces] =
+    useState<Workforce[]>(workforces);
+
   // Update local state when workforces prop changes
   React.useEffect(() => {
     setLocalWorkforces(workforces);
@@ -94,7 +94,7 @@ const PlanningGrid: React.FC<PlanningGridProps> = ({
   });
   const HandleSetPopUp = () => {
     SetLegendPopUp();
-  }
+  };
   // Set up sensors for drag and drop
   const sensors = useSensors(
     useSensor(PointerSensor, {
@@ -107,19 +107,19 @@ const PlanningGrid: React.FC<PlanningGridProps> = ({
       coordinateGetter: sortableKeyboardCoordinates,
     })
   );
-  
+
   // Handle drag end event for workforce reordering
   const handleDragEnd = (event: DragEndEvent) => {
     const { active, over } = event;
-    
+
     if (over && active.id !== over.id) {
       setLocalWorkforces((workforces) => {
         const oldIndex = workforces.findIndex((w) => w.Id === active.id);
         const newIndex = workforces.findIndex((w) => w.Id === over.id);
-        
+
         return arrayMove(workforces, oldIndex, newIndex);
       });
-      
+
       // Here you could trigger a save to backend if needed
       // For example: OnChange([], "reorder", null, null);
     }
@@ -131,7 +131,7 @@ const PlanningGrid: React.FC<PlanningGridProps> = ({
       [section]: !prev[section],
     }));
   };
-  
+
   const calculateAssignedCounts = (personList: Workforce[] | null) => {
     if (!personList) return new Array(datesInRange.length).fill(0);
 
@@ -239,7 +239,10 @@ const PlanningGrid: React.FC<PlanningGridProps> = ({
   }, [AvailabitlityPayload, datesInRange]);
 
   const AvailabilityRow = () => (
-    <div className="PA-gridRow AssignedRow" style={{ backgroundColor: "#FF9C55" }}>
+    <div
+      className="PA-gridRow AssignedRow"
+      style={{ backgroundColor: "#FF9C55" }}
+    >
       <div
         className="PA-firstColumnHeader"
         style={{ fontWeight: "bold", cursor: "pointer", color: "white" }}
@@ -265,6 +268,44 @@ const PlanningGrid: React.FC<PlanningGridProps> = ({
       ))}
     </div>
   );
+  const getAbsencesInDateRange = (
+    workforces: Workforce[],
+    datesInRange: Date[]
+  ) => {
+    if (!workforces || workforces.length === 0 || datesInRange.length === 0) {
+      return [];
+    }
+
+    const rangeStart = new Date(datesInRange[0]);
+    const rangeEnd = new Date(datesInRange[datesInRange.length - 1]);
+
+    // Set time to start of day for accurate comparison
+    rangeStart.setHours(0, 0, 0, 0);
+    rangeEnd.setHours(0, 0, 0, 0);
+
+    return workforces
+      .flatMap((w) => w.Absences || [])
+      .filter((absence) => {
+        if (!absence.StartDate || !absence.EndDate) return false;
+
+        const absenceStart = new Date(absence.StartDate);
+        const absenceEnd = new Date(absence.EndDate);
+        absenceStart.setHours(0, 0, 0, 0);
+        absenceEnd.setHours(0, 0, 0, 0);
+
+        // Check if absence start date OR end date is within the date range
+        const startDateInRange =
+          absenceStart >= rangeStart && absenceStart <= rangeEnd;
+        const endDateInRange =
+          absenceEnd >= rangeStart && absenceEnd <= rangeEnd;
+
+        return startDateInRange || endDateInRange;
+      });
+  };
+  const absencesInRange = useMemo(
+    () => getAbsencesInDateRange(localWorkforces, datesInRange),
+    [localWorkforces, datesInRange]
+  );
 
   return (
     <div className="PA-planningGrid" style={{ gridTemplateColumns }}>
@@ -275,16 +316,21 @@ const PlanningGrid: React.FC<PlanningGridProps> = ({
               type="checkbox"
               className="PA-checkboxAbsence"
               checked={
-                localWorkforces
-                  .flatMap((w) => w.Absences || [])
-                  .every((a) => selectedAbsences.some(selected => selected.Id === a.Id)) &&
-                selectedAbsences.length > 0
+                absencesInRange.length > 0 &&
+                absencesInRange.every((absence) =>
+                  selectedAbsences.some(
+                    (selected) => selected.Id === absence.Id
+                  )
+                )
               }
               onChange={(e) => selectAllAbsences(e.target.checked)}
             />
           )}
-          <div className="PA-infoPA"  onClick={HandleSetPopUp}> <FontAwesomeIcon  icon={faCircleInfo} style={{color: "#ff8000"}} /></div>
+          <div className="PA-infoPA" onClick={HandleSetPopUp}>
+            {" "}
+            <FontAwesomeIcon icon={faCircleInfo} style={{ color: "#ff8000" }} />
           </div>
+        </div>
 
         {datesInRange.map((date, index) => (
           <div key={index} className="PA-headerCell">
@@ -308,7 +354,7 @@ const PlanningGrid: React.FC<PlanningGridProps> = ({
         workforces={localWorkforces}
         storeInfo={storeInfo}
       />
-       <ManagerRow
+      <ManagerRow
         expandedSections={expandedSections}
         toggleSection={toggleSection}
         managerGroups={managerGroups}
@@ -324,7 +370,6 @@ const PlanningGrid: React.FC<PlanningGridProps> = ({
         cellWidth={cellWidth}
         totalAssignedCounts={totalAssignedCounts}
       />
-     
 
       <SpacerRow cellWidth={cellWidth} datesInRange={datesInRange} />
 

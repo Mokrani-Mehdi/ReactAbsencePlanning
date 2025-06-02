@@ -81,7 +81,7 @@ export class AbsencePlanning
     context: ComponentFramework.Context<IInputs>
   ): React.ReactElement {
     let Data;
-    const containerWidth = context.mode.allocatedWidth || 1500; // Default to 1500 if not available
+    const containerWidth = context.mode.allocatedWidth || 1000; // Default to 1500 if not available
     const containerHeight = context.mode.allocatedHeight || 800;
     let dataChanged = false;
     try {

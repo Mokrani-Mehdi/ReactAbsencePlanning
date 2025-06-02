@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef, useMemo } from "react";
 import Header from "./PlanningComponents/Header";
 import PlanningGrid from "./PlanningComponents/PlanningGrid";
 import SubHeader from "./PlanningComponents/SubHeader";
-import { getDatesInRange } from "../Helpers/AppHelper";
+import { getDatesInRange, isAbsenceInDateRange } from "../Helpers/AppHelper";
 import { Absences, Payload, Workforce } from "../Models/Model";
 import "../Css/planning.css";
 
@@ -202,7 +202,7 @@ const Planning: React.FC<Payload> = ({
       const screenWidth = containerWidth;
       const firstColumnWidth = 350;
       const gapSize = 2;
-      const padding = 16;
+      const padding = 20;
       const scrollbarWidth = 16;
 
       const availableWidth =
@@ -212,7 +212,7 @@ const Planning: React.FC<Payload> = ({
         scrollbarWidth -
         datesInRange.length * gapSize;
 
-      const width = Math.max(25, availableWidth / datesInRange.length);
+      const width = Math.max(17, availableWidth / datesInRange.length);
       const height = width > 45 ? 45 : width;
       setCellWidth(width);
       setcellHeight(height);
@@ -275,7 +275,7 @@ const Planning: React.FC<Payload> = ({
       setSelectedAbsences((prevSelected) => {
         const currentSelectedIds = new Set(prevSelected.map(a => a.Id));
         const newAbsences = workforce.Absences?.filter(
-          (absence) => !currentSelectedIds.has(absence.Id)
+          (absence) => !currentSelectedIds.has(absence.Id) && isAbsenceInDateRange(absence, datesInRange)
         ) || [];
         
         return [...prevSelected, ...newAbsences];
@@ -302,7 +302,7 @@ const Planning: React.FC<Payload> = ({
       
       safeData.Workforces.forEach((workforce) => {
         workforce.Absences?.forEach((absence) => {
-          if (!addedIds.has(absence.Id)) {
+          if (!addedIds.has(absence.Id) && isAbsenceInDateRange(absence, datesInRange)) {
             allAbsences.push(absence);
             addedIds.add(absence.Id);
           }

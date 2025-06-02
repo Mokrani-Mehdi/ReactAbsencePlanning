@@ -203,3 +203,28 @@ export const calculateAbsenceCounts = (
         return "Hors contrat";
     }
   };
+
+
+
+  export const isAbsenceInDateRange = (absence: Absences, datesInRange: Date[]): boolean => {
+  if (!absence.StartDate || !absence.EndDate || datesInRange.length === 0) {
+    return false;
+  }
+
+  const absenceStart = new Date(absence.StartDate);
+  const absenceEnd = new Date(absence.EndDate);
+  const rangeStart = new Date(datesInRange[0]);
+  const rangeEnd = new Date(datesInRange[datesInRange.length - 1]);
+
+  // Set time to start of day for accurate date comparison
+  absenceStart.setHours(0, 0, 0, 0);
+  absenceEnd.setHours(0, 0, 0, 0);
+  rangeStart.setHours(0, 0, 0, 0);
+  rangeEnd.setHours(0, 0, 0, 0);
+
+  // Check if absence start date OR end date is within the date range
+  const startDateInRange = absenceStart >= rangeStart && absenceStart <= rangeEnd;
+  const endDateInRange = absenceEnd >= rangeStart && absenceEnd <= rangeEnd;
+  
+  return startDateInRange || endDateInRange;
+};

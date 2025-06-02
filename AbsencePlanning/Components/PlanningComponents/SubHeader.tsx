@@ -100,6 +100,12 @@ const SubHeader: React.FC<SubHeaderPops> = ({
           <StoreIcon className="PA-image" />
           {storeName}
         </div>
+        {!isSelectMode ? "" : <div className="PA-store">
+          {" "}
+         
+          Absences Selected : {selectedAbsences.length}
+        </div>}
+        
       </div>
 
       <div className="PA-leftSide">
@@ -129,7 +135,7 @@ const SubHeader: React.FC<SubHeaderPops> = ({
           />
         </div>
         <button onClick={toggleMode} className="PA-select-button">
-          {!isSelectMode ? "Select" : "Cancel " + selectedAbsences.length}
+          {!isSelectMode ? "Select" : "Cancel "}
         </button>
       </div>
     </div>
