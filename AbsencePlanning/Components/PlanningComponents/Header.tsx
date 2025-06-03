@@ -2,6 +2,7 @@ import React from 'react'
 import Select from "react-select";
 import "../../Css/header.css";
 import { Workforce } from '../../Models/Model';
+import { PlanningAbsenceIcon } from '../../Assets/Icons';
 
 /* eslint-disable */
 interface HeaderProps {
@@ -84,7 +85,7 @@ const Header: React.FC<HeaderProps> = ({
     <div className="PA-header-container">
       <div className="PA-intro-container">
         
-          Planning Absences
+        <PlanningAbsenceIcon  className="PA-imagePlanning" />  Absences planning
       
       </div>
 

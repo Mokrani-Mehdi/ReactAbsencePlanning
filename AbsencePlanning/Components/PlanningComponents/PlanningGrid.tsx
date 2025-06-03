@@ -109,7 +109,10 @@ const PlanningGrid: React.FC<PlanningGridProps> = ({
       coordinateGetter: sortableKeyboardCoordinates,
     })
   );
-
+  const handleGetAvailability = (): void => {
+    
+    OnChange([], "GetAvailability", null, null);
+  };
   // Handle drag end event for workforce reordering
   const handleDragEnd = (event: DragEndEvent) => {
     const { active, over } = event;
@@ -248,7 +251,7 @@ const PlanningGrid: React.FC<PlanningGridProps> = ({
       <div
         className="PA-firstColumnHeader"
         style={{ fontWeight: "bold", cursor: "pointer", color: "white" }}
-        onClick={onGetavailabilityCall}
+        onClick={handleGetAvailability}
       >
         Disponibilité
         <FontAwesomeIcon className="PA-icone" icon={faRotateRight} size="sm" />

@@ -134,7 +134,7 @@ const SubHeader: React.FC<SubHeaderPops> = ({
             title={`Delete ${selectedAbsences.length} absence(s)`}
           />
         </div>
-        <button onClick={toggleMode} className="PA-select-button">
+        <button onClick={toggleMode} className={!isSelectMode ? "PA-select-button" : "PA-cancel-button "}> 
           {!isSelectMode ? "Select" : "Cancel "}
         </button>
       </div>

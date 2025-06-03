@@ -81,6 +81,8 @@ export class AbsencePlanning
     context: ComponentFramework.Context<IInputs>
   ): React.ReactElement {
     let Data;
+    let AvailabilityPayload;
+
     const containerWidth = context.mode.allocatedWidth || 1000; // Default to 1500 if not available
     const containerHeight = context.mode.allocatedHeight || 800;
     let dataChanged = false;
@@ -105,9 +107,22 @@ export class AbsencePlanning
       console.error("Error parsing JSON:", error);
       Data = {};
     }
+    const availabilityRaw = context.parameters.Availability.raw;
+    if (availabilityRaw && availabilityRaw !== "val") {
+      try {
+        AvailabilityPayload = JSON.parse(availabilityRaw);
+      } catch (error) {
+        console.error(
+          "Error parsing availability JSON:",
+          error,
+          availabilityRaw
+        );
+      }
+    }
 
     const props: Payload = {
       Data,
+      AvailabilityPayload,
       containerWidth,
       containerHeight,
       OnChange: this.HandleGetEvent,

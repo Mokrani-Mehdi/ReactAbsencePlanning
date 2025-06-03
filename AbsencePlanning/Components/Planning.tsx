@@ -219,7 +219,7 @@ const Planning: React.FC<Payload> = ({
       (datesInRange.length * gapSize);
 
     // Ensure minimum width and calculate cell dimensions
-    const width = Math.max(17, availableWidth / datesInRange.length);
+    const width = Math.max(11, availableWidth / datesInRange.length);
     const height = width > 45 ? 45 : width;
     
     setCellWidth(width);

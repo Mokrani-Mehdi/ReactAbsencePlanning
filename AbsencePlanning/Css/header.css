@@ -1,148 +1,166 @@
 .PA-header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 1rem 0;
-    padding: 0px 20px 0 20px;
-  }
-  
-  
-  .PA-DropDown-Department-container {
-    position: relative;
-    width: 250px;
-    font-family: 'Roboto', sans-serif;
-    z-index: 14;
-    height: 100%;
-  }
-  
-  .PA-DropDown-manager-container {
-    position: relative;
-    width: 250px;
-    font-family: 'Roboto', sans-serif;
-    z-index: 14;
-    height: 100%;
-  }
-  .PA-DropDown-Role-container {
-    position: relative;
-    width: 250px;
-    font-family: 'Roboto', sans-serif;
-    z-index: 14;
-    height: 100%;
-  }
-  
-  
-  
-  .PA-search-container {
-  
-    margin: 0px 2px 0 0;
-    font-family: 'Roboto', sans-serif;
-    height: 40px;
-    width: 250px;
-  }
-  
-  .PA-search-input {
-    width: 100%;
-    padding: 0.67rem 0;
-    text-indent: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
-    /* height: 100%; */
-  }
-  
-  .PA-search-input:focus {
-    outline: none;
-    border-color: #0066cc;
-    box-shadow: 0 0 0 2px rgba(0, 102, 204, 0.2);
-  }
-  
-  
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+  padding: 0px 20px 0 20px;
+}
 
-  
-  
-  .PA-DropDown-containers {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 10px;
-    height: 40px;
-  }
-  
-  
-  .PA-Info-container{
-  
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-  
-  /* .PA-css-13cymwt-control{
+.PA-intro-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 17pt;
+  font-weight: bold;
+  gap: 7px;
+  text-wrap-mode: nowrap;
+}
+
+.PA-imagePlanning {
+  width: 30px;
+  height: 40px;
+}
+
+.PA-DropDown-Department-container {
+  position: relative;
+  width: 250px;
+  font-family: 'Roboto', sans-serif;
+  z-index: 14;
+  height: 100%;
+}
+
+.PA-DropDown-manager-container {
+  position: relative;
+  width: 250px;
+  font-family: 'Roboto', sans-serif;
+  z-index: 14;
+  height: 100%;
+}
+
+.PA-DropDown-Role-container {
+  position: relative;
+  width: 250px;
+  font-family: 'Roboto', sans-serif;
+  z-index: 14;
+  height: 100%;
+}
+
+
+
+.PA-search-container {
+
+  margin: 0px 2px 0 0;
+  font-family: 'Roboto', sans-serif;
+  height: 40px;
+  width: 250px;
+}
+
+.PA-search-input {
+  width: 100%;
+  padding: 0.67rem 0;
+  text-indent: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  /* height: 100%; */
+}
+
+.PA-search-input:focus {
+  outline: none;
+  border-color: #0066cc;
+  box-shadow: 0 0 0 2px rgba(0, 102, 204, 0.2);
+}
+
+
+
+
+
+
+.PA-DropDown-containers {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  height: 40px;
+}
+
+
+.PA-Info-container {
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* .PA-css-13cymwt-control{
     height: 100%;
   } */
-  
-  .PA-custom-tooltip-container {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .PA-tooltip-text {
-    visibility: hidden;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 10px;
-    position: absolute;
-    z-index: 1000; /* Higher z-index to ensure it shows above Select */
-    bottom: 125%;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    transition: opacity 0.3s;
-    white-space: nowrap; /* Keep text on a single line */
-    min-width: 120px;
-  }
-  
-  .PA-custom-tooltip-container:hover .PA-tooltip-text {
-    visibility: visible;
-    opacity: 1;
-  }
-  
-  .PA-selected-count-chip {
-    background-color: #e0e0e0;
-    border-radius: 16px;
-    padding: 2px 8px;
-    font-size: 14px;
-    cursor: default;
-    max-width: 150px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-  }
-  .PA-selected-label {
-    border-radius: 16px;
-    font-size: 14px;
-    cursor: default;
-    max-width: 130px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    background: rgb(224, 224, 224);
-    border-radius: 10px;
-    padding: 2px 8px;
-  }
 
-@media only screen and (max-width: 1200px) {
-    .PA-DropDown-Department-container {
+.PA-custom-tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+.PA-tooltip-text {
+  visibility: hidden;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 10px;
+  position: absolute;
+  z-index: 1000;
+  /* Higher z-index to ensure it shows above Select */
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  white-space: nowrap;
+  /* Keep text on a single line */
+  min-width: 120px;
+}
+
+.PA-custom-tooltip-container:hover .PA-tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.PA-selected-count-chip {
+  background-color: #e0e0e0;
+  border-radius: 16px;
+  padding: 2px 8px;
+  font-size: 14px;
+  cursor: default;
+  max-width: 150px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.PA-selected-label {
+  border-radius: 16px;
+  font-size: 14px;
+  cursor: default;
+  max-width: 130px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  background: rgb(224, 224, 224);
+  border-radius: 10px;
+  padding: 2px 8px;
+}
+
+@media only screen and (max-width: 1400px) {
+  .PA-DropDown-Department-container {
     position: relative;
     width: 150px;
     font-family: 'Roboto', sans-serif;
     z-index: 14;
     height: 100%;
   }
-  
+
   .PA-DropDown-manager-container {
     position: relative;
     width: 150px;
@@ -150,12 +168,13 @@
     z-index: 14;
     height: 100%;
   }
+
   .PA-DropDown-Role-container {
     position: relative;
-    width: 250px;
+    width: 150px;
     font-family: 'Roboto', sans-serif;
     z-index: 14;
     height: 100%;
   }
-  
+
 }

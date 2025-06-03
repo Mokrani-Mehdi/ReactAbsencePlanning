@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <manifest>
-  <control namespace="AbsencePlanning" constructor="AbsencePlanning" version="1.0.20" display-name-key="AbsencePlanning" description-key="AbsencePlanning description" control-type="virtual">
+  <control namespace="AbsencePlanning" constructor="AbsencePlanning" version="1.0.25" display-name-key="AbsencePlanning" description-key="AbsencePlanning description" control-type="virtual">
     <external-service-usage enabled="false"/>
     <property name="Payload" display-name-key="Payload" description-key="Payload" of-type="SingleLine.Text" usage="bound" required="true" default-value=""/>
     <property name="Availability" display-name-key="Availability" description-key="Availability" of-type="SingleLine.Text" usage="bound" required="false" default-value=""/>
@@ -9,6 +9,7 @@
       <code path="index.ts" order="1"/>
       <platform-library name="React" version="16.14.0"/>
       <platform-library name="Fluent" version="9.46.2"/>
+      <img path="./Assets/PlanningAbsence.svg"/>
     </resources>
   </control>
 </manifest>
