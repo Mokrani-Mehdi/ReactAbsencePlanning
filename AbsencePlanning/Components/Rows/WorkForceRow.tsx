@@ -188,7 +188,7 @@ const WorkForceRow: React.FC<WorkforceRowProps> = ({
             />
           </span>
         )}
-        <span {...listeners} style={{ cursor: 'grab', marginLeft: '5px' }}>
+        <span {...listeners} style={{ cursor: 'grab', marginLeft: '5px', fontWeight: workforce?.IsManager ? "bold" : "normal", }}>
           {workforce.Name}
         </span>
       </div>
