@@ -94,7 +94,8 @@ const Planning: React.FC<Payload> = ({
         DepartmentSkillsLists: Data?.DepartmentSkillsLists || [],
         StoreInfo: Data?.StoreInfo || { FirstDayOfMonth: new Date().toISOString() }
       };
-      
+      setIsSelectMode(false);
+      setSelectedAbsences([]);
       setLocalData(safeData);
       setFirstLocalData(safeData);
       setDepartementData(safeData.DepartmentSkillsLists);
@@ -308,7 +309,7 @@ const Planning: React.FC<Payload> = ({
       const allAbsences: Absences[] = [];
       const addedIds = new Set<string>();
       
-      safeData.Workforces.forEach((workforce) => {
+      filteredWorkforces.forEach((workforce) => {
         workforce.Absences?.forEach((absence) => {
           if (!addedIds.has(absence.Id) && isAbsenceInDateRange(absence, datesInRange)) {
             allAbsences.push(absence);

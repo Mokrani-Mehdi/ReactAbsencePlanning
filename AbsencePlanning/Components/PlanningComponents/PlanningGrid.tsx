@@ -228,15 +228,15 @@ const PlanningGrid: React.FC<PlanningGridProps> = ({
     return groups;
   }, [localWorkforces]);
 
-  const calculateTotalAvailability = useMemo(() => {
+    const calculateTotalAvailability = useMemo(() => {
     const counts = new Array(datesInRange.length).fill(0);
     if (!AvailabitlityPayload) return counts;
 
     datesInRange.forEach((date, index) => {
       const shiftDate = date.toISOString().split("T")[0];
-      const availItem = AvailabitlityPayload.find((item) => {
-        return item.date.toISOString().split("T")[0] === shiftDate;
-      });
+      const availItem = AvailabitlityPayload.find(
+        (item) => item.date.toString() === shiftDate
+      );
       if (availItem) counts[index] = availItem.count;
     });
 

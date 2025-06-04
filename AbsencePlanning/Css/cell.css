@@ -55,8 +55,8 @@
     z-index: 16;
     line-height: 1.4;
     bottom: 125%;
-    left: 50%;
-    margin-left: -50px;
+    /* left: 50%;
+    margin-left: -50px; */
     opacity: 0;
     transition: opacity 0.3s;
     font-size: 12px;
