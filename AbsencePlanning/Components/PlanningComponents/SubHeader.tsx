@@ -86,8 +86,7 @@ const SubHeader: React.FC<SubHeaderPops> = ({
           <FontAwesomeIcon
             className="PA-righticone"
             icon={faChevronRight}
-            size="sm"
-           
+            size="sm"           
           />
           </div>
         </div>
@@ -118,7 +117,7 @@ const SubHeader: React.FC<SubHeaderPops> = ({
               cursor: selectedAbsences.filter( absence => !absence.Shared ).length > 0 ? "pointer" : "not-allowed",
             }}
             // onClick={handleShareClick}
-            title={`Share ${selectedAbsences.length} absence(s)`}
+            title={`Share ${selectedAbsences.filter( absence => !absence.Shared ).length} absence(s)`}
           />
         </div>
 

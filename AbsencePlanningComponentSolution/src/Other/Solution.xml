@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ImportExportXml version="9.1.0.643" SolutionPackageVersion="9.1" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SolutionManifest>
-    <UniqueName>AbsencePlanningSolution</UniqueName>
+    <UniqueName>AbsencePlanningComponentSolution</UniqueName>
     <LocalizedNames>
-      <LocalizedName description="AbsencePlanningSolution" languagecode="1033"/>
+      <LocalizedName description="AbsencePlanningComponentSolution" languagecode="1033"/>
     </LocalizedNames>
     <Descriptions/>
-    <Version>1.0.28</Version>
-    <Managed>1</Managed>
+    <Version>1.0.44</Version>
+    <Managed>0</Managed>
     <Publisher>
       <UniqueName>OraNovia</UniqueName>
       <LocalizedNames>

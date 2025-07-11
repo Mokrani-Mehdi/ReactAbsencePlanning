@@ -4,7 +4,7 @@ const xml2js = require('xml2js');
 
 // File paths
 const manifestPath = path.join(__dirname, 'AbsencePlanning', 'ControlManifest.Input.xml');
-const solutionPath = path.join(__dirname, 'AbsencePlanningSolution', 'src', 'Other', 'Solution.xml');
+const solutionPath = path.join(__dirname, 'AbsencePlanningComponentSolution', 'src', 'Other', 'Solution.xml');
 
 const parser = new xml2js.Parser();
 const builder = new xml2js.Builder();

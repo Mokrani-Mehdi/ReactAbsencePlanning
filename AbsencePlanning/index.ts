@@ -11,7 +11,7 @@ import {
 } from "./Models/Model";
 /* eslint-disable */
 
-export class AbsencePlanning
+export class AbsencePlanningComponent
   implements ComponentFramework.ReactControl<IInputs, IOutputs>
 {
   private notifyOutputChanged: () => void;

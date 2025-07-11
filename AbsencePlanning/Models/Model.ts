@@ -6,7 +6,7 @@ export interface Workforce {
   IsManager?: boolean;
   ManagerId?: string;
   FixedDayOff?: string[];
-  FavoriteDayOff?: string| null;
+  FavoriteDayOff?: string[];
   StartContract?: string;
   EndContract?: string;
   StateCode?: number;
@@ -75,12 +75,13 @@ export interface AbsencePlanningCellData
     Date:string;
 }
 export enum AbsenceCategory {
-  UNPAID_SHARED = "UNPAID_SHARED",
-  PAID_SHARED = "PAID_SHARED",
-  UNPAID_UNSHARED = "UNPAID_UNSHARED",
-  PAID_UNSHARED = "PAID_UNSHARED",
-  REPOS_OFF = "REPOS_OFF",
-  OUT_OF_CONTRACT = "OUT_OF_CONTRACT"
+  UNPAID_SHARED = "Unpaid Shared",
+  PAID_SHARED = "Paid Shared",
+  UNPAID_UNSHARED = "Unpaid Unshared",
+  PAID_UNSHARED = "Paid Unshared",
+  REPOS_OFF = "Repos Off",
+  OUT_OF_CONTRACT = "Out of Contract",
+  CLOSING_DAYS="Closing Days"
 }
 
 export const ABSENCE_CATEGORY_COLORS = {
@@ -89,7 +90,9 @@ export const ABSENCE_CATEGORY_COLORS = {
   [AbsenceCategory.UNPAID_UNSHARED]: "#90EE90",
   [AbsenceCategory.PAID_UNSHARED]: "#87CEFA",
   [AbsenceCategory.REPOS_OFF]: "#D3D3D3",
-  [AbsenceCategory.OUT_OF_CONTRACT]: "#808080"
+  [AbsenceCategory.OUT_OF_CONTRACT]: "#808080",
+  [AbsenceCategory.CLOSING_DAYS]: "#808080"
+
 };
 
 
