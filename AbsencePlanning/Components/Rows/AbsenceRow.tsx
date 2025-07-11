@@ -102,13 +102,13 @@ const AbsenceRow: React.FC<AbsenceRowProps> = ({
 
             // Add reasons why person is off
             if (person.FixedDayOff?.includes(getDayName(date)))
-              reason.push("Jour fixe");
+              reason.push("Fixed day off");
             if (person.FavoriteDayOff?.includes(getDayName(date)))
-              reason.push("Jour préféré");
+              reason.push("Preferred day off");
             if (storeInfo.ClosingDays?.includes(getDayName(date)))
-              reason.push("Fermeture");
+              reason.push("Closing day");
             if (storeInfo.Holidays?.includes(date.toISOString().split("T")[0]))
-              reason.push("Jour férié");
+              reason.push("Holiday");
 
             staffList.push(`${person.Name} (${reason.join(", ")})`);
           }
@@ -124,14 +124,14 @@ const AbsenceRow: React.FC<AbsenceRowProps> = ({
               person.StartContract &&
               new Date(date) < new Date(person.StartContract)
             ) {
-              reason.push("Avant contrat");
+              reason.push("Before contract");
             }
 
             if (
               person.EndContract &&
               new Date(date) > new Date(person.EndContract)
             ) {
-              reason.push("Après contrat");
+              reason.push("After contract");
             }
 
             staffList.push(`${person.Name} (${reason.join(", ")})`);
@@ -167,7 +167,7 @@ const AbsenceRow: React.FC<AbsenceRowProps> = ({
             if (
               isDayOff(person, date, storeInfo) &&
               !isOutOfContract(person, date) &&
-              !isClosingDay(date) && 
+              !isClosingDay(date) &&
               !staffList.includes(person.Name)
             ) {
               staffList.push(`${person.Name} (${getCategoryDisplayName(cat)})`);
@@ -184,12 +184,16 @@ const AbsenceRow: React.FC<AbsenceRowProps> = ({
               staffList.push(`${person.Name} (${getCategoryDisplayName(cat)})`);
             }
           });
-        }
-        else if (cat === AbsenceCategory.CLOSING_DAYS) {
+        } else if (cat === AbsenceCategory.CLOSING_DAYS) {
           if (isClosingDay(date)) {
-            workforces.forEach(person => {
-              if (!isOutOfContract(person, date) && !staffList.includes(person.Name)) {
-                staffList.push(`${person.Name} (${getCategoryDisplayName(cat)})`);
+            workforces.forEach((person) => {
+              if (
+                !isOutOfContract(person, date) &&
+                !staffList.includes(person.Name)
+              ) {
+                staffList.push(
+                  `${person.Name} (${getCategoryDisplayName(cat)})`
+                );
               }
             });
           }
@@ -279,7 +283,7 @@ const AbsenceRow: React.FC<AbsenceRowProps> = ({
                 </span>
               ))
             ) : (
-              <span>Aucun personnel</span>
+              <span>No staff</span>
             )}
           </div>
         )}
@@ -320,7 +324,6 @@ const AbsenceRow: React.FC<AbsenceRowProps> = ({
           if (
             isDayOff(person, date, storeInfo) &&
             !isOutOfContract(person, date) &&
-            
             !absenceCounted.has(person.Id)
           ) {
             totalAbsences += 1;
@@ -336,11 +339,13 @@ const AbsenceRow: React.FC<AbsenceRowProps> = ({
             absenceCounted.add(person.Id);
           }
         });
-      }
-      else if (category === AbsenceCategory.CLOSING_DAYS) {
+      } else if (category === AbsenceCategory.CLOSING_DAYS) {
         if (isClosingDay(date)) {
           workforces.forEach((person) => {
-            if (!isOutOfContract(person, date) && !absenceCounted.has(person.Id)) {
+            if (
+              !isOutOfContract(person, date) &&
+              !absenceCounted.has(person.Id)
+            ) {
               totalAbsences += 1;
               absenceCounted.add(person.Id);
             }
@@ -348,7 +353,7 @@ const AbsenceRow: React.FC<AbsenceRowProps> = ({
         }
       }
     });
-   
+
     return totalAbsences;
   };
 
@@ -360,7 +365,7 @@ const AbsenceRow: React.FC<AbsenceRowProps> = ({
           style={{ fontWeight: "bold", cursor: "pointer" }}
           onClick={() => toggleSection("absence")}
         >
-          Total absences by category {" "}
+          Total absences by category{" "}
           <FontAwesomeIcon
             className="PA-icone"
             icon={expandedSections.absence ? faChevronUp : faChevronDown}
