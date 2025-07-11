@@ -137,7 +137,7 @@ const DepartmentRow: React.FC<DepartmentRowProps> = ({
         {count > 0 && (
           <div className={`PA-tooltip-content ${tooltipPosition}`}>
             <strong>
-              {department ? `${department} le ` : "Staff affecté le "}
+              {department ? `${department} on ` : "Staff assigned on "}
               {date.toLocaleDateString("fr-FR")}
             </strong>
             <br />
@@ -146,7 +146,7 @@ const DepartmentRow: React.FC<DepartmentRowProps> = ({
                 <span key={i} className="staff-item">{staff}<br /></span>
               ))
             ) : (
-              <span>Aucun personnel</span>
+              <span>No staff</span>
             )}
           </div>
         )}
@@ -190,7 +190,7 @@ const DepartmentRow: React.FC<DepartmentRowProps> = ({
           style={{ fontWeight: "bold", cursor: "pointer" }}
           onClick={() => toggleSection("department")}
         >
-          Total affectés par département {' '}
+          Total assigned by Division	 {' '}
           <FontAwesomeIcon className="PA-icone"
             icon={expandedSections.department ? faChevronUp : faChevronDown} 
             size="sm"
