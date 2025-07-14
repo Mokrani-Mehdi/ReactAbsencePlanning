@@ -253,7 +253,7 @@ const PlanningGrid: React.FC<PlanningGridProps> = ({
         style={{ fontWeight: "bold", cursor: "pointer", color: "white" }}
         onClick={handleGetAvailability}
       >
-        Disponibilité
+        Availabilty
         <FontAwesomeIcon className="PA-icone" icon={faRotateRight} size="sm" />
       </div>
       {calculateTotalAvailability.map((count, index) => (
@@ -341,7 +341,7 @@ const PlanningGrid: React.FC<PlanningGridProps> = ({
           <div key={index} className="PA-headerCell">
             <div className="PA-headerName">
               {date
-                .toLocaleDateString("fr-FR", { weekday: "long" })
+                .toLocaleDateString("en-US", { weekday: "long" })
                 .substring(0, 3)}
             </div>
             <div className="PA-headerDate">{date.getDate()}</div>

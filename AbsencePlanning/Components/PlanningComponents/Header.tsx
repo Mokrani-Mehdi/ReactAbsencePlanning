@@ -158,7 +158,7 @@ const Header: React.FC<HeaderProps> = ({
               label: dept.DepartmentName,
             }))}
             
-            placeholder="Department"
+            placeholder="Division"
             value={departmentData
               .filter((dept) => selectedDepartments.includes(dept.DepartmentId))
               .map((dept) => ({
@@ -191,7 +191,7 @@ const Header: React.FC<HeaderProps> = ({
               label: workforce.Name,
             }))}
             
-            placeholder="Workforce"
+            placeholder="Staff members"
             value={workforces
               .filter((workforce) => selectedWorkforces.includes(workforce.Id))
               .map((workforce) => ({

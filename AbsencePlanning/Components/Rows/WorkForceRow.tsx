@@ -51,7 +51,27 @@ const WorkForceRow: React.FC<WorkforceRowProps> = ({
     transition,
     isDragging,
   } = useSortable({ id: workforce.Id });
-  
+  const absenceOverlapsPeriod = (absenceStart: Date, absenceEnd: Date, periodStart: Date, periodEnd: Date): boolean => {
+  return absenceStart <= periodEnd && absenceEnd >= periodStart;
+};
+
+const getAbsencesInDisplayedPeriod = (): Absences[] => {
+  const periodStart = new Date(dates[0]);
+  const periodEnd = new Date(dates[dates.length - 1]);
+  periodStart.setHours(0, 0, 0, 0);
+  periodEnd.setHours(0, 0, 0, 0);
+
+  return (workforce.Absences || []).filter((absence) => {
+    const start = new Date(absence.StartDate || "");
+    const end = new Date(absence.EndDate || "");
+    start.setHours(0, 0, 0, 0);
+    end.setHours(0, 0, 0, 0);
+
+    return absenceOverlapsPeriod(start, end, periodStart, periodEnd);
+  });
+};
+const absencesInPeriod = getAbsencesInDisplayedPeriod();
+
   const style = {
     transform: CSS.Transform.toString(transform),
     transition,
@@ -59,19 +79,19 @@ const WorkForceRow: React.FC<WorkforceRowProps> = ({
     zIndex: isDragging ? 1 : 0,
   };
 
-  const isAllSelected =
-    (workforce?.Absences?.length > 0 &&
-      workforce.Absences?.every((a) => 
-        selectedAbsences.some(selected => selected.Id === a.Id)
-      )) ??
-    false;
+ 
     
-  const isSomeSelected =
-    (workforce?.Absences?.length > 0 &&
-      workforce.Absences?.some((a) => 
-        selectedAbsences.some(selected => selected.Id === a.Id)
-      )) ??
-    false;
+ const isAllSelected =
+  absencesInPeriod.length > 0 &&
+  absencesInPeriod.every((a) =>
+    selectedAbsences.some((selected) => selected.Id === a.Id)
+  );
+
+const isSomeSelected =
+  absencesInPeriod.length > 0 &&
+  absencesInPeriod.some((a) =>
+    selectedAbsences.some((selected) => selected.Id === a.Id)
+  );
 
 
  const HandleOnChange = (absence: Absences | null, date: Date) => {

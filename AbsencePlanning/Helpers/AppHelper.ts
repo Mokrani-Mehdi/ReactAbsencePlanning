@@ -250,19 +250,19 @@ export const calculateAbsenceCounts = (
 export const getCategoryDisplayName = (category: AbsenceCategory): string => {
   switch (category) {
     case AbsenceCategory.UNPAID_SHARED:
-      return "Unpaid shared leave";
+      return "Validated absences";
     case AbsenceCategory.PAID_SHARED:
-      return "Paid shared leave";
+      return "Worked validated absences";
     case AbsenceCategory.UNPAID_UNSHARED:
-      return "Unpaid unshared leave";
+      return "Draft absences";
     case AbsenceCategory.PAID_UNSHARED:
-      return "Paid unshared leave";
+      return "Worked draft absences";
     case AbsenceCategory.REPOS_OFF:
-      return "Rest/Day off";
+      return "Day Off";
     case AbsenceCategory.OUT_OF_CONTRACT:
-      return "Out of contract";
+      return "Start/end contract date";
     case AbsenceCategory.CLOSING_DAYS:
-      return "Closing Shop Day";
+      return "Closing day";
   }
 };
 export const isAbsenceInDateRange = (

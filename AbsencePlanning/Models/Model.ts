@@ -11,7 +11,7 @@ export interface Workforce {
   EndContract?: string;
   StateCode?: number;
   IsKeyHolder?: boolean;
-  IsInternalProfile?:boolean;
+  IsInternalProfile?: boolean;
   Departments: DepartmentWorkforce[];
 }
 export interface AvailabilityItem {
@@ -19,11 +19,10 @@ export interface AvailabilityItem {
   count: number;
 }
 export interface DepartmentWorkforce {
-    Name: string;
-    Id: string;
-   
-  }
-  
+  Name: string;
+  Id: string;
+}
+
 export interface Skill {
   Name: string;
   SkillId: string;
@@ -57,31 +56,35 @@ export interface Payload {
   containerWidth: number;
   containerHeight: number;
   AvailabilityPayload?: AvailabilityItem[];
-  OnChange : (selectedAbsences : string[], actionType: string | null,nextDate : string | null,selectedWorforceDate :  AbsencePlanningCellData|null ) =>  void;
+  OnChange: (
+    selectedAbsences: string[],
+    actionType: string | null,
+    nextDate: string | null,
+    selectedWorforceDate: AbsencePlanningCellData | null
+  ) => void;
 }
 export interface StoreInfo {
   ClosingDays: string[];
   Name: string;
   Holidays: string[];
-  FirstDayOfMonth : string;
+  FirstDayOfMonth: string;
   StartPlanning: string;
   EndPlanning: string;
 }
 
-export interface AbsencePlanningCellData
-{
-    Workforce : Workforce;
-    Absence: Absences| null;
-    Date:string;
+export interface AbsencePlanningCellData {
+  Workforce: Workforce;
+  Absence: Absences | null;
+  Date: string;
 }
 export enum AbsenceCategory {
-  UNPAID_SHARED = "Unpaid Shared",
-  PAID_SHARED = "Paid Shared",
-  UNPAID_UNSHARED = "Unpaid Unshared",
-  PAID_UNSHARED = "Paid Unshared",
-  REPOS_OFF = "Repos Off",
-  OUT_OF_CONTRACT = "Out of Contract",
-  CLOSING_DAYS="Closing Days"
+  UNPAID_UNSHARED = "Draft absences",
+  UNPAID_SHARED = "Validated absence",
+  PAID_UNSHARED = "Worked draft absences",
+  PAID_SHARED = "Worked validated absences",
+  OUT_OF_CONTRACT = "Start/end contract date",
+  REPOS_OFF = "Day Off",
+  CLOSING_DAYS = "Closing Days",
 }
 
 export const ABSENCE_CATEGORY_COLORS = {
@@ -91,14 +94,12 @@ export const ABSENCE_CATEGORY_COLORS = {
   [AbsenceCategory.PAID_UNSHARED]: "#87CEFA",
   [AbsenceCategory.REPOS_OFF]: "#D3D3D3",
   [AbsenceCategory.OUT_OF_CONTRACT]: "#808080",
-  [AbsenceCategory.CLOSING_DAYS]: "#808080"
-
+  [AbsenceCategory.CLOSING_DAYS]: "#808080",
 };
 
-
 export interface IState {
-    selectedAbsences: string[];
-    actionType : string | null;
-    nextDate : string | null;
-    selectedWorforceDate : AbsencePlanningCellData|null;
+  selectedAbsences: string[];
+  actionType: string | null;
+  nextDate: string | null;
+  selectedWorforceDate: AbsencePlanningCellData | null;
 }

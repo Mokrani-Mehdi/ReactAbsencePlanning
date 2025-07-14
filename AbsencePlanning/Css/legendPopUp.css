@@ -65,7 +65,7 @@
 }
 
 .PA-popup-content {
-  padding: 20px;
+  padding: 18px;
   contain: content; /* CSS containment for performance */
 }
 
@@ -94,7 +94,7 @@
   align-items: center;
   font-size: 14px;
   flex: 0 0 auto; /* Prevent items from growing/shrinking */
-  min-width: 150px; /* Minimum width for items */
+  min-width: 100px; /* Minimum width for items */
 }
 
 /* Optimize circle rendering */

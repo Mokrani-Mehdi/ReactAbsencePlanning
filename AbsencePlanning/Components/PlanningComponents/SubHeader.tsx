@@ -79,8 +79,8 @@ const SubHeader: React.FC<SubHeaderPops> = ({
            
           />
           </div>
-          {new Date(currentDate).toLocaleDateString("fr-FR", { month: "long" })}{" "}
-          {new Date(currentDate).toLocaleDateString("fr-FR", {
+          {new Date(currentDate).toLocaleDateString("en-US", { month: "long" })}{" "}
+          {new Date(currentDate).toLocaleDateString("en-US", {
             year: "numeric",
           })}<div  className="PA-righticone" onClick={() => HandleDateChange(true)}>
           <FontAwesomeIcon
@@ -90,15 +90,16 @@ const SubHeader: React.FC<SubHeaderPops> = ({
           />
           </div>
         </div>
-        <div className="PA-staff">
-          <Staff2Icon className="PA-image" />
-          {Workforces.length} effectifs
-        </div>
         <div className="PA-store">
           {" "}
           <StoreIcon className="PA-image" />
           {storeName}
         </div>
+        <div className="PA-staff">
+          <Staff2Icon className="PA-image" />
+          {Workforces.length} Staff Members
+        </div>
+        
         {!isSelectMode ? "" : <div className="PA-store">
           {" "}
          
