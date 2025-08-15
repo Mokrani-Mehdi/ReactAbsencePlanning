@@ -59,7 +59,7 @@ const AbsenceRow: React.FC<AbsenceRowProps> = ({
 
     return (
       storeInfo.ClosingDays?.includes(dayName) ||
-      storeInfo.Holidays?.includes(dateString)
+      storeInfo.Holidays?.map(e=> e.Date).includes(dateString)
     );
   };
   // Function to get all staff with absences on a specific date and category
@@ -107,7 +107,7 @@ const AbsenceRow: React.FC<AbsenceRowProps> = ({
               reason.push("Preferred day off");
             if (storeInfo.ClosingDays?.includes(getDayName(date)))
               reason.push("Closing day");
-            if (storeInfo.Holidays?.includes(date.toISOString().split("T")[0]))
+            if (storeInfo.Holidays?.map(e=> e.Date).includes(date.toISOString().split("T")[0]))
               reason.push("Holiday");
 
             staffList.push(`${person.Name} (${reason.join(", ")})`);

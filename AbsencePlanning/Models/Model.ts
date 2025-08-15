@@ -22,7 +22,10 @@ export interface DepartmentWorkforce {
   Name: string;
   Id: string;
 }
-
+export interface Holiday{
+  Name : string;
+  Date: string;
+}
 export interface Skill {
   Name: string;
   SkillId: string;
@@ -66,7 +69,7 @@ export interface Payload {
 export interface StoreInfo {
   ClosingDays: string[];
   Name: string;
-  Holidays: string[];
+  Holidays: Holiday[];
   FirstDayOfMonth: string;
   StartPlanning: string;
   EndPlanning: string;

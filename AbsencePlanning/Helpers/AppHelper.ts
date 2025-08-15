@@ -163,7 +163,7 @@ export const isDayOff = (
   // Check if it's a holiday
   if (storeInfo?.Holidays && Array.isArray(storeInfo.Holidays)) {
     const formattedDate = date.toISOString().split("T")[0];
-    if (storeInfo.Holidays.includes(formattedDate)) {
+    if (storeInfo.Holidays?.map(e=> e.Date).includes(formattedDate)) {
       return true;
     }
   }
@@ -186,7 +186,7 @@ export const isClosingDays = (storeInfo: StoreInfo, date: Date): boolean => {
   // Check if it's a holiday
   if (storeInfo?.Holidays && Array.isArray(storeInfo.Holidays)) {
     const formattedDate = date.toISOString().split("T")[0];
-    if (storeInfo.Holidays.includes(formattedDate)) {
+    if (storeInfo.Holidays?.map(e=> e.Date).includes(formattedDate)) {
       return true;
     }
   }

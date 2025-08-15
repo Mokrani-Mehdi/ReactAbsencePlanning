@@ -142,13 +142,38 @@ const isSomeSelected =
     return storeInfo.ClosingDays.includes(dayName);
   };
 
+   const getHolidayInfo = (date: Date): { isHoliday: boolean; holidayName?: string } => {
+    if (!storeInfo?.Holidays || !Array.isArray(storeInfo.Holidays)) {
+      return { isHoliday: false };
+    }
+
+    const formattedDate = date.toISOString().split("T")[0];
+    
+    // Check if holidays are objects with Date and Name properties
+    const holiday = storeInfo.Holidays.find((holiday: any) => {
+      if (typeof holiday === 'object' && holiday.Date) {
+        return holiday.Date === formattedDate;
+      }
+      // Fallback for old string format
+      return holiday === formattedDate;
+    });
+
+    if (holiday) {
+      return {
+        isHoliday: true,
+        holidayName: typeof holiday === 'object' ? holiday.Name : "Exceptional Day Off"
+      };
+    }
+
+    return { isHoliday: false };
+  };
   const isHoliday = (date: Date): boolean => {
     if (!storeInfo?.Holidays || !Array.isArray(storeInfo.Holidays)) {
       return false;
     }
 
     const formattedDate = date.toISOString().split("T")[0];
-    return storeInfo.Holidays.includes(formattedDate);
+    return storeInfo.Holidays.map(e => e.Date).includes(formattedDate);
   };
 
   const isWithinContractPeriod = (date: Date): boolean => {
@@ -234,7 +259,7 @@ const isSomeSelected =
         const isFixedOff = isFixedDayOff(date);
         const isFavoriteOff = isFavoriteDayOff(date);
         const isClosingDay = isStoreClosingDay(date);
-        const isHolidayDate = isHoliday(date);
+        const HolidayInfo = getHolidayInfo(date);
         const isContractActive = isWithinContractPeriod(date);
 
         const hasMultipleAbsences = applicableAbsences.length > 1;
@@ -245,7 +270,7 @@ const isSomeSelected =
         const hasAbsenceOnClosingDay =
           applicableAbsences.length > 0 && isClosingDay;
         const hasAbsenceOnHoliday =
-          applicableAbsences.length > 0 && isHolidayDate;
+          applicableAbsences.length > 0 && HolidayInfo.isHoliday;
 
         const hasOverlap =
           hasMultipleAbsences ||
@@ -279,7 +304,7 @@ const isSomeSelected =
               isFixedDayOff={isFixedOff}
               isFavoriteDayOff={isFavoriteOff}
               isStoreClosingDay={isClosingDay}
-              isHoliday={isHolidayDate}
+              HolidayInfo={HolidayInfo}
               isWithinContractPeriod={isContractActive}
               hasOverlap={hasOverlap}
             />

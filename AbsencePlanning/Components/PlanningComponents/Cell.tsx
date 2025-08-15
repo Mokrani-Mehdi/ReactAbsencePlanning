@@ -5,6 +5,10 @@ import { faWarning } from "@fortawesome/free-solid-svg-icons";
 import { Absences, AbsenceCategory, ABSENCE_CATEGORY_COLORS, Workforce } from "../../Models/Model";
 import { getAbsenceCategory, getCategoryDisplayName } from "../../Helpers/AppHelper";
 
+interface HolidayProps{
+isHoliday : boolean;
+holidayName? : string;
+}
 interface CellProps {
   workforceName: string;
   absence?: Absences| null;
@@ -15,7 +19,7 @@ interface CellProps {
   isFixedDayOff?: boolean;
   isFavoriteDayOff?: boolean;
   isStoreClosingDay?: boolean;
-  isHoliday?: boolean;
+  HolidayInfo?: HolidayProps;
   isWithinContractPeriod?: boolean;
   hasOverlap?: boolean;
 }
@@ -30,7 +34,7 @@ const Cell: React.FC<CellProps> = ({
   isFixedDayOff,
   isFavoriteDayOff,
   isStoreClosingDay,
-  isHoliday,
+  HolidayInfo,
   isWithinContractPeriod = true,
   hasOverlap,
 }) => {
@@ -53,7 +57,7 @@ const Cell: React.FC<CellProps> = ({
     // Add border for selected cells instead of changing background
     const buttonClass = `PA-shift-button ${isSelected ? "PA-selected-shift" : ""}`;
 
-    if (isHoliday) {
+    if (HolidayInfo?.isHoliday) {
       buttonStyle = { backgroundColor: "#B0B0B0" };
     } else if (isStoreClosingDay) {
       buttonStyle = { backgroundColor: "#A0A0A0" };
@@ -90,7 +94,7 @@ const Cell: React.FC<CellProps> = ({
           style={{ width: "200px", whiteSpace: "normal" }}
         >
           {!isWithinContractPeriod && <div>Out of Contract Period</div>}
-          {isHoliday && <div>Holiday</div>}
+          {HolidayInfo?.isHoliday && <div>{HolidayInfo?.holidayName}</div>}
           {isStoreClosingDay && <div>Store Closed</div>}
 
           {absences && absences.length > 0 && (

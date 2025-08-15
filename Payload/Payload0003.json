@@ -1,160 +1,325 @@
 {
     "StoreInfo": {
-        "Name": "Bordeaux",
+        "Name": "CN - Shanghai IFC",
         "Holidays": [
-            "2025-07-01",
+            "2024-11-28",
+            "2024-05-20",
+            "2025-01-01",
+            "2024-05-08",
+            "2023-12-25",
+            "2025-12-25",
+            "2025-08-15",
+            "2024-10-02",
             "2024-01-01",
-            "2023-07-14",
-            "2023-04-10",
-            "2024-08-11",
-            "2024-02-15",
-            "2023-05-16",
-            "2021-05-18",
-            "2023-09-26",
-            "2023-03-30",
-            "2023-07-14",
-            "2023-08-24",
-            "2023-05-15",
-            "2023-05-20",
-            "2023-04-09",
-            "2023-04-26",
-            "2024-11-11",
+            "2023-11-01",
             "2024-11-01",
-            "2023-01-06",
-            "2023-03-02",
-            "2023-03-13",
-            "2024-01-01",
             "2023-08-15",
-            "2024-01-11",
-            "2022-05-21",
-            "2023-08-14",
-            "2024-02-01",
-            "2023-10-19",
-            "2019-04-10",
-            "2020-05-17",
-            "2022-05-19",
-            "2025-01-13",
-            "2025-07-13",
-            "2025-07-15"
+            "2024-10-03",
+            "2023-07-14",
+            "2023-08-15",
+            "2024-07-14",
+            "2024-01-01",
+            "2024-04-01",
+            "2024-05-09",
+            "2024-08-15",
+            "2023-12-25",
+            "2024-05-20",
+            "2024-12-25",
+            "2023-11-11",
+            "2023-08-15",
+            "2024-05-01",
+            "2024-11-11",
+            "2025-10-13",
+            "2024-12-25",
+            "2025-10-13",
+            "2025-12-25",
+            "2025-02-17",
+            {
+                "Date": "2025-07-01",
+                "Name": "Thanksgiving"
+            },
+            "2025-02-28",
+            "2025-08-04",
+            "2024-12-25",
+            "2025-05-19",
+            "2025-01-01",
+            "2026-01-01",
+            "2025-12-26",
+            "2025-09-01",
+            "2025-06-24",
+            "2025-04-20",
+            "2025-07-01",
+            "2025-07-21",
+            "2025-07-01",
+            "2025-03-28",
+            "2024-11-01",
+            "2025-01-28",
+            "2025-12-26",
+            "2025-12-25",
+            "2025-12-25",
+            "2024-12-29",
+            "2025-05-20",
+            "2024-12-26",
+            "2025-04-21",
+            "2025-08-15",
+            "2025-12-25",
+            "2025-12-26",
+            "2025-07-01",
+            "2025-12-26",
+            "2024-10-14",
+            "2024-12-08",
+            "2025-09-01",
+            "2025-08-04",
+            "2025-09-01",
+            "2025-12-26",
+            "2025-04-20"
         ],
-        "ClosingDays": [
-            "Sunday"
-        ],
-        "FirstDayOfMonth": "2025-07-07",
+        "ClosingDays": [],
+        "FirstDayOfMonth": "2025-07-23",
         "StartPlanning": "2025-06-30",
         "EndPlanning": "2025-08-10"
     },
     "DepartmentSkillsLists": [
         {
-            "DepartmentName": "IT ",
-            "DepartmentId": "f4073bc1-6040-f011-877a-000d3a2e5c5f",
-            "HexColor": "#cce4f7",
+            "DepartmentName": "SSS After Sales Specialist",
+            "DepartmentId": "0d468544-86ac-ef11-b8e8-000d3a2edaa4",
+            "HexColor": "#e6e4f8",
             "Skills": [
                 {
-                    "Name": "Support",
-                    "SkillId": "4c0aa5c2-6040-f011-8779-7c1e522845fc"
-                },
-                {
-                    "Name": "Dev",
-                    "SkillId": "4f0aa5c2-6040-f011-8779-7c1e522845fc"
+                    "Name": "After Sales Specialist",
+                    "SkillId": "a2577742-86ac-ef11-b8e8-7c1e527260d4"
                 }
             ]
         },
         {
-            "DepartmentName": "QA",
-            "DepartmentId": "8481c8d5-6040-f011-8779-7c1e52120534",
-            "HexColor": "#ccdce8",
+            "DepartmentName": "SSS Tailor",
+            "DepartmentId": "6d11adbc-20a8-ef11-b8e8-000d3a4b4bcc",
+            "HexColor": "#dcd3e5",
             "Skills": [
                 {
-                    "Name": "QA",
-                    "SkillId": "3ead1ad5-6040-f011-8779-7c1e5274147f"
+                    "Name": "Tailor",
+                    "SkillId": "8059a6be-20a8-ef11-b8e8-0022488b8f44"
+                }
+            ]
+        },
+        {
+            "DepartmentName": "SSS Admin",
+            "DepartmentId": "e367af4e-41ab-ef11-b8e8-0022488b8f44",
+            "HexColor": "#e6e4f8",
+            "Skills": [
+                {
+                    "Name": "Admin",
+                    "SkillId": "b234bf53-41ab-ef11-b8e8-6045bd978e6c"
+                }
+            ]
+        },
+        {
+            "DepartmentName": "SSS Cashier",
+            "DepartmentId": "b5f2a06b-41ab-ef11-b8e8-7c1e524d8ad8",
+            "HexColor": "#e6e4f8",
+            "Skills": [
+                {
+                    "Name": "Cashier",
+                    "SkillId": "8f48586c-41ab-ef11-b8e8-000d3a2edaa4"
+                }
+            ]
+        },
+        {
+            "DepartmentName": "Management Team",
+            "DepartmentId": "a2deca8a-20a8-ef11-b8e8-7c1e524e00a6",
+            "HexColor": "#ffeeda",
+            "Skills": [
+                {
+                    "Name": "Assistant Store Manager",
+                    "SkillId": "2547408c-20a8-ef11-b8e8-0022488b8f44"
+                },
+                {
+                    "Name": "Team Leader",
+                    "SkillId": "a26eaa45-6b67-f011-bec3-6045bd988618"
+                },
+                {
+                    "Name": "Store Manager",
+                    "SkillId": "97c7398a-20a8-ef11-b8e8-6045bd98978e"
+                },
+                {
+                    "Name": "Area Manager",
+                    "SkillId": "3dc1b58a-20a8-ef11-b8e9-7c1e525262bb"
+                }
+            ]
+        },
+        {
+            "DepartmentName": "Sales Team",
+            "DepartmentId": "8a7e8d9a-20a8-ef11-b8e8-7c1e524e613d",
+            "HexColor": "#cce4f7",
+            "Skills": [
+                {
+                    "Name": "Sales Master",
+                    "SkillId": "2dd27d98-20a8-ef11-b8e8-6045bd8726c0"
+                },
+                {
+                    "Name": "Senior Sales",
+                    "SkillId": "c91e2b97-20a8-ef11-b8e8-6045bd8be842"
+                },
+                {
+                    "Name": "Sales",
+                    "SkillId": "71a4bc96-20a8-ef11-b8e8-6045bdf2ab60"
+                }
+            ]
+        },
+        {
+            "DepartmentName": "Stock Team",
+            "DepartmentId": "fbce87cd-20a8-ef11-b8e8-7c1e52731583",
+            "HexColor": "#e8f2d1",
+            "Skills": [
+                {
+                    "Name": "Stock Assistant",
+                    "SkillId": "f67f2bcc-20a8-ef11-8a69-6045bd920ba3"
+                },
+                {
+                    "Name": "Stock Executive",
+                    "SkillId": "df5035ce-20a8-ef11-b8e8-6045bd98978e"
+                }
+            ]
+        },
+        {
+            "DepartmentName": "Team Leader",
+            "DepartmentId": "5bc1111e-d866-f011-bec2-7c1e52858a84",
+            "HexColor": "#ffd9d9",
+            "Skills": [
+                {
+                    "Name": "Team Leader",
+                    "SkillId": "99d7f91d-d866-f011-bec3-7c1e525e07eb"
                 }
             ]
         }
     ],
     "AbsenceReasons": [
         {
-            "AbsenceReasonName": "Out Of Contract",
-            "AbsenceReasonId": "d6c9ed1b-d750-f011-877a-000d3a2e5c5f"
+            "AbsenceReasonName": "Annual Leave",
+            "AbsenceReasonId": "1d7e5618-ec36-f011-8c4e-6045bd8fb5e4"
         },
         {
-            "AbsenceReasonName": "Hybrid Random Day Off",
-            "AbsenceReasonId": "d9c9ed1b-d750-f011-877a-000d3a2e5c5f"
+            "AbsenceReasonName": "Business Trip ",
+            "AbsenceReasonId": "1f7e5618-ec36-f011-8c4e-6045bd8fb5e4"
         },
         {
-            "AbsenceReasonName": "Sick Day",
-            "AbsenceReasonId": "2c57a4db-7a40-f011-8779-7c1e52120534"
+            "AbsenceReasonName": "Closing Shop Day ",
+            "AbsenceReasonId": "217e5618-ec36-f011-8c4e-6045bd8fb5e4"
         },
         {
-            "AbsenceReasonName": "Random Weekly Day OFF",
-            "AbsenceReasonId": "d89e9217-d750-f011-877b-7c1e52120534"
+            "AbsenceReasonName": "Companssionate Leave ",
+            "AbsenceReasonId": "237e5618-ec36-f011-8c4e-6045bd8fb5e4"
         },
         {
-            "AbsenceReasonName": "Exceptional Day Off",
-            "AbsenceReasonId": "e89e9217-d750-f011-877b-7c1e52120534"
+            "AbsenceReasonName": "Compensation Leave ",
+            "AbsenceReasonId": "257e5618-ec36-f011-8c4e-6045bd8fb5e4"
+        },
+        {
+            "AbsenceReasonName": "Exceptional Day Off ",
+            "AbsenceReasonId": "277e5618-ec36-f011-8c4e-6045bd8fb5e4"
         },
         {
             "AbsenceReasonName": "Favorite Day Off Non Respected",
-            "AbsenceReasonId": "e99e9217-d750-f011-877b-7c1e52120534"
-        },
-        {
-            "AbsenceReasonName": "Worked Day Non Assigned",
-            "AbsenceReasonId": "ef9e9217-d750-f011-877b-7c1e52120534"
-        },
-        {
-            "AbsenceReasonName": "Fixed Day Off Non Respected",
-            "AbsenceReasonId": "129f9217-d750-f011-877b-7c1e52120534"
-        },
-        {
-            "AbsenceReasonName": "Hybrid Fixed Day Off Non Respected",
-            "AbsenceReasonId": "34691f1b-d750-f011-877a-7c1e52713c5e"
-        },
-        {
-            "AbsenceReasonName": "Chosen Day Off",
-            "AbsenceReasonId": "7caf6309-fb50-f011-877a-7c1e52713c5e"
+            "AbsenceReasonId": "2b7e5618-ec36-f011-8c4e-6045bd8fb5e4"
         },
         {
             "AbsenceReasonName": "Favorite Day Off",
-            "AbsenceReasonId": "82eaeb17-d750-f011-877a-7c1e5274147f"
+            "AbsenceReasonId": "2d7e5618-ec36-f011-8c4e-6045bd8fb5e4"
         },
         {
-            "AbsenceReasonName": "Fixed Day Off",
-            "AbsenceReasonId": "8eeaeb17-d750-f011-877a-7c1e5274147f"
+            "AbsenceReasonName": "Fixed Day Off ",
+            "AbsenceReasonId": "2f7e5618-ec36-f011-8c4e-6045bd8fb5e4"
         },
         {
-            "AbsenceReasonName": "GHZ KRM Test",
-            "AbsenceReasonId": "d1f4f7e4-2653-f011-877a-7c1e5274147f"
+            "AbsenceReasonName": "Fixed Day Off Non Respected",
+            "AbsenceReasonId": "317e5618-ec36-f011-8c4e-6045bd8fb5e4"
         },
         {
-            "AbsenceReasonName": "Rest Day",
-            "AbsenceReasonId": "664c5229-1c41-f011-877a-7c1e5282da3d"
+            "AbsenceReasonName": "Home Leave ",
+            "AbsenceReasonId": "337e5618-ec36-f011-8c4e-6045bd8fb5e4"
         },
         {
             "AbsenceReasonName": "Hybrid Fixed Day Off",
-            "AbsenceReasonId": "637e081a-d750-f011-877b-7c1e5282da3d"
+            "AbsenceReasonId": "377e5618-ec36-f011-8c4e-6045bd8fb5e4"
         },
         {
-            "AbsenceReasonName": "Closing Shop Day",
-            "AbsenceReasonId": "677e081a-d750-f011-877b-7c1e5282da3d"
+            "AbsenceReasonName": "Hybrid Fixed Day Off Non Respected",
+            "AbsenceReasonId": "397e5618-ec36-f011-8c4e-6045bd8fb5e4"
+        },
+        {
+            "AbsenceReasonName": "Hybrid Random Day Off",
+            "AbsenceReasonId": "3b7e5618-ec36-f011-8c4e-6045bd8fb5e4"
+        },
+        {
+            "AbsenceReasonName": "Maternity Leave ",
+            "AbsenceReasonId": "3d7e5618-ec36-f011-8c4e-6045bd8fb5e4"
+        },
+        {
+            "AbsenceReasonName": "Other Leave ",
+            "AbsenceReasonId": "417e5618-ec36-f011-8c4e-6045bd8fb5e4"
+        },
+        {
+            "AbsenceReasonName": "Out Of Contract ",
+            "AbsenceReasonId": "437e5618-ec36-f011-8c4e-6045bd8fb5e4"
+        },
+        {
+            "AbsenceReasonName": "Parental Leave - Children ",
+            "AbsenceReasonId": "457e5618-ec36-f011-8c4e-6045bd8fb5e4"
+        },
+        {
+            "AbsenceReasonName": "Paternity Leave ",
+            "AbsenceReasonId": "477e5618-ec36-f011-8c4e-6045bd8fb5e4"
+        },
+        {
+            "AbsenceReasonName": "Public Holiday ",
+            "AbsenceReasonId": "4a7e5618-ec36-f011-8c4e-6045bd8fb5e4"
+        },
+        {
+            "AbsenceReasonName": "Random Weekly Day OFF ",
+            "AbsenceReasonId": "4c7e5618-ec36-f011-8c4e-6045bd8fb5e4"
+        },
+        {
+            "AbsenceReasonName": "Sick Leave",
+            "AbsenceReasonId": "4e7e5618-ec36-f011-8c4e-6045bd8fb5e4"
+        },
+        {
+            "AbsenceReasonName": "Training",
+            "AbsenceReasonId": "507e5618-ec36-f011-8c4e-6045bd8fb5e4"
+        },
+        {
+            "AbsenceReasonName": "Wedding Leave",
+            "AbsenceReasonId": "527e5618-ec36-f011-8c4e-6045bd8fb5e4"
+        },
+        {
+            "AbsenceReasonName": "Worked Day Non Assigned",
+            "AbsenceReasonId": "547e5618-ec36-f011-8c4e-6045bd8fb5e4"
+        },
+        {
+            "AbsenceReasonName": "Planned Day Off",
+            "AbsenceReasonId": "86cc7f80-b042-f011-877a-6045bd988618"
+        },
+        {
+            "AbsenceReasonName": "Chosen Day Off",
+            "AbsenceReasonId": "19ba0a7e-3063-f011-bec3-7c1e52509c86"
         }
     ],
     "Workforces": [
         {
-            "Id": "055ea3a1-d750-f011-877a-000d3a2e5c5f",
-            "Name": "Luciano FARES TAIE",
+            "Id": "8cbb6a53-a4af-ef11-b8e8-000d3a2edaa4",
+            "Name": "June LIU",
             "IsInternalProfile": true,
             "ContractEndDateCode": "",
             "ContractStartDate": "",
             "IsManager": false,
             "StateCode": 0,
-            "RoleDescription": "Product Owner",
+            "RoleDescription": "Sales associate",
             "IsKeyHolder": false,
-            "ManagerId": "f48ea8ba-3fcd-ed11-b597-000d3a4a3dd0",
+            "ManagerId": "34241b5a-a4af-ef11-b8e8-6045bd8726c0",
             "Departments": [
                 {
-                    "Id": "8481c8d5-6040-f011-8779-7c1e52120534",
+                    "Id": "8a7e8d9a-20a8-ef11-b8e8-7c1e524e613d",
                     "LogicalName": "ava_department",
-                    "Name": "QA",
+                    "Name": "Sales Team",
                     "KeyAttributes": [],
                     "RowVersion": null,
                     "ExtensionData": {}
@@ -162,107 +327,113 @@
             ],
             "Absences": [
                 {
-                    "Name": "Sick Day",
-                    "Id": "481af637-bc4a-f011-8779-7c1e52120534",
-                    "Paid": true,
+                    "Name": "Planned Day Off",
+                    "Id": "4df3b263-dd66-f011-bec3-6045bdf66105",
+                    "Paid": false,
                     "Shared": true,
-                    "StartDate": "2025-06-24",
-                    "EndDate": "2025-07-02"
+                    "StartDate": "2025-08-03",
+                    "EndDate": "2025-08-03"
                 },
                 {
-                    "Name": "Sick Day",
-                    "Id": "17e8fa0a-ca51-f011-877a-7c1e5274147f",
-                    "Paid": true,
-                    "Shared": false,
-                    "StartDate": "2025-07-24",
+                    "Name": "Annual Leave",
+                    "Id": "59176540-870b-f011-bae3-7c1e525e07eb",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-23",
+                    "EndDate": "2025-04-23"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "28a6b941-870b-f011-bae3-7c1e5285a4b2",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-24",
+                    "EndDate": "2025-04-24"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "e0aefa3b-870b-f011-bae3-7c1e52509c86",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-21",
+                    "EndDate": "2025-04-21"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "f95bef2f-eb02-f011-bae3-000d3abc9f30",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-03-29",
+                    "EndDate": "2025-03-31"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "7faa5f3d-870b-f011-bae3-000d3abc9f30",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-25",
+                    "EndDate": "2025-04-25"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "a3ebd5d2-5e5d-f011-bec2-6045bd9ff080",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-01",
                     "EndDate": "2025-08-01"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "74e3b064-dd66-f011-bec3-00224883d701",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-02",
+                    "EndDate": "2025-08-02"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "cca26f41-870b-f011-bae2-7c1e525dcf28",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-26",
+                    "EndDate": "2025-04-26"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "49a5a63e-870b-f011-bae3-6045bd976f90",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-22",
+                    "EndDate": "2025-04-22"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "b5b95230-eb02-f011-bae2-6045bd988618",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-03-27",
+                    "EndDate": "2025-03-28"
                 }
             ],
             "FixedDayOff": [],
-            "FavoriteDayOff": [
-                "Monday",
-                "Tuesday"
-            ]
-        },
-        {
-            "Id": "f48ea8ba-3fcd-ed11-b597-000d3a4a3dd0",
-            "Name": "Karim GHAZI",
-            "IsInternalProfile": true,
-            "ContractEndDateCode": "",
-            "ContractStartDate": "",
-            "IsManager": true,
-            "StateCode": 0,
-            "RoleDescription": "Test KGH",
-            "IsKeyHolder": true,
-            "ManagerId": null,
-            "Departments": [
-                {
-                    "Id": "8481c8d5-6040-f011-8779-7c1e52120534",
-                    "LogicalName": "ava_department",
-                    "Name": "QA",
-                    "KeyAttributes": [],
-                    "RowVersion": null,
-                    "ExtensionData": {}
-                }
-            ],
-            "Absences": [],
-            "FixedDayOff": [
-                "Tuesday",
-                "Sunday"
-            ],
             "FavoriteDayOff": []
         },
         {
-            "Id": "237b1ad0-460f-ee11-8f6d-6045bd8c9633",
-            "Name": "Valentine DUMAS",
+            "Id": "9cbb6a53-a4af-ef11-b8e8-000d3a2edaa4",
+            "Name": "Hannah ZHANG",
             "IsInternalProfile": true,
             "ContractEndDateCode": "",
             "ContractStartDate": "",
-            "IsManager": true,
+            "IsManager": false,
             "StateCode": 0,
-            "RoleDescription": "Manager",
+            "RoleDescription": "Sales associate",
             "IsKeyHolder": false,
-            "ManagerId": null,
+            "ManagerId": "34241b5a-a4af-ef11-b8e8-6045bd8726c0",
             "Departments": [
                 {
-                    "Id": "f4073bc1-6040-f011-877a-000d3a2e5c5f",
+                    "Id": "8a7e8d9a-20a8-ef11-b8e8-7c1e524e613d",
                     "LogicalName": "ava_department",
-                    "Name": "IT ",
-                    "KeyAttributes": [],
-                    "RowVersion": null,
-                    "ExtensionData": {}
-                }
-            ],
-            "Absences": [],
-            "FixedDayOff": [
-                "Saturday"
-            ],
-            "FavoriteDayOff": []
-        },
-        {
-            "Id": "eb3dae9e-d750-f011-877b-7c1e52510281",
-            "Name": "Alysson ARTHAUD CANALI",
-            "IsInternalProfile": true,
-            "ContractEndDateCode": "",
-            "ContractStartDate": "",
-            "IsManager": true,
-            "StateCode": 0,
-            "RoleDescription": "Manager",
-            "IsKeyHolder": false,
-            "ManagerId": null,
-            "Departments": [
-                {
-                    "Id": "f4073bc1-6040-f011-877a-000d3a2e5c5f",
-                    "LogicalName": "ava_department",
-                    "Name": "IT ",
-                    "KeyAttributes": [],
-                    "RowVersion": null,
-                    "ExtensionData": {}
-                },
-                {
-                    "Id": "8481c8d5-6040-f011-8779-7c1e52120534",
-                    "LogicalName": "ava_department",
-                    "Name": "QA",
+                    "Name": "Sales Team",
                     "KeyAttributes": [],
                     "RowVersion": null,
                     "ExtensionData": {}
@@ -270,69 +441,367 @@
             ],
             "Absences": [
                 {
-                    "Name": "Sick Day",
-                    "Id": "f9e1b0d8-e650-f011-877a-000d3a2e5c5f",
-                    "Paid": true,
+                    "Name": "Annual Leave",
+                    "Id": "0d21020c-870b-f011-bae2-6045bdf2e5c4",
+                    "Paid": false,
                     "Shared": true,
-                    "StartDate": "2025-05-29",
-                    "EndDate": "2025-05-30"
+                    "StartDate": "2025-04-06",
+                    "EndDate": "2025-04-06"
                 },
                 {
-                    "Name": "Chosen Day Off",
-                    "Id": "45f81289-8c56-f011-877a-6045bd9b754f",
+                    "Name": "Annual Leave",
+                    "Id": "a830fa0d-870b-f011-bae3-6045bd976f90",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-28",
+                    "EndDate": "2025-04-28"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "a7375b08-870b-f011-bae2-6045bd988618",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-29",
+                    "EndDate": "2025-04-29"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "ae375b08-870b-f011-bae2-6045bd988618",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-05",
+                    "EndDate": "2025-04-05"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "1b4a440b-870b-f011-bae2-7c1e525dcf28",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-30",
+                    "EndDate": "2025-04-30"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "1a46c50b-870b-f011-bae3-6045bd93e25d",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-04",
+                    "EndDate": "2025-04-04"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "9445a609-870b-f011-bae3-6045bd9637e0",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-03",
+                    "EndDate": "2025-04-03"
+                }
+            ],
+            "FixedDayOff": [],
+            "FavoriteDayOff": []
+        },
+        {
+            "Id": "36006359-a4af-ef11-b8e8-000d3a2edaa4",
+            "Name": "Selena ZHU",
+            "IsInternalProfile": true,
+            "ContractEndDateCode": "",
+            "ContractStartDate": "",
+            "IsManager": false,
+            "StateCode": 0,
+            "RoleDescription": "Sales associate",
+            "IsKeyHolder": false,
+            "ManagerId": "c2ee5354-a4af-ef11-b8e8-6045bd8be842",
+            "Departments": [
+                {
+                    "Id": "8a7e8d9a-20a8-ef11-b8e8-7c1e524e613d",
+                    "LogicalName": "ava_department",
+                    "Name": "Sales Team",
+                    "KeyAttributes": [],
+                    "RowVersion": null,
+                    "ExtensionData": {}
+                }
+            ],
+            "Absences": [
+                {
+                    "Name": "Wedding Leave",
+                    "Id": "ff7617b3-dd66-f011-bec2-000d3abcc0c4",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-30",
+                    "EndDate": "2025-08-30"
+                },
+                {
+                    "Name": "Training",
+                    "Id": "f3affad6-eb02-f011-bae2-7c1e52843506",
+                    "Paid": true,
+                    "Shared": true,
+                    "StartDate": "2025-03-06",
+                    "EndDate": "2025-03-06"
+                },
+                {
+                    "Name": "Wedding Leave",
+                    "Id": "bfa544b0-dd66-f011-bec3-6045bd9ff080",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-28",
+                    "EndDate": "2025-08-28"
+                },
+                {
+                    "Name": "Wedding Leave",
+                    "Id": "c71d39b5-dd66-f011-bec2-7c1e52858a84",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-31",
+                    "EndDate": "2025-08-31"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "7f85a4af-dd66-f011-bec3-7c1e525e07eb",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-27",
+                    "EndDate": "2025-08-27"
+                },
+                {
+                    "Name": "Training",
+                    "Id": "d2f19a8f-870b-f011-bae3-6045bdf66105",
+                    "Paid": true,
+                    "Shared": true,
+                    "StartDate": "2025-04-25",
+                    "EndDate": "2025-04-25"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "d6f19a8f-870b-f011-bae3-6045bdf66105",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-29",
+                    "EndDate": "2025-04-29"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "693b6d8d-870b-f011-bae2-6045bd988618",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-28",
+                    "EndDate": "2025-04-28"
+                },
+                {
+                    "Name": "Training",
+                    "Id": "76736b8a-870b-f011-bae2-7c1e525dcf28",
+                    "Paid": true,
+                    "Shared": true,
+                    "StartDate": "2025-04-24",
+                    "EndDate": "2025-04-24"
+                },
+                {
+                    "Name": "Wedding Leave",
+                    "Id": "077bbdb5-dd66-f011-bec3-00224883d701",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-29",
+                    "EndDate": "2025-08-29"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "93d9d98f-870b-f011-bae3-00224883d701",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-30",
+                    "EndDate": "2025-04-30"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "c3c4d0bc-dd66-f011-bec3-7c1e52843506",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-04",
+                    "EndDate": "2025-08-04"
+                }
+            ],
+            "FixedDayOff": [],
+            "FavoriteDayOff": []
+        },
+        {
+            "Id": "5c006359-a4af-ef11-b8e8-000d3a2edaa4",
+            "Name": "Juliette WANG",
+            "IsInternalProfile": true,
+            "ContractEndDateCode": "",
+            "ContractStartDate": "",
+            "IsManager": true,
+            "StateCode": 0,
+            "RoleDescription": "Manager",
+            "IsKeyHolder": true,
+            "ManagerId": "2cb86961-a4af-ef11-b8e8-7c1e525fc740",
+            "Departments": [
+                {
+                    "Id": "a2deca8a-20a8-ef11-b8e8-7c1e524e00a6",
+                    "LogicalName": "ava_department",
+                    "Name": "Management Team",
+                    "KeyAttributes": [],
+                    "RowVersion": null,
+                    "ExtensionData": {}
+                }
+            ],
+            "Absences": [
+                {
+                    "Name": "Annual Leave",
+                    "Id": "ee24a92b-ec02-f011-bae3-000d3abcc0c4",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-03-02",
+                    "EndDate": "2025-03-02"
+                }
+            ],
+            "FixedDayOff": [],
+            "FavoriteDayOff": []
+        },
+        {
+            "Id": "1231675f-a4af-ef11-b8e8-000d3a2edaa4",
+            "Name": "Louise YAO",
+            "IsInternalProfile": true,
+            "ContractEndDateCode": "",
+            "ContractStartDate": "",
+            "IsManager": false,
+            "StateCode": 0,
+            "RoleDescription": "Sales associate",
+            "IsKeyHolder": false,
+            "ManagerId": "34241b5a-a4af-ef11-b8e8-6045bd8726c0",
+            "Departments": [
+                {
+                    "Id": "8a7e8d9a-20a8-ef11-b8e8-7c1e524e613d",
+                    "LogicalName": "ava_department",
+                    "Name": "Sales Team",
+                    "KeyAttributes": [],
+                    "RowVersion": null,
+                    "ExtensionData": {}
+                }
+            ],
+            "Absences": [
+                {
+                    "Name": "OFF ",
+                    "Id": "76671c65-870b-f011-bae3-6045bd9ff080",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-22",
+                    "EndDate": "2025-04-22"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "8b0a6c63-870b-f011-bae3-7c1e52509c86",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-07",
+                    "EndDate": "2025-04-07"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "8e0a6c63-870b-f011-bae3-7c1e52509c86",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-20",
+                    "EndDate": "2025-04-20"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "42c52863-870b-f011-bae2-6045bd920207",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-08",
+                    "EndDate": "2025-04-08"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "f634da99-dd66-f011-bec3-6045bdf66105",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-18",
+                    "EndDate": "2025-08-18"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "36a89765-870b-f011-bae3-7c1e525e07eb",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-09",
+                    "EndDate": "2025-04-09"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "718e2399-dd66-f011-bec3-7c1e525dcf28",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-08",
+                    "EndDate": "2025-08-08"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "103c9e66-870b-f011-bae3-7c1e5285a4b2",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-23",
+                    "EndDate": "2025-04-23"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "a63d119a-dd66-f011-bec3-7c1e52509c86",
                     "Paid": false,
                     "Shared": true,
                     "StartDate": "2025-08-07",
                     "EndDate": "2025-08-07"
                 },
                 {
-                    "Name": "Sick Day",
-                    "Id": "bbbd823a-e750-f011-877b-7c1e52120534",
-                    "Paid": true,
-                    "Shared": true,
-                    "StartDate": "2025-06-18",
-                    "EndDate": "2025-06-22"
-                },
-                {
-                    "Name": "Chosen Day Off",
-                    "Id": "6d86502f-fc50-f011-877a-7c1e5274147f",
-                    "Paid": false,
-                    "Shared": false,
-                    "StartDate": "2025-06-12",
-                    "EndDate": "2025-06-12"
-                },
-                {
-                    "Name": "Chosen Day Off",
-                    "Id": "61124f54-fc50-f011-877a-7c1e5274147f",
+                    "Name": "Compensation Leave ",
+                    "Id": "e4a93d97-dd66-f011-bec3-7c1e52843506",
                     "Paid": false,
                     "Shared": true,
-                    "StartDate": "2025-07-23",
-                    "EndDate": "2025-07-25"
+                    "StartDate": "2025-08-06",
+                    "EndDate": "2025-08-06"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "c5e995ec-5e5d-f011-bec2-7c1e52843506",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-05",
+                    "EndDate": "2025-08-05"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "4682f762-870b-f011-bae2-6045bd988618",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-21",
+                    "EndDate": "2025-04-21"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "b82a3e98-dd66-f011-bec2-6045bd976f90",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-17",
+                    "EndDate": "2025-08-17"
                 }
             ],
             "FixedDayOff": [],
-            "FavoriteDayOff": [
-                "Tuesday",
-                "Wednesday",
-                "Friday"
-            ]
+            "FavoriteDayOff": []
         },
         {
-            "Id": "b6f684a3-d750-f011-877a-7c1e52713c5e",
-            "Name": "Generic fmw110",
+            "Id": "2193b452-a4af-ef11-b8e8-000d3a4b97aa",
+            "Name": "Bosco XU",
             "IsInternalProfile": true,
             "ContractEndDateCode": "",
             "ContractStartDate": "",
             "IsManager": false,
             "StateCode": 0,
-            "RoleDescription": "Vendeur",
+            "RoleDescription": "Sales associate",
             "IsKeyHolder": false,
-            "ManagerId": "f48ea8ba-3fcd-ed11-b597-000d3a4a3dd0",
+            "ManagerId": "c2ee5354-a4af-ef11-b8e8-6045bd8be842",
             "Departments": [
                 {
-                    "Id": "f4073bc1-6040-f011-877a-000d3a2e5c5f",
+                    "Id": "8a7e8d9a-20a8-ef11-b8e8-7c1e524e613d",
                     "LogicalName": "ava_department",
-                    "Name": "IT ",
+                    "Name": "Sales Team",
                     "KeyAttributes": [],
                     "RowVersion": null,
                     "ExtensionData": {}
@@ -340,46 +809,684 @@
             ],
             "Absences": [
                 {
-                    "Name": "Sick Day",
-                    "Id": "3e79cbf4-c951-f011-877a-7c1e5228066f",
-                    "Paid": true,
-                    "Shared": false,
-                    "StartDate": "2025-06-19",
-                    "EndDate": "2025-06-25"
+                    "Name": "Annual Leave",
+                    "Id": "457ea385-5e5d-f011-bec2-7c1e525dcf28",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-26",
+                    "EndDate": "2025-08-26"
                 },
                 {
-                    "Name": "Sick Day",
-                    "Id": "757605ff-c951-f011-877a-7c1e5274147f",
+                    "Name": "OFF ",
+                    "Id": "987b5ca7-860b-f011-bae3-00224883d701",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-23",
+                    "EndDate": "2025-04-23"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "9b7b5ca7-860b-f011-bae3-00224883d701",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-21",
+                    "EndDate": "2025-04-21"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "ce1e7c87-5e5d-f011-bec2-00224883d701",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-25",
+                    "EndDate": "2025-08-25"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "483ad5a4-860b-f011-bae3-6045bd976f90",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-20",
+                    "EndDate": "2025-04-20"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "ef4aa949-dd66-f011-bec3-7c1e52509c86",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-02",
+                    "EndDate": "2025-08-02"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "ff4aa949-dd66-f011-bec3-7c1e52509c86",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-09",
+                    "EndDate": "2025-08-09"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "edd592a1-860b-f011-bae3-7c1e5285a4b2",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-06",
+                    "EndDate": "2025-04-06"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "e11726a8-860b-f011-bae3-7c1e5285a4b2",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-22",
+                    "EndDate": "2025-04-22"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "9a8bb0a5-860b-f011-bae3-7c1e525e07eb",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-19",
+                    "EndDate": "2025-04-19"
+                },
+                {
+                    "Name": "Training",
+                    "Id": "5a8489e2-eb02-f011-bae2-6045bd920207",
                     "Paid": true,
-                    "Shared": false,
-                    "StartDate": "2025-07-16",
-                    "EndDate": "2025-07-24"
+                    "Shared": true,
+                    "StartDate": "2025-03-06",
+                    "EndDate": "2025-03-06"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "9d335d49-dd66-f011-bec3-7c1e5285a4b2",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-24",
+                    "EndDate": "2025-08-24"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "a24007a2-860b-f011-bae3-7c1e52509c86",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-02",
+                    "EndDate": "2025-04-02"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "fadc6d47-dd66-f011-bec2-000d3abcc0c4",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-23",
+                    "EndDate": "2025-08-23"
                 }
             ],
-            "FixedDayOff": [
-                "Monday"
-            ],
-            "FavoriteDayOff": [
-                "Friday",
-                "Saturday"
-            ]
+            "FixedDayOff": [],
+            "FavoriteDayOff": []
         },
         {
-            "Id": "b9f684a3-d750-f011-877a-7c1e52713c5e",
-            "Name": "Generic fmw101",
+            "Id": "e177d75a-ba00-f011-bae3-000d3abcc0c4",
+            "Name": "Kevin HUANG",
+            "IsInternalProfile": true,
+            "ContractEndDateCode": "",
+            "ContractStartDate": "",
+            "IsManager": false,
+            "StateCode": 0,
+            "RoleDescription": "OP Team",
+            "IsKeyHolder": false,
+            "ManagerId": "abd66355-a4af-ef11-b8e8-6045bd920ba3",
+            "Departments": [
+                {
+                    "Id": "fbce87cd-20a8-ef11-b8e8-7c1e52731583",
+                    "LogicalName": "ava_department",
+                    "Name": "Stock Team",
+                    "KeyAttributes": [],
+                    "RowVersion": null,
+                    "ExtensionData": {}
+                }
+            ],
+            "Absences": [],
+            "FixedDayOff": [],
+            "FavoriteDayOff": []
+        },
+        {
+            "Id": "c31e622e-dc00-f011-bae3-00224883d701",
+            "Name": "Nancy HUANG",
+            "IsInternalProfile": true,
+            "ContractEndDateCode": "",
+            "ContractStartDate": "",
+            "IsManager": false,
+            "StateCode": 0,
+            "RoleDescription": "OP Team",
+            "IsKeyHolder": false,
+            "ManagerId": "abd66355-a4af-ef11-b8e8-6045bd920ba3",
+            "Departments": [
+                {
+                    "Id": "b5f2a06b-41ab-ef11-b8e8-7c1e524d8ad8",
+                    "LogicalName": "ava_department",
+                    "Name": "SSS Cashier",
+                    "KeyAttributes": [],
+                    "RowVersion": null,
+                    "ExtensionData": {}
+                }
+            ],
+            "Absences": [
+                {
+                    "Name": "OFF ",
+                    "Id": "82c0265c-8a0b-f011-bae3-6045bd976f90",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-20",
+                    "EndDate": "2025-04-20"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "e96fad42-de66-f011-bec2-000d3abcc0c4",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-04",
+                    "EndDate": "2025-08-04"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "c204299c-eb02-f011-bae3-000d3abcc0c4",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-03-15",
+                    "EndDate": "2025-03-16"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "8ed67ca3-5f5d-f011-bec1-000d3abcc0c4",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-03",
+                    "EndDate": "2025-08-03"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "4c1d9141-de66-f011-bec2-7c1e52858a84",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-07",
+                    "EndDate": "2025-08-07"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "b71d9141-de66-f011-bec2-7c1e52858a84",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-05",
+                    "EndDate": "2025-08-05"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "80d9b05e-8a0b-f011-bae3-7c1e52509c86",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-24",
+                    "EndDate": "2025-04-24"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "bd2cda9a-eb02-f011-bae3-7c1e5285a4b2",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-03-17",
+                    "EndDate": "2025-03-17"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "6613b658-8a0b-f011-bae3-000d3abc9f30",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-19",
+                    "EndDate": "2025-04-19"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "e370ee42-de66-f011-bec3-6045bdf66105",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-06",
+                    "EndDate": "2025-08-06"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "7dbcad3f-de66-f011-bec2-7ced8d161559",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-08",
+                    "EndDate": "2025-08-08"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "8fb5bf9c-eb02-f011-bae2-7c1e525dcf28",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-03-16",
+                    "EndDate": "2025-03-16"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "ab19703e-de66-f011-bec3-7c1e52509c86",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-30",
+                    "EndDate": "2025-08-30"
+                }
+            ],
+            "FixedDayOff": [],
+            "FavoriteDayOff": []
+        },
+        {
+            "Id": "db1e622e-dc00-f011-bae3-00224883d701",
+            "Name": "Edison GUO",
+            "IsInternalProfile": true,
+            "ContractEndDateCode": "",
+            "ContractStartDate": "",
+            "IsManager": false,
+            "StateCode": 0,
+            "RoleDescription": "OP Team",
+            "IsKeyHolder": false,
+            "ManagerId": "abd66355-a4af-ef11-b8e8-6045bd920ba3",
+            "Departments": [
+                {
+                    "Id": "6d11adbc-20a8-ef11-b8e8-000d3a4b4bcc",
+                    "LogicalName": "ava_department",
+                    "Name": "SSS Tailor",
+                    "KeyAttributes": [],
+                    "RowVersion": null,
+                    "ExtensionData": {}
+                }
+            ],
+            "Absences": [
+                {
+                    "Name": "Annual Leave",
+                    "Id": "edf6dfb0-5f5d-f011-bec2-7c1e52509c86",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-16",
+                    "EndDate": "2025-08-16"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "f4f6dfb0-5f5d-f011-bec2-7c1e52509c86",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-19",
+                    "EndDate": "2025-08-19"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "e976abb1-5f5d-f011-bec2-7c1e525dcf28",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-17",
+                    "EndDate": "2025-08-17"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "ae6b85af-5f5d-f011-bec1-000d3abcc0c4",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-18",
+                    "EndDate": "2025-08-18"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "70df6ba8-de66-f011-bec2-000d3abcc0c4",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-22",
+                    "EndDate": "2025-08-22"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "df9c00a4-de66-f011-bec3-6045bd988618",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-20",
+                    "EndDate": "2025-08-20"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "a64259a9-de66-f011-bec2-6045bd976f90",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-21",
+                    "EndDate": "2025-08-21"
+                }
+            ],
+            "FixedDayOff": [],
+            "FavoriteDayOff": []
+        },
+        {
+            "Id": "0a1f622e-dc00-f011-bae3-00224883d701",
+            "Name": "Jerry SHEN",
+            "IsInternalProfile": true,
+            "ContractEndDateCode": "",
+            "ContractStartDate": "",
+            "IsManager": false,
+            "StateCode": 0,
+            "RoleDescription": "OP Team",
+            "IsKeyHolder": false,
+            "ManagerId": "abd66355-a4af-ef11-b8e8-6045bd920ba3",
+            "Departments": [
+                {
+                    "Id": "fbce87cd-20a8-ef11-b8e8-7c1e52731583",
+                    "LogicalName": "ava_department",
+                    "Name": "Stock Team",
+                    "KeyAttributes": [],
+                    "RowVersion": null,
+                    "ExtensionData": {}
+                }
+            ],
+            "Absences": [
+                {
+                    "Name": "Annual Leave",
+                    "Id": "3464769c-de66-f011-bec2-000d3abcc0c4",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-16",
+                    "EndDate": "2025-08-16"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "006e5999-8a0b-f011-bae3-6045bd93e25d",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-04",
+                    "EndDate": "2025-04-04"
+                },
+                {
+                    "Name": "Training",
+                    "Id": "5d9160c6-eb02-f011-bae3-000d3abcc0c4",
+                    "Paid": true,
+                    "Shared": true,
+                    "StartDate": "2025-03-17",
+                    "EndDate": "2025-03-19"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "d82cc696-8a0b-f011-bae3-000d3abc9f30",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-05",
+                    "EndDate": "2025-04-05"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "b369709a-8a0b-f011-bae2-6045bd920207",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-02",
+                    "EndDate": "2025-04-02"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "1da39797-8a0b-f011-bae3-6045bd9637e0",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-07",
+                    "EndDate": "2025-04-07"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "20a39797-8a0b-f011-bae3-6045bd9637e0",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-08",
+                    "EndDate": "2025-04-08"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "a1174e9c-de66-f011-bec2-7c1e52858a84",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-20",
+                    "EndDate": "2025-08-20"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "fb698199-8a0b-f011-bae3-7c1e52509c86",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-06",
+                    "EndDate": "2025-04-06"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "2762f896-8a0b-f011-bae3-7c1e525e07eb",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-03",
+                    "EndDate": "2025-04-03"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "d38ad897-de66-f011-bec3-6045bdf66105",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-14",
+                    "EndDate": "2025-08-14"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "f981fa99-de66-f011-bec3-6045bd93e25d",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-19",
+                    "EndDate": "2025-08-19"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "8ae9de98-de66-f011-bec3-7c1e52509c86",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-15",
+                    "EndDate": "2025-08-15"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "a0e9de98-de66-f011-bec3-7c1e52509c86",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-17",
+                    "EndDate": "2025-08-17"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "abf8719a-de66-f011-bec2-7ced8d161559",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-18",
+                    "EndDate": "2025-08-18"
+                }
+            ],
+            "FixedDayOff": [],
+            "FavoriteDayOff": []
+        },
+        {
+            "Id": "80dd3358-a4af-ef11-b8e8-0022488b8f44",
+            "Name": "Dicky WANG",
+            "IsInternalProfile": true,
+            "ContractEndDateCode": "",
+            "ContractStartDate": "",
+            "IsManager": false,
+            "StateCode": 0,
+            "RoleDescription": "Sales associate",
+            "IsKeyHolder": false,
+            "ManagerId": "5c006359-a4af-ef11-b8e8-000d3a2edaa4",
+            "Departments": [
+                {
+                    "Id": "8a7e8d9a-20a8-ef11-b8e8-7c1e524e613d",
+                    "LogicalName": "ava_department",
+                    "Name": "Sales Team",
+                    "KeyAttributes": [],
+                    "RowVersion": null,
+                    "ExtensionData": {}
+                }
+            ],
+            "Absences": [
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "f35dd733-dd66-f011-bec2-7ced8d161559",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-17",
+                    "EndDate": "2025-08-17"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "0cc2df75-860b-f011-bae3-7c1e5285a4b2",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-02",
+                    "EndDate": "2025-04-02"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "66f187e6-ea02-f011-bae3-7c1e52509c86",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-03-30",
+                    "EndDate": "2025-03-31"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "819ed933-dd66-f011-bec2-7c1e52858a84",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-03",
+                    "EndDate": "2025-08-03"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "db500330-dd66-f011-bec2-6045bd976f90",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-02",
+                    "EndDate": "2025-08-02"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "de500330-dd66-f011-bec2-6045bd976f90",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-16",
+                    "EndDate": "2025-08-16"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "4f0f9c61-5e5d-f011-bec2-7ced8d0bcb9b",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-09",
+                    "EndDate": "2025-08-09"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "e3836ae6-ea02-f011-bae3-6045bd976f90",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-03-26",
+                    "EndDate": "2025-03-29"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "65839e73-860b-f011-bae3-6045bd976f90",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-01",
+                    "EndDate": "2025-04-01"
+                }
+            ],
+            "FixedDayOff": [],
+            "FavoriteDayOff": []
+        },
+        {
+            "Id": "bac71e60-a4af-ef11-b8e8-0022488b8f44",
+            "Name": "Bill ZHU",
+            "IsInternalProfile": true,
+            "ContractEndDateCode": "",
+            "ContractStartDate": "",
+            "IsManager": false,
+            "StateCode": 0,
+            "RoleDescription": "Sales associate",
+            "IsKeyHolder": false,
+            "ManagerId": "c2ee5354-a4af-ef11-b8e8-6045bd8be842",
+            "Departments": [
+                {
+                    "Id": "8a7e8d9a-20a8-ef11-b8e8-7c1e524e613d",
+                    "LogicalName": "ava_department",
+                    "Name": "Sales Team",
+                    "KeyAttributes": [],
+                    "RowVersion": null,
+                    "ExtensionData": {}
+                }
+            ],
+            "Absences": [
+                {
+                    "Name": "OFF ",
+                    "Id": "3bd9754d-870b-f011-bae2-7c1e525dcf28",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-30",
+                    "EndDate": "2025-04-30"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "8bc1984a-870b-f011-bae2-6045bd920207",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-28",
+                    "EndDate": "2025-04-28"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "8e8e0a4d-870b-f011-bae3-6045bd9637e0",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-29",
+                    "EndDate": "2025-04-29"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "31e8194c-870b-f011-bae3-6045bdf66105",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-26",
+                    "EndDate": "2025-04-26"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "e41e224e-870b-f011-bae3-7c1e5285a4b2",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-27",
+                    "EndDate": "2025-04-27"
+                }
+            ],
+            "FixedDayOff": [],
+            "FavoriteDayOff": []
+        },
+        {
+            "Id": "34241b5a-a4af-ef11-b8e8-6045bd8726c0",
+            "Name": "Vivi JIA",
             "IsInternalProfile": true,
             "ContractEndDateCode": "",
             "ContractStartDate": "",
             "IsManager": true,
             "StateCode": 0,
-            "RoleDescription": "Test KGH",
-            "IsKeyHolder": false,
-            "ManagerId": "f48ea8ba-3fcd-ed11-b597-000d3a4a3dd0",
+            "RoleDescription": "Team Leader",
+            "IsKeyHolder": true,
+            "ManagerId": "abd66355-a4af-ef11-b8e8-6045bd920ba3",
             "Departments": [
                 {
-                    "Id": "f4073bc1-6040-f011-877a-000d3a2e5c5f",
+                    "Id": "a2deca8a-20a8-ef11-b8e8-7c1e524e00a6",
                     "LogicalName": "ava_department",
-                    "Name": "IT ",
+                    "Name": "Management Team",
                     "KeyAttributes": [],
                     "RowVersion": null,
                     "ExtensionData": {}
@@ -387,19 +1494,3060 @@
             ],
             "Absences": [
                 {
-                    "Name": "Rest Day",
-                    "Id": "d4e19749-5656-f011-877b-7c1e5274147f",
+                    "Name": "Planned Day Off",
+                    "Id": "ab51b184-dc66-f011-bec2-6045bd95970e",
                     "Paid": false,
                     "Shared": true,
-                    "StartDate": "2025-08-15",
-                    "EndDate": "2025-08-16"
+                    "StartDate": "2025-08-21",
+                    "EndDate": "2025-08-21"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "1c7d0888-dc66-f011-bec2-7c1e52266fdc",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-22",
+                    "EndDate": "2025-08-22"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "a851b184-dc66-f011-bec2-6045bd95970e",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-09",
+                    "EndDate": "2025-08-09"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "131b0287-dc66-f011-bec3-00224883d701",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-06",
+                    "EndDate": "2025-08-06"
                 }
             ],
             "FixedDayOff": [],
-            "FavoriteDayOff": [
-                "Monday",
-                "Wednesday"
-            ]
+            "FavoriteDayOff": []
+        },
+        {
+            "Id": "c2ee5354-a4af-ef11-b8e8-6045bd8be842",
+            "Name": "Celia CAI",
+            "IsInternalProfile": true,
+            "ContractEndDateCode": "",
+            "ContractStartDate": "",
+            "IsManager": true,
+            "StateCode": 0,
+            "RoleDescription": "Team Leader",
+            "IsKeyHolder": true,
+            "ManagerId": "abd66355-a4af-ef11-b8e8-6045bd920ba3",
+            "Departments": [
+                {
+                    "Id": "a2deca8a-20a8-ef11-b8e8-7c1e524e00a6",
+                    "LogicalName": "ava_department",
+                    "Name": "Management Team",
+                    "KeyAttributes": [],
+                    "RowVersion": null,
+                    "ExtensionData": {}
+                }
+            ],
+            "Absences": [
+                {
+                    "Name": "OFF ",
+                    "Id": "7225cdf1-840b-f011-bae2-6045bdf2e5c4",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-22",
+                    "EndDate": "2025-04-22"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "a86175f0-840b-f011-bae3-6045bd9637e0",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-19",
+                    "EndDate": "2025-04-19"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "a4fda6ef-840b-f011-bae3-6045bd93e25d",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-21",
+                    "EndDate": "2025-04-21"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "a4e64df6-840b-f011-bae2-7c1e52843506",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-23",
+                    "EndDate": "2025-04-23"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "b990c5f4-840b-f011-bae3-6045bdf66105",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-20",
+                    "EndDate": "2025-04-20"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "065116f2-840b-f011-bae3-7c1e525e07eb",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-18",
+                    "EndDate": "2025-04-18"
+                }
+            ],
+            "FixedDayOff": [],
+            "FavoriteDayOff": []
+        },
+        {
+            "Id": "d0a65f2f-dc00-f011-bae2-6045bd8e1423",
+            "Name": "Nicole PU",
+            "IsInternalProfile": true,
+            "ContractEndDateCode": "",
+            "ContractStartDate": "",
+            "IsManager": false,
+            "StateCode": 0,
+            "RoleDescription": "OP Team",
+            "IsKeyHolder": false,
+            "ManagerId": "abd66355-a4af-ef11-b8e8-6045bd920ba3",
+            "Departments": [
+                {
+                    "Id": "b5f2a06b-41ab-ef11-b8e8-7c1e524d8ad8",
+                    "LogicalName": "ava_department",
+                    "Name": "SSS Cashier",
+                    "KeyAttributes": [],
+                    "RowVersion": null,
+                    "ExtensionData": {}
+                }
+            ],
+            "Absences": [
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "64c5911e-de66-f011-bec3-6045bdf66105",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-13",
+                    "EndDate": "2025-08-13"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "e0f9d08f-5f5d-f011-bec2-7c1e5285a4b2",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-09",
+                    "EndDate": "2025-08-09"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "f3f56078-eb02-f011-bae2-7c1e525dcf28",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-03-27",
+                    "EndDate": "2025-03-28"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "95220b90-5f5d-f011-bec2-7c1e52858a84",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-10",
+                    "EndDate": "2025-08-10"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "eedeb722-de66-f011-bec3-6045bd9ff080",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-11",
+                    "EndDate": "2025-08-11"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "04dfb722-de66-f011-bec3-6045bd9ff080",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-12",
+                    "EndDate": "2025-08-12"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "48614529-8a0b-f011-bae3-00224883d701",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-01",
+                    "EndDate": "2025-04-01"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "b3da1479-eb02-f011-bae3-6045bd976f90",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-03-29",
+                    "EndDate": "2025-03-31"
+                }
+            ],
+            "FixedDayOff": [],
+            "FavoriteDayOff": []
+        },
+        {
+            "Id": "7ac2664f-a4af-ef11-b8e8-6045bd8ed336",
+            "Name": "Benjamin LI",
+            "IsInternalProfile": true,
+            "ContractEndDateCode": "",
+            "ContractStartDate": "",
+            "IsManager": false,
+            "StateCode": 0,
+            "RoleDescription": "Sales associate",
+            "IsKeyHolder": false,
+            "ManagerId": "5c006359-a4af-ef11-b8e8-000d3a2edaa4",
+            "Departments": [
+                {
+                    "Id": "8a7e8d9a-20a8-ef11-b8e8-7c1e524e613d",
+                    "LogicalName": "ava_department",
+                    "Name": "Sales Team",
+                    "KeyAttributes": [],
+                    "RowVersion": null,
+                    "ExtensionData": {}
+                }
+            ],
+            "Absences": [
+                {
+                    "Name": "OFF ",
+                    "Id": "006fc649-860b-f011-bae2-6045bdf2e5c4",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-28",
+                    "EndDate": "2025-04-28"
+                },
+                {
+                    "Name": "Training",
+                    "Id": "2c50bff1-eb02-f011-bae2-7c1e525dcf28",
+                    "Paid": true,
+                    "Shared": true,
+                    "StartDate": "2025-03-26",
+                    "EndDate": "2025-03-28"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "1ed2264d-860b-f011-bae2-7c1e525dcf28",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-24",
+                    "EndDate": "2025-04-24"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "27d2264d-860b-f011-bae2-7c1e525dcf28",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-26",
+                    "EndDate": "2025-04-26"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "3fd2264d-860b-f011-bae2-7c1e525dcf28",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-29",
+                    "EndDate": "2025-04-29"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "2b56be4a-860b-f011-bae3-7c1e5285a4b2",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-27",
+                    "EndDate": "2025-04-27"
+                }
+            ],
+            "FixedDayOff": [],
+            "FavoriteDayOff": []
+        },
+        {
+            "Id": "7cc2664f-a4af-ef11-b8e8-6045bd8ed336",
+            "Name": "Grayden ZHANG",
+            "IsInternalProfile": true,
+            "ContractEndDateCode": "",
+            "ContractStartDate": "",
+            "IsManager": false,
+            "StateCode": 0,
+            "RoleDescription": "Sales associate",
+            "IsKeyHolder": false,
+            "ManagerId": "5c006359-a4af-ef11-b8e8-000d3a2edaa4",
+            "Departments": [
+                {
+                    "Id": "8a7e8d9a-20a8-ef11-b8e8-7c1e524e613d",
+                    "LogicalName": "ava_department",
+                    "Name": "Sales Team",
+                    "KeyAttributes": [],
+                    "RowVersion": null,
+                    "ExtensionData": {}
+                }
+            ],
+            "Absences": [
+                {
+                    "Name": "OFF ",
+                    "Id": "b0f43063-860b-f011-bae3-7c1e5285a4b2",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-26",
+                    "EndDate": "2025-04-26"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "a20fe064-860b-f011-bae3-6045bdf66105",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-18",
+                    "EndDate": "2025-04-18"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "95bd4363-860b-f011-bae2-6045bd988618",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-24",
+                    "EndDate": "2025-04-24"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "a65b3e61-860b-f011-bae3-7c1e52509c86",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-25",
+                    "EndDate": "2025-04-25"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "ebba0a24-dd66-f011-bec2-6045bd976f90",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-29",
+                    "EndDate": "2025-08-29"
+                }
+            ],
+            "FixedDayOff": [],
+            "FavoriteDayOff": []
+        },
+        {
+            "Id": "7b131a5d-a4af-ef11-b8e8-6045bd8ed336",
+            "Name": "Sunny TAN",
+            "IsInternalProfile": true,
+            "ContractEndDateCode": "",
+            "ContractStartDate": "",
+            "IsManager": false,
+            "StateCode": 0,
+            "RoleDescription": "Sales associate",
+            "IsKeyHolder": false,
+            "ManagerId": "5c006359-a4af-ef11-b8e8-000d3a2edaa4",
+            "Departments": [
+                {
+                    "Id": "8a7e8d9a-20a8-ef11-b8e8-7c1e524e613d",
+                    "LogicalName": "ava_department",
+                    "Name": "Sales Team",
+                    "KeyAttributes": [],
+                    "RowVersion": null,
+                    "ExtensionData": {}
+                }
+            ],
+            "Absences": [
+                {
+                    "Name": "Annual Leave",
+                    "Id": "fb628c86-5c5d-f011-bec1-6045bd976f90",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-24",
+                    "EndDate": "2025-08-24"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "eead92b5-ea02-f011-bae3-6045bdf2e5c4",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-03-10",
+                    "EndDate": "2025-03-13"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "fead92b5-ea02-f011-bae3-6045bdf2e5c4",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-03-14",
+                    "EndDate": "2025-03-15"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "40168e88-5c5d-f011-bec2-7c1e52858a84",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-25",
+                    "EndDate": "2025-08-25"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "d4a0ee3e-850b-f011-bae3-7c1e52509c86",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-20",
+                    "EndDate": "2025-04-20"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "de4c2d3d-850b-f011-bae3-000d3abc9f30",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-26",
+                    "EndDate": "2025-04-26"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "4d84983d-850b-f011-bae3-000d3abcc0c4",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-13",
+                    "EndDate": "2025-04-13"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "c92ddeb9-ea02-f011-bae2-7c1e52843506",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-03-09",
+                    "EndDate": "2025-03-09"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "e2a562c3-dc66-f011-bec2-7c1e52266fdc",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-26",
+                    "EndDate": "2025-08-26"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "e6a562c3-dc66-f011-bec2-7c1e52266fdc",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-27",
+                    "EndDate": "2025-08-27"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "2eb0d43a-850b-f011-bae3-7c1e5285a4b2",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-06",
+                    "EndDate": "2025-04-06"
+                }
+            ],
+            "FixedDayOff": [],
+            "FavoriteDayOff": []
+        },
+        {
+            "Id": "7e131a5d-a4af-ef11-b8e8-6045bd8ed336",
+            "Name": "Yoyo LIU",
+            "IsInternalProfile": true,
+            "ContractEndDateCode": "",
+            "ContractStartDate": "",
+            "IsManager": false,
+            "StateCode": 0,
+            "RoleDescription": "Sales associate",
+            "IsKeyHolder": false,
+            "ManagerId": "5c006359-a4af-ef11-b8e8-000d3a2edaa4",
+            "Departments": [
+                {
+                    "Id": "8a7e8d9a-20a8-ef11-b8e8-7c1e524e613d",
+                    "LogicalName": "ava_department",
+                    "Name": "Sales Team",
+                    "KeyAttributes": [],
+                    "RowVersion": null,
+                    "ExtensionData": {}
+                }
+            ],
+            "Absences": [
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "8ad4fee1-dc66-f011-bec3-7c1e525dcf28",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-29",
+                    "EndDate": "2025-08-29"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "6ebaa1a9-850b-f011-bae2-7c1e525dcf28",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-01",
+                    "EndDate": "2025-04-01"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "a3dfa7a9-850b-f011-bae3-6045bdf66105",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-08",
+                    "EndDate": "2025-04-08"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "759549e3-dc66-f011-bec3-6045bd93e25d",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-19",
+                    "EndDate": "2025-08-19"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "3948eadf-dc66-f011-bec2-6045bd95970e",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-30",
+                    "EndDate": "2025-08-30"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "4dad57a7-850b-f011-bae3-00224883d701",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-05",
+                    "EndDate": "2025-04-05"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "eba855a6-850b-f011-bae3-000d3abcc0c4",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-02",
+                    "EndDate": "2025-04-02"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "3fedd0ac-850b-f011-bae2-7c1e52843506",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-06",
+                    "EndDate": "2025-04-06"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "4d3e36ac-850b-f011-bae2-6045bdf2e5c4",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-09",
+                    "EndDate": "2025-04-09"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "4f3e36ac-850b-f011-bae2-6045bdf2e5c4",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-07",
+                    "EndDate": "2025-04-07"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "bd74f5e8-5c5d-f011-bec2-7c1e52843506",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-28",
+                    "EndDate": "2025-08-28"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "aa55c1cd-5c5d-f011-bec2-00224883d701",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-17",
+                    "EndDate": "2025-08-17"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "ab98bae2-dc66-f011-bec3-00224883d701",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-18",
+                    "EndDate": "2025-08-18"
+                }
+            ],
+            "FixedDayOff": [],
+            "FavoriteDayOff": []
+        },
+        {
+            "Id": "abd66355-a4af-ef11-b8e8-6045bd920ba3",
+            "Name": "Cindy HONG",
+            "IsInternalProfile": true,
+            "ContractEndDateCode": "",
+            "ContractStartDate": "",
+            "IsManager": true,
+            "StateCode": 0,
+            "RoleDescription": "Manager",
+            "IsKeyHolder": true,
+            "ManagerId": "2cb86961-a4af-ef11-b8e8-7c1e525fc740",
+            "Departments": [
+                {
+                    "Id": "a2deca8a-20a8-ef11-b8e8-7c1e524e00a6",
+                    "LogicalName": "ava_department",
+                    "Name": "Management Team",
+                    "KeyAttributes": [],
+                    "RowVersion": null,
+                    "ExtensionData": {}
+                }
+            ],
+            "Absences": [
+                {
+                    "Name": "Annual Leave",
+                    "Id": "4f904420-ec02-f011-bae3-7c1e5285a4b2",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-03-24",
+                    "EndDate": "2025-03-24"
+                }
+            ],
+            "FixedDayOff": [],
+            "FavoriteDayOff": []
+        },
+        {
+            "Id": "99d6c95b-a4af-ef11-b8e8-6045bd920ba3",
+            "Name": "Candy CHEN",
+            "IsInternalProfile": true,
+            "ContractEndDateCode": "",
+            "ContractStartDate": "",
+            "IsManager": false,
+            "StateCode": 0,
+            "RoleDescription": "Sales associate",
+            "IsKeyHolder": false,
+            "ManagerId": "34241b5a-a4af-ef11-b8e8-6045bd8726c0",
+            "Departments": [
+                {
+                    "Id": "8a7e8d9a-20a8-ef11-b8e8-7c1e524e613d",
+                    "LogicalName": "ava_department",
+                    "Name": "Sales Team",
+                    "KeyAttributes": [],
+                    "RowVersion": null,
+                    "ExtensionData": {}
+                }
+            ],
+            "Absences": [
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "d03297e0-dd66-f011-bec3-7c1e5285a4b2",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-27",
+                    "EndDate": "2025-08-27"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "3e0a014a-eb02-f011-bae3-6045bd9637e0",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-03-12",
+                    "EndDate": "2025-03-14"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "03fd0cdd-dd66-f011-bec2-000d3abcc0c4",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-25",
+                    "EndDate": "2025-08-25"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "d344d1dd-dd66-f011-bec3-6045bd93e25d",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-29",
+                    "EndDate": "2025-08-29"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "b450ede1-dd66-f011-bec2-7c1e52266fdc",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-28",
+                    "EndDate": "2025-08-28"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "713daa76-d466-f011-bec2-7c1e52266fdc",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-04",
+                    "EndDate": "2025-08-04"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "6b5943e1-dd66-f011-bec3-7c1e52843506",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-26",
+                    "EndDate": "2025-08-26"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "cc514849-eb02-f011-bae2-6045bd988618",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-03-15",
+                    "EndDate": "2025-03-16"
+                }
+            ],
+            "FixedDayOff": [],
+            "FavoriteDayOff": []
+        },
+        {
+            "Id": "9bd6c95b-a4af-ef11-b8e8-6045bd920ba3",
+            "Name": "Fiona BI",
+            "IsInternalProfile": true,
+            "ContractEndDateCode": "",
+            "ContractStartDate": "",
+            "IsManager": false,
+            "StateCode": 0,
+            "RoleDescription": "Sales associate",
+            "IsKeyHolder": false,
+            "ManagerId": "34241b5a-a4af-ef11-b8e8-6045bd8726c0",
+            "Departments": [
+                {
+                    "Id": "8a7e8d9a-20a8-ef11-b8e8-7c1e524e613d",
+                    "LogicalName": "ava_department",
+                    "Name": "Sales Team",
+                    "KeyAttributes": [],
+                    "RowVersion": null,
+                    "ExtensionData": {}
+                }
+            ],
+            "Absences": [
+                {
+                    "Name": "Annual Leave",
+                    "Id": "ab59b4ac-5c5d-f011-bec2-7c1e52843506",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-11",
+                    "EndDate": "2025-08-11"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "fe6b4ad1-dc66-f011-bec3-7c1e52843506",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-01",
+                    "EndDate": "2025-08-01"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "0f654cd7-dc66-f011-bec3-7c1e52843506",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-14",
+                    "EndDate": "2025-08-14"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "ea188953-850b-f011-bae3-6045bd976f90",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-05",
+                    "EndDate": "2025-04-05"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "03198953-850b-f011-bae3-6045bd976f90",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-27",
+                    "EndDate": "2025-04-27"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "6e0b56ad-5c5d-f011-bec2-6045bdf66105",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-12",
+                    "EndDate": "2025-08-12"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "5fb15153-850b-f011-bae3-7c1e525e07eb",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-12",
+                    "EndDate": "2025-04-12"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "db480f56-850b-f011-bae3-6045bd9ff080",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-26",
+                    "EndDate": "2025-04-26"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "db0be3d1-dc66-f011-bec2-7ced8d161559",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-02",
+                    "EndDate": "2025-08-02"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "7059ebd3-dc66-f011-bec2-6045bd95970e",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-15",
+                    "EndDate": "2025-08-15"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "b30c1295-ea02-f011-bae3-6045bdf66105",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-03-05",
+                    "EndDate": "2025-03-07"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "e0c812b0-5c5d-f011-bec2-6045bd93e25d",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-10",
+                    "EndDate": "2025-08-10"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "69cc4353-850b-f011-bae3-6045bd9637e0",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-20",
+                    "EndDate": "2025-04-20"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "7c002ad2-dc66-f011-bec2-7c1e52858a84",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-13",
+                    "EndDate": "2025-08-13"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "8d2e9756-850b-f011-bae2-6045bd920207",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-19",
+                    "EndDate": "2025-04-19"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "14289255-850b-f011-bae3-000d3abc9f30",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-21",
+                    "EndDate": "2025-04-21"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "b1295b95-ea02-f011-bae3-000d3abcc0c4",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-03-01",
+                    "EndDate": "2025-03-04"
+                }
+            ],
+            "FixedDayOff": [],
+            "FavoriteDayOff": []
+        },
+        {
+            "Id": "ca3c6131-dc00-f011-bae3-6045bd976f90",
+            "Name": "Gavin WU",
+            "IsInternalProfile": true,
+            "ContractEndDateCode": "",
+            "ContractStartDate": "",
+            "IsManager": false,
+            "StateCode": 0,
+            "RoleDescription": "OP Team",
+            "IsKeyHolder": false,
+            "ManagerId": "abd66355-a4af-ef11-b8e8-6045bd920ba3",
+            "Departments": [
+                {
+                    "Id": "fbce87cd-20a8-ef11-b8e8-7c1e52731583",
+                    "LogicalName": "ava_department",
+                    "Name": "Stock Team",
+                    "KeyAttributes": [],
+                    "RowVersion": null,
+                    "ExtensionData": {}
+                }
+            ],
+            "Absences": [
+                {
+                    "Name": "OFF ",
+                    "Id": "ac7e85b8-eb02-f011-bae2-6045bd920207",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-03-10",
+                    "EndDate": "2025-03-10"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "775ddf70-de66-f011-bec3-6045bd9ff080",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-22",
+                    "EndDate": "2025-08-22"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "60e57c74-de66-f011-bec3-7c1e52509c86",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-23",
+                    "EndDate": "2025-08-23"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "305a9473-de66-f011-bec3-7c1e525dcf28",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-21",
+                    "EndDate": "2025-08-21"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "b43ceebc-eb02-f011-bae3-7c1e525e07eb",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-03-14",
+                    "EndDate": "2025-03-14"
+                },
+                {
+                    "Name": "Parental Leave - Children ",
+                    "Id": "b57396b7-eb02-f011-bae3-6045bd976f90",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-03-11",
+                    "EndDate": "2025-03-13"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "c2638a73-de66-f011-bec3-00224883d701",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-24",
+                    "EndDate": "2025-08-24"
+                }
+            ],
+            "FixedDayOff": [],
+            "FavoriteDayOff": []
+        },
+        {
+            "Id": "1657bf49-695d-f011-bec1-6045bd976f90",
+            "Name": "Rachel JIANG",
+            "IsInternalProfile": true,
+            "ContractEndDateCode": "",
+            "ContractStartDate": "",
+            "IsManager": false,
+            "StateCode": 0,
+            "RoleDescription": "Sales associate",
+            "IsKeyHolder": false,
+            "ManagerId": "8778d35e-33d9-ef11-8eea-6045bdf5d2ec",
+            "Departments": [
+                {
+                    "Id": "8a7e8d9a-20a8-ef11-b8e8-7c1e524e613d",
+                    "LogicalName": "ava_department",
+                    "Name": "Sales Team",
+                    "KeyAttributes": [],
+                    "RowVersion": null,
+                    "ExtensionData": {}
+                }
+            ],
+            "Absences": [
+                {
+                    "Name": "Parental Leave - Children ",
+                    "Id": "b10d9418-dd66-f011-bec3-7c1e525dcf28",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-26",
+                    "EndDate": "2025-08-26"
+                },
+                {
+                    "Name": "Parental Leave - Children ",
+                    "Id": "dd97cf17-dd66-f011-bec3-7c1e525e07eb",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-29",
+                    "EndDate": "2025-08-29"
+                },
+                {
+                    "Name": "Parental Leave - Children ",
+                    "Id": "e0234613-dd66-f011-bec2-7c1e52266fdc",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-27",
+                    "EndDate": "2025-08-27"
+                },
+                {
+                    "Name": "Parental Leave - Children ",
+                    "Id": "ffcc8b17-dd66-f011-bec2-000d3abcc0c4",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-28",
+                    "EndDate": "2025-08-28"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "cdfefe18-dd66-f011-bec3-7c1e5285a4b2",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-30",
+                    "EndDate": "2025-08-30"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "ddfefe18-dd66-f011-bec3-7c1e5285a4b2",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-31",
+                    "EndDate": "2025-08-31"
+                }
+            ],
+            "FixedDayOff": [],
+            "FavoriteDayOff": []
+        },
+        {
+            "Id": "c958ea5e-a4af-ef11-b8e8-6045bd98978e",
+            "Name": "Jeffery HUANG",
+            "IsInternalProfile": true,
+            "ContractEndDateCode": "",
+            "ContractStartDate": "",
+            "IsManager": false,
+            "StateCode": 0,
+            "RoleDescription": "Sales associate",
+            "IsKeyHolder": false,
+            "ManagerId": "5c006359-a4af-ef11-b8e8-000d3a2edaa4",
+            "Departments": [
+                {
+                    "Id": "8a7e8d9a-20a8-ef11-b8e8-7c1e524e613d",
+                    "LogicalName": "ava_department",
+                    "Name": "Sales Team",
+                    "KeyAttributes": [],
+                    "RowVersion": null,
+                    "ExtensionData": {}
+                }
+            ],
+            "Absences": [
+                {
+                    "Name": "OFF ",
+                    "Id": "1c3e7ae5-870b-f011-bae3-7c1e52509c86",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-09",
+                    "EndDate": "2025-04-09"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "00e75564-eb02-f011-bae3-00224883d701",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-03-25",
+                    "EndDate": "2025-03-26"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "46bd5be3-870b-f011-bae3-000d3abcc0c4",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-10",
+                    "EndDate": "2025-04-10"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "5c2423e6-870b-f011-bae3-6045bd9ff080",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-11",
+                    "EndDate": "2025-04-11"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "f4e7e4ff-dd66-f011-bec3-7c1e525dcf28",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-20",
+                    "EndDate": "2025-08-20"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "f7e7e4ff-dd66-f011-bec3-7c1e525dcf28",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-08",
+                    "EndDate": "2025-08-08"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "9671b701-de66-f011-bec3-7c1e52509c86",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-09",
+                    "EndDate": "2025-08-09"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "966139e7-870b-f011-bae3-7c1e5285a4b2",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-07",
+                    "EndDate": "2025-04-07"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "e2b040e6-870b-f011-bae3-6045bd976f90",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-06",
+                    "EndDate": "2025-04-06"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "de41bd64-eb02-f011-bae3-6045bd976f90",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-03-22",
+                    "EndDate": "2025-03-24"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "da364fe7-870b-f011-bae2-6045bdf2e5c4",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-08",
+                    "EndDate": "2025-04-08"
+                }
+            ],
+            "FixedDayOff": [],
+            "FavoriteDayOff": []
+        },
+        {
+            "Id": "16b12830-dc00-f011-bae3-6045bd9ff080",
+            "Name": "Jiu CHENGJ",
+            "IsInternalProfile": true,
+            "ContractEndDateCode": "",
+            "ContractStartDate": "",
+            "IsManager": false,
+            "StateCode": 0,
+            "RoleDescription": "OP Team",
+            "IsKeyHolder": false,
+            "ManagerId": "abd66355-a4af-ef11-b8e8-6045bd920ba3",
+            "Departments": [
+                {
+                    "Id": "fbce87cd-20a8-ef11-b8e8-7c1e52731583",
+                    "LogicalName": "ava_department",
+                    "Name": "Stock Team",
+                    "KeyAttributes": [],
+                    "RowVersion": null,
+                    "ExtensionData": {}
+                }
+            ],
+            "Absences": [
+                {
+                    "Name": "Paternity Leave ",
+                    "Id": "e4dbda8a-de66-f011-bec2-6045bd976f90",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-09-07",
+                    "EndDate": "2025-09-07"
+                },
+                {
+                    "Name": "Paternity Leave ",
+                    "Id": "dfdbb78b-de66-f011-bec3-7c1e52843506",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-09-03",
+                    "EndDate": "2025-09-03"
+                },
+                {
+                    "Name": "Paternity Leave ",
+                    "Id": "dd83a78b-de66-f011-bec3-00224883d701",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-28",
+                    "EndDate": "2025-08-28"
+                },
+                {
+                    "Name": "Paternity Leave ",
+                    "Id": "a7616e88-de66-f011-bec2-7ced8d161559",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-31",
+                    "EndDate": "2025-08-31"
+                },
+                {
+                    "Name": "Paternity Leave ",
+                    "Id": "c50fcf8c-de66-f011-bec3-7c1e52509c86",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-09-05",
+                    "EndDate": "2025-09-05"
+                },
+                {
+                    "Name": "Paternity Leave ",
+                    "Id": "c90fcf8c-de66-f011-bec3-7c1e52509c86",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-09-06",
+                    "EndDate": "2025-09-06"
+                },
+                {
+                    "Name": "Paternity Leave ",
+                    "Id": "7c449e87-de66-f011-bec3-6045bd93e25d",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-09-02",
+                    "EndDate": "2025-09-02"
+                },
+                {
+                    "Name": "Paternity Leave ",
+                    "Id": "8b9c7c8a-de66-f011-bec2-6045bd95970e",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-27",
+                    "EndDate": "2025-08-27"
+                },
+                {
+                    "Name": "Paternity Leave ",
+                    "Id": "4d171b8a-de66-f011-bec2-7c1e52266fdc",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-30",
+                    "EndDate": "2025-08-30"
+                },
+                {
+                    "Name": "Paternity Leave ",
+                    "Id": "57171b8a-de66-f011-bec2-7c1e52266fdc",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-09-04",
+                    "EndDate": "2025-09-04"
+                },
+                {
+                    "Name": "Paternity Leave ",
+                    "Id": "101b8b8a-de66-f011-bec2-000d3abcc0c4",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-26",
+                    "EndDate": "2025-08-26"
+                },
+                {
+                    "Name": "Paternity Leave ",
+                    "Id": "681b8b8a-de66-f011-bec2-000d3abcc0c4",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-09-01",
+                    "EndDate": "2025-09-01"
+                },
+                {
+                    "Name": "Paternity Leave ",
+                    "Id": "4c7ef289-de66-f011-bec2-7c1e52858a84",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-25",
+                    "EndDate": "2025-08-25"
+                },
+                {
+                    "Name": "Paternity Leave ",
+                    "Id": "a9aa378a-de66-f011-bec3-7c1e5285a4b2",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-29",
+                    "EndDate": "2025-08-29"
+                }
+            ],
+            "FixedDayOff": [],
+            "FavoriteDayOff": []
+        },
+        {
+            "Id": "2ab12830-dc00-f011-bae3-6045bd9ff080",
+            "Name": "Jason CHENCH",
+            "IsInternalProfile": true,
+            "ContractEndDateCode": "",
+            "ContractStartDate": "",
+            "IsManager": false,
+            "StateCode": 0,
+            "RoleDescription": "OP Team",
+            "IsKeyHolder": false,
+            "ManagerId": "abd66355-a4af-ef11-b8e8-6045bd920ba3",
+            "Departments": [
+                {
+                    "Id": "fbce87cd-20a8-ef11-b8e8-7c1e52731583",
+                    "LogicalName": "ava_department",
+                    "Name": "Stock Team",
+                    "KeyAttributes": [],
+                    "RowVersion": null,
+                    "ExtensionData": {}
+                }
+            ],
+            "Absences": [
+                {
+                    "Name": "OFF ",
+                    "Id": "53453d84-8a0b-f011-bae3-6045bd9637e0",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-04",
+                    "EndDate": "2025-04-04"
+                }
+            ],
+            "FixedDayOff": [],
+            "FavoriteDayOff": []
+        },
+        {
+            "Id": "d7c5a45f-33d9-ef11-8eea-6045bdf2ab60",
+            "Name": "Annie MIAO",
+            "IsInternalProfile": true,
+            "ContractEndDateCode": "",
+            "ContractStartDate": "",
+            "IsManager": false,
+            "StateCode": 0,
+            "RoleDescription": "Sales associate",
+            "IsKeyHolder": false,
+            "ManagerId": "abd66355-a4af-ef11-b8e8-6045bd920ba3",
+            "Departments": [
+                {
+                    "Id": "8a7e8d9a-20a8-ef11-b8e8-7c1e524e613d",
+                    "LogicalName": "ava_department",
+                    "Name": "Sales Team",
+                    "KeyAttributes": [],
+                    "RowVersion": null,
+                    "ExtensionData": {}
+                }
+            ],
+            "Absences": [
+                {
+                    "Name": "OFF ",
+                    "Id": "78c78f24-850b-f011-bae3-000d3abcc0c4",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-23",
+                    "EndDate": "2025-04-23"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "cf4a64b9-dc66-f011-bec3-6045bd93e25d",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-23",
+                    "EndDate": "2025-08-23"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "3f635cb7-dc66-f011-bec3-7c1e52509c86",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-24",
+                    "EndDate": "2025-08-24"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "699dbeb7-dc66-f011-bec3-7c1e5285a4b2",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-22",
+                    "EndDate": "2025-08-22"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "1e9c46df-e702-f011-bae3-7c1e5285a4b2",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-03-10",
+                    "EndDate": "2025-03-12"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "46588553-ea02-f011-bae3-00224883d701",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-03-08",
+                    "EndDate": "2025-03-09"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "d6b5e024-850b-f011-bae3-000d3abc9f30",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-21",
+                    "EndDate": "2025-04-21"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "3b22d8b5-dc66-f011-bec2-6045bd95970e",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-21",
+                    "EndDate": "2025-08-21"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "6e4e51dd-e702-f011-bae2-7c1e525dcf28",
+                    "Paid": false,
+                    "Shared": false,
+                    "StartDate": "2025-03-08",
+                    "EndDate": "2025-03-09"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "f0046d25-850b-f011-bae3-6045bd9ff080",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-20",
+                    "EndDate": "2025-04-20"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "d2f4beb6-dc66-f011-bec2-7c1e52266fdc",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-25",
+                    "EndDate": "2025-08-25"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "ce7b3326-850b-f011-bae3-00224883d701",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-24",
+                    "EndDate": "2025-04-24"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "07b3fa21-850b-f011-bae2-6045bdf2e5c4",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-19",
+                    "EndDate": "2025-04-19"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "0ab3fa21-850b-f011-bae2-6045bdf2e5c4",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-22",
+                    "EndDate": "2025-04-22"
+                }
+            ],
+            "FixedDayOff": [],
+            "FavoriteDayOff": []
+        },
+        {
+            "Id": "20a651e6-6ead-ef11-b8e8-6045bdf2ab60",
+            "Name": "Sammy TAO",
+            "IsInternalProfile": true,
+            "ContractEndDateCode": "",
+            "ContractStartDate": "",
+            "IsManager": false,
+            "StateCode": 0,
+            "RoleDescription": "OP Team",
+            "IsKeyHolder": true,
+            "ManagerId": "abd66355-a4af-ef11-b8e8-6045bd920ba3",
+            "Departments": [
+                {
+                    "Id": "e367af4e-41ab-ef11-b8e8-0022488b8f44",
+                    "LogicalName": "ava_department",
+                    "Name": "SSS Admin",
+                    "KeyAttributes": [],
+                    "RowVersion": null,
+                    "ExtensionData": {}
+                }
+            ],
+            "Absences": [
+                {
+                    "Name": "Annual Leave",
+                    "Id": "73f50ab1-840b-f011-bae2-7c1e525dcf28",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-21",
+                    "EndDate": "2025-04-21"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "1a573ab2-840b-f011-bae3-7c1e5285a4b2",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-18",
+                    "EndDate": "2025-04-18"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "1c573ab2-840b-f011-bae3-7c1e5285a4b2",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-22",
+                    "EndDate": "2025-04-22"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "3e5111af-840b-f011-bae3-6045bdf66105",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-23",
+                    "EndDate": "2025-04-23"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "7e879501-5b5d-f011-bec2-7c1e5282f0d8",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-29",
+                    "EndDate": "2025-08-29"
+                }
+            ],
+            "FixedDayOff": [
+                "Saturday",
+                "Sunday"
+            ],
+            "FavoriteDayOff": []
+        },
+        {
+            "Id": "e20ef88d-f2b3-ef11-b8e8-6045bdf2ab60",
+            "Name": "Adela AN",
+            "IsInternalProfile": true,
+            "ContractEndDateCode": "",
+            "ContractStartDate": "",
+            "IsManager": false,
+            "StateCode": 0,
+            "RoleDescription": "Sales associate",
+            "IsKeyHolder": false,
+            "ManagerId": "5c006359-a4af-ef11-b8e8-000d3a2edaa4",
+            "Departments": [
+                {
+                    "Id": "8a7e8d9a-20a8-ef11-b8e8-7c1e524e613d",
+                    "LogicalName": "ava_department",
+                    "Name": "Sales Team",
+                    "KeyAttributes": [],
+                    "RowVersion": null,
+                    "ExtensionData": {}
+                }
+            ],
+            "Absences": [
+                {
+                    "Name": "Training",
+                    "Id": "fcffefe1-e802-f011-bae3-6045bd9637e0",
+                    "Paid": true,
+                    "Shared": true,
+                    "StartDate": "2025-03-11",
+                    "EndDate": "2025-03-13"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "ed37e117-8a0b-f011-bae3-6045bd93e25d",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-24",
+                    "EndDate": "2025-04-24"
+                },
+                {
+                    "Name": "Random Weekly Day OFF ",
+                    "Id": "f8d40d78-5f5d-f011-bec1-000d3abcc0c4",
+                    "Paid": false,
+                    "Shared": false,
+                    "StartDate": "2025-08-21",
+                    "EndDate": "2025-08-21"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "fd858678-5f5d-f011-bec2-7c1e52509c86",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-19",
+                    "EndDate": "2025-08-19"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "9a79f715-8a0b-f011-bae3-6045bdf66105",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-23",
+                    "EndDate": "2025-04-23"
+                },
+                {
+                    "Name": "Random Weekly Day OFF ",
+                    "Id": "6dcdae7a-5f5d-f011-bec2-6045bdf66105",
+                    "Paid": false,
+                    "Shared": false,
+                    "StartDate": "2025-08-20",
+                    "EndDate": "2025-08-20"
+                },
+                {
+                    "Name": "Random Weekly Day OFF ",
+                    "Id": "85cdae7a-5f5d-f011-bec2-6045bdf66105",
+                    "Paid": false,
+                    "Shared": false,
+                    "StartDate": "2025-08-22",
+                    "EndDate": "2025-08-22"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "2255c876-5f5d-f011-bec2-7c1e525e07eb",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-18",
+                    "EndDate": "2025-08-18"
+                },
+                {
+                    "Name": null,
+                    "Id": "664c53cb-665d-f011-bec2-7c1e525e07eb",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-20",
+                    "EndDate": "2025-08-20"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "6ab67208-de66-f011-bec3-6045bd93e25d",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-31",
+                    "EndDate": "2025-08-31"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "a1500119-8a0b-f011-bae3-7c1e5285a4b2",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-21",
+                    "EndDate": "2025-04-21"
+                },
+                {
+                    "Name": null,
+                    "Id": "21d972c9-665d-f011-bec2-7c1e52509c86",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-21",
+                    "EndDate": "2025-08-21"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "a594c241-d566-f011-bec3-7c1e52509c86",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-20",
+                    "EndDate": "2025-08-20"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "4e57d140-d566-f011-bec3-7c1e52843506",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-22",
+                    "EndDate": "2025-08-22"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "8ccb0214-8a0b-f011-bae2-7c1e52843506",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-13",
+                    "EndDate": "2025-04-13"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "51e0ff19-8a0b-f011-bae2-7c1e52843506",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-22",
+                    "EndDate": "2025-04-22"
+                }
+            ],
+            "FixedDayOff": [],
+            "FavoriteDayOff": []
+        },
+        {
+            "Id": "d90b3d54-a4af-ef11-b8e8-6045bdf4c8dd",
+            "Name": "Kiki CHEN",
+            "IsInternalProfile": true,
+            "ContractEndDateCode": "",
+            "ContractStartDate": "",
+            "IsManager": false,
+            "StateCode": 0,
+            "RoleDescription": "Sales associate",
+            "IsKeyHolder": false,
+            "ManagerId": "8778d35e-33d9-ef11-8eea-6045bdf5d2ec",
+            "Departments": [
+                {
+                    "Id": "8a7e8d9a-20a8-ef11-b8e8-7c1e524e613d",
+                    "LogicalName": "ava_department",
+                    "Name": "Sales Team",
+                    "KeyAttributes": [],
+                    "RowVersion": null,
+                    "ExtensionData": {}
+                }
+            ],
+            "Absences": [
+                {
+                    "Name": "Annual Leave",
+                    "Id": "dce07dbf-5e5d-f011-bec1-6045bd976f90",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-28",
+                    "EndDate": "2025-08-28"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "239c9cf7-860b-f011-bae3-7c1e5285a4b2",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-03",
+                    "EndDate": "2025-04-03"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "23e52f5d-dd66-f011-bec3-6045bd93e25d",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-29",
+                    "EndDate": "2025-08-29"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "17a8ce5a-dd66-f011-bec3-7c1e525e07eb",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-30",
+                    "EndDate": "2025-08-30"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "23a8ce5a-dd66-f011-bec3-7c1e525e07eb",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-31",
+                    "EndDate": "2025-08-31"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "ae6a50f2-860b-f011-bae3-000d3abcc0c4",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-02",
+                    "EndDate": "2025-04-02"
+                }
+            ],
+            "FixedDayOff": [],
+            "FavoriteDayOff": []
+        },
+        {
+            "Id": "23af105b-a4af-ef11-b8e8-6045bdf4c8dd",
+            "Name": "Esther QI",
+            "IsInternalProfile": true,
+            "ContractEndDateCode": "",
+            "ContractStartDate": "",
+            "IsManager": false,
+            "StateCode": 0,
+            "RoleDescription": "Sales associate",
+            "IsKeyHolder": false,
+            "ManagerId": "5c006359-a4af-ef11-b8e8-000d3a2edaa4",
+            "Departments": [
+                {
+                    "Id": "8a7e8d9a-20a8-ef11-b8e8-7c1e524e613d",
+                    "LogicalName": "ava_department",
+                    "Name": "Sales Team",
+                    "KeyAttributes": [],
+                    "RowVersion": null,
+                    "ExtensionData": {}
+                }
+            ],
+            "Absences": [
+                {
+                    "Name": "Annual Leave",
+                    "Id": "2ac3d7e6-860b-f011-bae3-6045bd9ff080",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-25",
+                    "EndDate": "2025-04-25"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "12ba769d-5e5d-f011-bec2-6045bd93e25d",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-01",
+                    "EndDate": "2025-08-01"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "c0866207-eb02-f011-bae3-6045bd93e25d",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-03-29",
+                    "EndDate": "2025-03-31"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "7aa1804f-dd66-f011-bec3-7c1e5285a4b2",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-02",
+                    "EndDate": "2025-08-02"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "782664e7-860b-f011-bae3-000d3abc9f30",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-01",
+                    "EndDate": "2025-04-01"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "43a570e8-860b-f011-bae3-7c1e525e07eb",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-30",
+                    "EndDate": "2025-04-30"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "7cc4e850-dd66-f011-bec3-6045bd93e25d",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-03",
+                    "EndDate": "2025-08-03"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "f9c2d7e6-860b-f011-bae3-6045bd9ff080",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-28",
+                    "EndDate": "2025-04-28"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "34a2f2e4-860b-f011-bae3-7c1e5285a4b2",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-26",
+                    "EndDate": "2025-04-26"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "63c774e3-860b-f011-bae2-6045bd988618",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-29",
+                    "EndDate": "2025-04-29"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "84c774e3-860b-f011-bae2-6045bd988618",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-27",
+                    "EndDate": "2025-04-27"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "386bca0a-eb02-f011-bae2-6045bd988618",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-03-27",
+                    "EndDate": "2025-03-28"
+                }
+            ],
+            "FixedDayOff": [],
+            "FavoriteDayOff": []
+        },
+        {
+            "Id": "8778d35e-33d9-ef11-8eea-6045bdf5d2ec",
+            "Name": "Ruth XU",
+            "IsInternalProfile": true,
+            "ContractEndDateCode": "",
+            "ContractStartDate": "",
+            "IsManager": true,
+            "StateCode": 0,
+            "RoleDescription": "Team Leader",
+            "IsKeyHolder": true,
+            "ManagerId": "5c006359-a4af-ef11-b8e8-000d3a2edaa4",
+            "Departments": [
+                {
+                    "Id": "a2deca8a-20a8-ef11-b8e8-7c1e524e00a6",
+                    "LogicalName": "ava_department",
+                    "Name": "Management Team",
+                    "KeyAttributes": [],
+                    "RowVersion": null,
+                    "ExtensionData": {}
+                }
+            ],
+            "Absences": [
+                {
+                    "Name": "Business Trip ",
+                    "Id": "e45b62a5-dc66-f011-bec3-00224883d701",
+                    "Paid": true,
+                    "Shared": true,
+                    "StartDate": "2025-08-20",
+                    "EndDate": "2025-08-20"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "afc7bc4e-5c5d-f011-bec1-6045bd976f90",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-26",
+                    "EndDate": "2025-08-26"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "26f522a4-dc66-f011-bec3-7c1e52509c86",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-27",
+                    "EndDate": "2025-08-27"
+                },
+                {
+                    "Name": "Business Trip ",
+                    "Id": "fadd8ca2-dc66-f011-bec2-7c1e52266fdc",
+                    "Paid": true,
+                    "Shared": true,
+                    "StartDate": "2025-08-19",
+                    "EndDate": "2025-08-19"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "27764806-850b-f011-bae3-000d3abc9f30",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-03",
+                    "EndDate": "2025-04-03"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "fe748003-850b-f011-bae2-7c1e52843506",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-02",
+                    "EndDate": "2025-04-02"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "bc0fa003-850b-f011-bae3-6045bd9637e0",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-01",
+                    "EndDate": "2025-04-01"
+                },
+                {
+                    "Name": "Business Trip ",
+                    "Id": "62b2b3a5-dc66-f011-bec2-000d3abcc0c4",
+                    "Paid": true,
+                    "Shared": true,
+                    "StartDate": "2025-08-21",
+                    "EndDate": "2025-08-21"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "73b2b3a5-dc66-f011-bec2-000d3abcc0c4",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-22",
+                    "EndDate": "2025-08-22"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "d00d67a5-dc66-f011-bec3-6045bd9ff080",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-28",
+                    "EndDate": "2025-08-28"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "a5c11b51-5c5d-f011-bec1-000d3abcc0c4",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-25",
+                    "EndDate": "2025-08-25"
+                }
+            ],
+            "FixedDayOff": [],
+            "FavoriteDayOff": []
+        },
+        {
+            "Id": "69cf1e55-a4af-ef11-b8e9-6045bdf5d2ec",
+            "Name": "Jamie ZHOU",
+            "IsInternalProfile": true,
+            "ContractEndDateCode": "",
+            "ContractStartDate": "",
+            "IsManager": false,
+            "StateCode": 0,
+            "RoleDescription": "Sales associate",
+            "IsKeyHolder": false,
+            "ManagerId": "5c006359-a4af-ef11-b8e8-000d3a2edaa4",
+            "Departments": [
+                {
+                    "Id": "8a7e8d9a-20a8-ef11-b8e8-7c1e524e613d",
+                    "LogicalName": "ava_department",
+                    "Name": "Sales Team",
+                    "KeyAttributes": [],
+                    "RowVersion": null,
+                    "ExtensionData": {}
+                }
+            ],
+            "Absences": [
+                {
+                    "Name": "Annual Leave",
+                    "Id": "e3b4662a-870b-f011-bae3-000d3abcc0c4",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-09",
+                    "EndDate": "2025-04-09"
+                },
+                {
+                    "Name": "Training",
+                    "Id": "e6b4662a-870b-f011-bae3-000d3abcc0c4",
+                    "Paid": true,
+                    "Shared": true,
+                    "StartDate": "2025-04-29",
+                    "EndDate": "2025-04-29"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "d9244429-870b-f011-bae3-6045bd9ff080",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-12",
+                    "EndDate": "2025-04-12"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "20b6452b-870b-f011-bae3-000d3abc9f30",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-10",
+                    "EndDate": "2025-04-10"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "f3f32a1d-eb02-f011-bae3-000d3abcc0c4",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-03-29",
+                    "EndDate": "2025-03-31"
+                },
+                {
+                    "Name": "Training",
+                    "Id": "0b4efa2a-870b-f011-bae2-6045bd920207",
+                    "Paid": true,
+                    "Shared": true,
+                    "StartDate": "2025-04-28",
+                    "EndDate": "2025-04-28"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "fafeeb1d-eb02-f011-bae3-6045bd9ff080",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-03-27",
+                    "EndDate": "2025-03-28"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "c2516329-870b-f011-bae2-7c1e525dcf28",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-11",
+                    "EndDate": "2025-04-11"
+                }
+            ],
+            "FixedDayOff": [],
+            "FavoriteDayOff": []
+        },
+        {
+            "Id": "3f473d5b-a4af-ef11-b8e9-6045bdf5d2ec",
+            "Name": "Doris FAN",
+            "IsInternalProfile": true,
+            "ContractEndDateCode": "",
+            "ContractStartDate": "",
+            "IsManager": false,
+            "StateCode": 0,
+            "RoleDescription": "Sales associate",
+            "IsKeyHolder": false,
+            "ManagerId": "34241b5a-a4af-ef11-b8e8-6045bd8726c0",
+            "Departments": [
+                {
+                    "Id": "8a7e8d9a-20a8-ef11-b8e8-7c1e524e613d",
+                    "LogicalName": "ava_department",
+                    "Name": "Sales Team",
+                    "KeyAttributes": [],
+                    "RowVersion": null,
+                    "ExtensionData": {}
+                }
+            ],
+            "Absences": [
+                {
+                    "Name": "Annual Leave",
+                    "Id": "45f1c830-860b-f011-bae2-7c1e52843506",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-27",
+                    "EndDate": "2025-04-27"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "2b730beb-dc66-f011-bec2-6045bd976f90",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-31",
+                    "EndDate": "2025-08-31"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "a2dd7bee-dc66-f011-bec3-7c1e52509c86",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-30",
+                    "EndDate": "2025-08-30"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "47f87709-5d5d-f011-bec2-6045bdf66105",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-28",
+                    "EndDate": "2025-08-28"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "d2d9b22d-860b-f011-bae3-6045bdf66105",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-02",
+                    "EndDate": "2025-04-02"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "d7d9b22d-860b-f011-bae3-6045bdf66105",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-30",
+                    "EndDate": "2025-04-30"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "a44c0131-860b-f011-bae2-6045bd920207",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-01",
+                    "EndDate": "2025-04-01"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "b34c0131-860b-f011-bae2-6045bd920207",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-26",
+                    "EndDate": "2025-04-26"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "41f1c830-860b-f011-bae2-7c1e52843506",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-25",
+                    "EndDate": "2025-04-25"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "16323231-860b-f011-bae3-7c1e52509c86",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-28",
+                    "EndDate": "2025-04-28"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "52365b08-5d5d-f011-bec2-6045bd9ff080",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-27",
+                    "EndDate": "2025-08-27"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "59365b08-5d5d-f011-bec2-6045bd9ff080",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-29",
+                    "EndDate": "2025-08-29"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "db33452f-860b-f011-bae3-00224883d701",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-29",
+                    "EndDate": "2025-04-29"
+                }
+            ],
+            "FixedDayOff": [],
+            "FavoriteDayOff": []
+        },
+        {
+            "Id": "d08e172d-dc00-f011-bae3-6045bdf66105",
+            "Name": "Yajuan TAN",
+            "IsInternalProfile": true,
+            "ContractEndDateCode": "",
+            "ContractStartDate": "",
+            "IsManager": false,
+            "StateCode": 0,
+            "RoleDescription": "OP Team",
+            "IsKeyHolder": false,
+            "ManagerId": "abd66355-a4af-ef11-b8e8-6045bd920ba3",
+            "Departments": [
+                {
+                    "Id": "b5f2a06b-41ab-ef11-b8e8-7c1e524d8ad8",
+                    "LogicalName": "ava_department",
+                    "Name": "SSS Cashier",
+                    "KeyAttributes": [],
+                    "RowVersion": null,
+                    "ExtensionData": {}
+                }
+            ],
+            "Absences": [
+                {
+                    "Name": "OFF ",
+                    "Id": "c955fa69-8a0b-f011-bae3-000d3abcc0c4",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-18",
+                    "EndDate": "2025-04-18"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "2508556c-8a0b-f011-bae3-6045bd9637e0",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-26",
+                    "EndDate": "2025-04-26"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "2be79854-de66-f011-bec2-000d3abcc0c4",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-24",
+                    "EndDate": "2025-08-24"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "1f7cef53-de66-f011-bec2-7c1e52858a84",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-21",
+                    "EndDate": "2025-08-21"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "d84e1555-de66-f011-bec3-6045bdf66105",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-19",
+                    "EndDate": "2025-08-19"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "9ec18859-de66-f011-bec3-7c1e525e07eb",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-29",
+                    "EndDate": "2025-08-29"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "3ce17e56-de66-f011-bec3-7c1e52509c86",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-20",
+                    "EndDate": "2025-08-20"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "9dee9d59-de66-f011-bec2-6045bd95970e",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-23",
+                    "EndDate": "2025-08-23"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "4827003f-e802-f011-bae3-6045bd9ff080",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-03-01",
+                    "EndDate": "2025-03-01"
+                },
+                {
+                    "Name": "Parental Leave - Children ",
+                    "Id": "76811940-e802-f011-bae2-7c1e525dcf28",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-03-02",
+                    "EndDate": "2025-03-06"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "df86f056-de66-f011-bec3-6045bd93e25d",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-27",
+                    "EndDate": "2025-08-27"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "c9801e58-de66-f011-bec2-7ced8d161559",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-22",
+                    "EndDate": "2025-08-22"
+                }
+            ],
+            "FixedDayOff": [],
+            "FavoriteDayOff": []
+        },
+        {
+            "Id": "3ab89330-dc00-f011-bae2-7c1e52121539",
+            "Name": "Cathy JI",
+            "IsInternalProfile": true,
+            "ContractEndDateCode": "",
+            "ContractStartDate": "",
+            "IsManager": false,
+            "StateCode": 0,
+            "RoleDescription": "OP Team",
+            "IsKeyHolder": false,
+            "ManagerId": "abd66355-a4af-ef11-b8e8-6045bd920ba3",
+            "Departments": [
+                {
+                    "Id": "b5f2a06b-41ab-ef11-b8e8-7c1e524d8ad8",
+                    "LogicalName": "ava_department",
+                    "Name": "SSS Cashier",
+                    "KeyAttributes": [],
+                    "RowVersion": null,
+                    "ExtensionData": {}
+                }
+            ],
+            "Absences": [
+                {
+                    "Name": "Annual Leave",
+                    "Id": "73325150-8a0b-f011-bae3-7c1e5285a4b2",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-06",
+                    "EndDate": "2025-04-06"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "5b565430-de66-f011-bec3-7c1e525dcf28",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-16",
+                    "EndDate": "2025-08-16"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "e8aee32c-de66-f011-bec2-7c1e52266fdc",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-15",
+                    "EndDate": "2025-08-15"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "cfac584c-8a0b-f011-bae3-6045bdf66105",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-07",
+                    "EndDate": "2025-04-07"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "dbda844c-8a0b-f011-bae3-7c1e52509c86",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-04",
+                    "EndDate": "2025-04-04"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "9d57ac4b-8a0b-f011-bae2-6045bd920207",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-05",
+                    "EndDate": "2025-04-05"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "4193c130-de66-f011-bec2-000d3abcc0c4",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-18",
+                    "EndDate": "2025-08-18"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "0b92c72e-de66-f011-bec3-6045bd9ff080",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-17",
+                    "EndDate": "2025-08-17"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "dee68a4c-8a0b-f011-bae2-6045bdf2e5c4",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-03",
+                    "EndDate": "2025-04-03"
+                }
+            ],
+            "FixedDayOff": [],
+            "FavoriteDayOff": []
+        },
+        {
+            "Id": "18b6005d-33d9-ef11-8eea-7c1e524e00a6",
+            "Name": "Helen LIU",
+            "IsInternalProfile": true,
+            "ContractEndDateCode": "",
+            "ContractStartDate": "",
+            "IsManager": false,
+            "StateCode": 0,
+            "RoleDescription": "Sales associate",
+            "IsKeyHolder": false,
+            "ManagerId": "c2ee5354-a4af-ef11-b8e8-6045bd8be842",
+            "Departments": [
+                {
+                    "Id": "8a7e8d9a-20a8-ef11-b8e8-7c1e524e613d",
+                    "LogicalName": "ava_department",
+                    "Name": "Sales Team",
+                    "KeyAttributes": [],
+                    "RowVersion": null,
+                    "ExtensionData": {}
+                }
+            ],
+            "Absences": [
+                {
+                    "Name": "OFF ",
+                    "Id": "9100388b-860b-f011-bae2-7c1e52843506",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-03",
+                    "EndDate": "2025-04-03"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "a800388b-860b-f011-bae2-7c1e52843506",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-20",
+                    "EndDate": "2025-04-20"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "4a1d0d8e-860b-f011-bae2-6045bd988618",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-04",
+                    "EndDate": "2025-04-04"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "98666e8c-860b-f011-bae2-6045bd920207",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-18",
+                    "EndDate": "2025-04-18"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "edc92b8b-860b-f011-bae2-7c1e525dcf28",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-19",
+                    "EndDate": "2025-04-19"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "1ab8443b-dd66-f011-bec2-6045bd95970e",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-10",
+                    "EndDate": "2025-08-10"
+                }
+            ],
+            "FixedDayOff": [],
+            "FavoriteDayOff": []
+        },
+        {
+            "Id": "c9054655-a4af-ef11-b8e8-7c1e524e00a6",
+            "Name": "Chico FU",
+            "IsInternalProfile": true,
+            "ContractEndDateCode": "",
+            "ContractStartDate": "",
+            "IsManager": false,
+            "StateCode": 0,
+            "RoleDescription": "Sales associate",
+            "IsKeyHolder": false,
+            "ManagerId": "34241b5a-a4af-ef11-b8e8-6045bd8726c0",
+            "Departments": [
+                {
+                    "Id": "8a7e8d9a-20a8-ef11-b8e8-7c1e524e613d",
+                    "LogicalName": "ava_department",
+                    "Name": "Sales Team",
+                    "KeyAttributes": [],
+                    "RowVersion": null,
+                    "ExtensionData": {}
+                }
+            ],
+            "Absences": [
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "0176c3a2-dd66-f011-bec2-6045bd95970e",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-02",
+                    "EndDate": "2025-08-02"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "1b76c3a2-dd66-f011-bec2-6045bd95970e",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-04",
+                    "EndDate": "2025-08-04"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "28d465a6-dd66-f011-bec3-6045bdf66105",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-03",
+                    "EndDate": "2025-08-03"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "e0d500f9-5e5d-f011-bec2-7c1e525e07eb",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-01",
+                    "EndDate": "2025-08-01"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "881a2d7d-870b-f011-bae3-6045bd9ff080",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-27",
+                    "EndDate": "2025-04-27"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "9d1a2d7d-870b-f011-bae3-6045bd9ff080",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-30",
+                    "EndDate": "2025-04-30"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "d4c31b78-870b-f011-bae2-7c1e525dcf28",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-29",
+                    "EndDate": "2025-04-29"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "75b0287c-870b-f011-bae3-6045bd976f90",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-26",
+                    "EndDate": "2025-04-26"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "78b0287c-870b-f011-bae3-6045bd976f90",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-28",
+                    "EndDate": "2025-04-28"
+                }
+            ],
+            "FixedDayOff": [],
+            "FavoriteDayOff": []
+        },
+        {
+            "Id": "31a1088f-f2b3-ef11-b8e8-7c1e524e613d",
+            "Name": "Tom GE",
+            "IsInternalProfile": true,
+            "ContractEndDateCode": "",
+            "ContractStartDate": "",
+            "IsManager": false,
+            "StateCode": 0,
+            "RoleDescription": "OP Team",
+            "IsKeyHolder": false,
+            "ManagerId": "abd66355-a4af-ef11-b8e8-6045bd920ba3",
+            "Departments": [
+                {
+                    "Id": "fbce87cd-20a8-ef11-b8e8-7c1e52731583",
+                    "LogicalName": "ava_department",
+                    "Name": "Stock Team",
+                    "KeyAttributes": [],
+                    "RowVersion": null,
+                    "ExtensionData": {}
+                }
+            ],
+            "Absences": [
+                {
+                    "Name": "Annual Leave",
+                    "Id": "4f145b67-de66-f011-bec3-7c1e52843506",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-02",
+                    "EndDate": "2025-08-02"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "1212e265-de66-f011-bec2-7c1e52858a84",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-05",
+                    "EndDate": "2025-08-05"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "57ab6e67-de66-f011-bec3-6045bdf66105",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-03",
+                    "EndDate": "2025-08-03"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "cc10ea64-de66-f011-bec2-7c1e52266fdc",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-01",
+                    "EndDate": "2025-08-01"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "1d266f68-de66-f011-bec3-7c1e52509c86",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-04",
+                    "EndDate": "2025-08-04"
+                }
+            ],
+            "FixedDayOff": [],
+            "FavoriteDayOff": []
+        },
+        {
+            "Id": "f3e7152e-dc00-f011-bae3-7c1e52509c86",
+            "Name": "Miaomiao MIAO",
+            "IsInternalProfile": true,
+            "ContractEndDateCode": "",
+            "ContractStartDate": "",
+            "IsManager": false,
+            "StateCode": 0,
+            "RoleDescription": "OP Team",
+            "IsKeyHolder": false,
+            "ManagerId": "abd66355-a4af-ef11-b8e8-6045bd920ba3",
+            "Departments": [
+                {
+                    "Id": "0d468544-86ac-ef11-b8e8-000d3a2edaa4",
+                    "LogicalName": "ava_department",
+                    "Name": "SSS After Sales Specialist",
+                    "KeyAttributes": [],
+                    "RowVersion": null,
+                    "ExtensionData": {}
+                }
+            ],
+            "Absences": [
+                {
+                    "Name": "OFF ",
+                    "Id": "cd78f178-8a0b-f011-bae3-7c1e525e07eb",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-26",
+                    "EndDate": "2025-04-26"
+                }
+            ],
+            "FixedDayOff": [],
+            "FavoriteDayOff": []
+        },
+        {
+            "Id": "85fab554-a4af-ef11-b8e9-7c1e525262bb",
+            "Name": "Keila WANG",
+            "IsInternalProfile": true,
+            "ContractEndDateCode": "",
+            "ContractStartDate": "",
+            "IsManager": false,
+            "StateCode": 0,
+            "RoleDescription": "Sales associate",
+            "IsKeyHolder": false,
+            "ManagerId": "34241b5a-a4af-ef11-b8e8-6045bd8726c0",
+            "Departments": [
+                {
+                    "Id": "8a7e8d9a-20a8-ef11-b8e8-7c1e524e613d",
+                    "LogicalName": "ava_department",
+                    "Name": "Sales Team",
+                    "KeyAttributes": [],
+                    "RowVersion": null,
+                    "ExtensionData": {}
+                }
+            ],
+            "Absences": [
+                {
+                    "Name": "Annual Leave",
+                    "Id": "d1fdcfcf-dd66-f011-bec3-7c1e525dcf28",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-29",
+                    "EndDate": "2025-08-29"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "213974c0-870b-f011-bae3-6045bdf66105",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-02",
+                    "EndDate": "2025-04-02"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "e2fdcfcf-dd66-f011-bec3-7c1e525dcf28",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-31",
+                    "EndDate": "2025-08-31"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "72e6d9cd-dd66-f011-bec2-6045bd95970e",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-27",
+                    "EndDate": "2025-08-27"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "7e20ffbb-870b-f011-bae3-7c1e5285a4b2",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-01",
+                    "EndDate": "2025-04-01"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "0ccbcbd2-dd66-f011-bec2-7ced8d161559",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-28",
+                    "EndDate": "2025-08-28"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "f5d3d0bb-870b-f011-bae3-000d3abc9f30",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-05",
+                    "EndDate": "2025-04-05"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "9fbb7bc0-870b-f011-bae3-6045bd9ff080",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-03",
+                    "EndDate": "2025-04-03"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "d8db05c1-870b-f011-bae3-6045bd9637e0",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-04",
+                    "EndDate": "2025-04-04"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "c1d20fcf-dd66-f011-bec3-7c1e52843506",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-30",
+                    "EndDate": "2025-08-30"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "6612c8d0-dd66-f011-bec3-6045bd988618",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-04",
+                    "EndDate": "2025-08-04"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "22a546bc-870b-f011-bae3-00224883d701",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-06",
+                    "EndDate": "2025-04-06"
+                }
+            ],
+            "FixedDayOff": [],
+            "FavoriteDayOff": []
+        },
+        {
+            "Id": "89fab554-a4af-ef11-b8e9-7c1e525262bb",
+            "Name": "Yoki YE",
+            "IsInternalProfile": true,
+            "ContractEndDateCode": "",
+            "ContractStartDate": "",
+            "IsManager": false,
+            "StateCode": 0,
+            "RoleDescription": "Sales associate",
+            "IsKeyHolder": false,
+            "ManagerId": "c2ee5354-a4af-ef11-b8e8-6045bd8be842",
+            "Departments": [
+                {
+                    "Id": "8a7e8d9a-20a8-ef11-b8e8-7c1e524e613d",
+                    "LogicalName": "ava_department",
+                    "Name": "Sales Team",
+                    "KeyAttributes": [],
+                    "RowVersion": null,
+                    "ExtensionData": {}
+                }
+            ],
+            "Absences": [
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "24ce56f5-dd66-f011-bec3-6045bd988618",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-02",
+                    "EndDate": "2025-08-02"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "24097cd5-870b-f011-bae2-6045bd988618",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-18",
+                    "EndDate": "2025-04-18"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "eaa86bd3-870b-f011-bae2-7c1e525dcf28",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-11",
+                    "EndDate": "2025-04-11"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "ea68965b-5f5d-f011-bec2-7c1e5282f0d8",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-01",
+                    "EndDate": "2025-08-01"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "c5b490f2-dd66-f011-bec3-6045bd9ff080",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-19",
+                    "EndDate": "2025-08-19"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "2e4615d7-870b-f011-bae3-000d3abcc0c4",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-09",
+                    "EndDate": "2025-04-09"
+                },
+                {
+                    "Name": "OFF ",
+                    "Id": "49c3a2d3-870b-f011-bae2-6045bd920207",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-10",
+                    "EndDate": "2025-04-10"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "5ca50bf2-dd66-f011-bec2-7c1e52858a84",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-20",
+                    "EndDate": "2025-08-20"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "7a7b2ef3-dd66-f011-bec3-7c1e5285a4b2",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-18",
+                    "EndDate": "2025-08-18"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "d622dbd4-870b-f011-bae3-7c1e5285a4b2",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-06",
+                    "EndDate": "2025-04-06"
+                },
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "c6b382f2-dd66-f011-bec2-6045bd95970e",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-03",
+                    "EndDate": "2025-08-03"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "ab60e8d1-870b-f011-bae3-7c1e525e07eb",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-07",
+                    "EndDate": "2025-04-07"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "ad60e8d1-870b-f011-bae3-7c1e525e07eb",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-04-08",
+                    "EndDate": "2025-04-08"
+                }
+            ],
+            "FixedDayOff": [],
+            "FavoriteDayOff": []
+        },
+        {
+            "Id": "b10a8e4d-a4af-ef11-b8e8-7c1e525fc740",
+            "Name": "Barbie SHI",
+            "IsInternalProfile": true,
+            "ContractEndDateCode": "",
+            "ContractStartDate": "",
+            "IsManager": false,
+            "StateCode": 0,
+            "RoleDescription": "Sales associate",
+            "IsKeyHolder": false,
+            "ManagerId": "c2ee5354-a4af-ef11-b8e8-6045bd8be842",
+            "Departments": [
+                {
+                    "Id": "8a7e8d9a-20a8-ef11-b8e8-7c1e524e613d",
+                    "LogicalName": "ava_department",
+                    "Name": "Sales Team",
+                    "KeyAttributes": [],
+                    "RowVersion": null,
+                    "ExtensionData": {}
+                }
+            ],
+            "Absences": [],
+            "FixedDayOff": [],
+            "FavoriteDayOff": []
+        },
+        {
+            "Id": "2cb86961-a4af-ef11-b8e8-7c1e525fc740",
+            "Name": "Eric YANGLY",
+            "IsInternalProfile": true,
+            "ContractEndDateCode": "",
+            "ContractStartDate": "",
+            "IsManager": true,
+            "StateCode": 0,
+            "RoleDescription": "Manager",
+            "IsKeyHolder": true,
+            "ManagerId": null,
+            "Departments": [
+                {
+                    "Id": "a2deca8a-20a8-ef11-b8e8-7c1e524e00a6",
+                    "LogicalName": "ava_department",
+                    "Name": "Management Team",
+                    "KeyAttributes": [],
+                    "RowVersion": null,
+                    "ExtensionData": {}
+                }
+            ],
+            "Absences": [
+                {
+                    "Name": "OFF ",
+                    "Id": "5832b310-ec02-f011-bae3-6045bd976f90",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-03-07",
+                    "EndDate": "2025-03-08"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "b707ba15-ec02-f011-bae2-7c1e525dcf28",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-03-09",
+                    "EndDate": "2025-03-10"
+                },
+                {
+                    "Name": "Annual Leave",
+                    "Id": "54f6b110-ec02-f011-bae2-7c1e52843506",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-03-04",
+                    "EndDate": "2025-03-06"
+                }
+            ],
+            "FixedDayOff": [],
+            "FavoriteDayOff": []
+        },
+        {
+            "Id": "2f898443-695d-f011-bec2-7ced8d0bcb9b",
+            "Name": "Tina CHEN",
+            "IsInternalProfile": true,
+            "ContractEndDateCode": "",
+            "ContractStartDate": "",
+            "IsManager": false,
+            "StateCode": 0,
+            "RoleDescription": "Sales associate",
+            "IsKeyHolder": false,
+            "ManagerId": "34241b5a-a4af-ef11-b8e8-6045bd8726c0",
+            "Departments": [
+                {
+                    "Id": "8a7e8d9a-20a8-ef11-b8e8-7c1e524e613d",
+                    "LogicalName": "ava_department",
+                    "Name": "Sales Team",
+                    "KeyAttributes": [],
+                    "RowVersion": null,
+                    "ExtensionData": {}
+                }
+            ],
+            "Absences": [
+                {
+                    "Name": "Planned Day Off",
+                    "Id": "cdf7d510-de66-f011-bec3-7c1e525e07eb",
+                    "Paid": false,
+                    "Shared": true,
+                    "StartDate": "2025-08-25",
+                    "EndDate": "2025-08-25"
+                }
+            ],
+            "FixedDayOff": [],
+            "FavoriteDayOff": []
         }
     ]
 }
